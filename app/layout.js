@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Danial's Portfolio</title>
+        <link rel="icon" href="/img/Kcube.svg" />
       </head>
       <body className={inter.className}>
         {children}

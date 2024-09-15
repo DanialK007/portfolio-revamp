@@ -9,10 +9,8 @@ export default function FadeIn({ children, className, duration }) {
 
   useEffect(() => {
     if (isInView) {
-      console.log("Show");
       mainControls.start("show");
     } else {
-      console.log("hide");
       mainControls.start("hide");
     }
   }, [isInView, mainControls]);

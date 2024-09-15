@@ -115,7 +115,7 @@ function Header() {
 
       {/*  Bottom navbar : initially hidden */}
       <div
-        className={`fixed z-40 bottom-0 left-0 w-screen text-white py-4 px-6 translate-y-full duration-700 ${isScrolled ? "translate-y-0" : "translate-y-20"}`}
+        className={`fixed z-40 bottom-0 left-0 w-full text-white py-4 px-6 duration-700 ${isScrolled ? "translate-y-0" : "translate-y-20"}`}
       >
         <div className="mx-auto flex justify-center gap-2">
           <a

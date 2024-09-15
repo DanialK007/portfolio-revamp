@@ -14,7 +14,7 @@ html{
     }
 }
 .animate-spin {
-    animation: spin 4s linear infinite;
+    animation: spin 1.5s ease-in-out infinite;
 }
 
 @keyframes fadeIn {

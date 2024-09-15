@@ -8,12 +8,12 @@ function Hero() {
     >
       <div className="absolute -top-10 -right-20 md:right-20 w-96 h-32 -rotate-45 rounded-[100%] bg-gradient-to-r blur-3xl from-blue-500 to-red-500 bl ur-2xl"></div>
       <div className="absolute bottom-44 -left-80 md:-left-20 w-[600px] h-20 rotate-12 rounded-[100%] bg-gradient-to-r blur-3xl from-cyan-500 to-indigo-500 bl ur-2xl"></div>
-      <div className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold uppercase">
-        Hi, Welcome home
+      <div className="text-3xl md:text-6xl text-white/60 lg:text-7xl xl:text-8xl font-semibold uppercase">
+        Hi, <spanc className="text-white"> Welcome </spanc> home
       </div>
-      <div className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold uppercase flex">
+      <div className="text-3xl md:text-6xl text-white/60 lg:text-7xl xl:text-8xl font-semibold uppercase flex">
         It's me,
-        <span className="capitalize ps-2 md:ps-5 relative pb-5 md:pb-3 lg:pb-2">
+        <span className="capitalize text-white ps-2 md:ps-5 relative pb-5 md:pb-3 lg:pb-2">
           Kcube
           <div className="absolute left-0 bottom-0 w-full text-end px-1 text-[0.5rem] md:text-xs uppercase font-normal">
             Kaung Khant Kyaw

@@ -24,20 +24,20 @@ function Work() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-5 gap-3">
-        <FadeIn duration="1.2" className="p-2 lg:saturate-100 hover:scale-90 lg:hover:scale-100 hover:saturate-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
-          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-green-600 flex justify-between">
+        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
+          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-r from-indigo-900 to-purple-950 flex justify-between">
             <div className="">Next.js</div>
-            <div className="font-mono">2023</div>
+            <div className="font-mono">2024</div>
           </div>
-          <div className="bg-green-600 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center">
+          <div className="bg-gradient-to-br from-indigo-800 to-purple-950 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
               <img
-                src="img/bootstrap-logo.png"
+                src="img/nextjs.svg"
                 alt=""
-                className="w-14 opacity-60 saturate-0 brightness-200"
+                className="w-10 invert opacity-60 saturate-0 brightness-200"
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
-                <div className="">CSS Framework</div>
+                <div className="">React Framework</div>
                 <div className="italic">Virtual Tour</div>
               </div>
             </div>
@@ -48,10 +48,10 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.5" className="p-2 lg:saturate-100 hover:scale-90 lg:hover:scale-100 hover:saturate-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
+        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-indigo-600 flex justify-between">
             <div className="">Tailwind</div>
-            <div className="font-mono">2024</div>
+            <div className="font-mono">2023</div>
           </div>
           <div className="bg-indigo-600 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
@@ -68,11 +68,11 @@ function Work() {
             <img
               src="img/preview-min.png"
               alt=""
-              className="h-2/5 xl:h-2/3 rounded-lg"
+              className="h-2/5 xl:h-3/5 xl:p-3 rounded-lg"
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.9" className="p-2 lg:saturate-100 hover:scale-90 lg:hover:scale-100 hover:saturate-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
+        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-sky-600 flex justify-between">
             <div className="">React</div>
             <div className="font-mono">2024</div>
@@ -92,7 +92,7 @@ function Work() {
             <img
               src="img/Trending Tailwind templates _ Tailwind Awesome - Google Chrome 4_18_2024 5_19_34 PM-min.png"
               alt=""
-              className="h-2/5 xl:h-2/3 rounded-lg object-contain"
+              className="h-2/5 xl:h-2/5 rounded-lg object-contain"
             />
           </div>
         </FadeIn>
