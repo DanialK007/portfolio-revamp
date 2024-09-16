@@ -355,7 +355,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
-            className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10"
+            className="p-6 pb-0 bg-black rounded-2xl text-2xl border border-white/10"
           >
             <div className="">
               Frontend Developer with <br />2 years of experience, focused on
