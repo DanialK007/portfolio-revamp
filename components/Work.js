@@ -24,13 +24,13 @@ function Work() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-5 gap-3">
-        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
-          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-r from-indigo-900 to-purple-950 flex justify-between">
+        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-black from-30% to-[#020f60c7] flex justify-between">
             <div className="">Next.js</div>
             <div className="font-mono">2024</div>
           </div>
-          <div className="bg-gradient-to-br from-indigo-800 to-purple-950 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center">
-            <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
+          <div className="bg-neutral-800 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
+            <div className="cap2 absolute w-full bg-gradient-to-t from-black to-25% h-full duration-300 z-10 flex flex-col justify-between p-5">
               <img
                 src="img/nextjs.svg"
                 alt=""
@@ -38,22 +38,22 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">React Framework</div>
-                <div className="italic">Virtual Tour</div>
+                <div className="italic text-lg">Virtual Tour</div>
               </div>
             </div>
             <img
-              src="img/Macbook_Air_Mockup_4b.png"
+              src="img/mockup3.jpeg"
               alt=""
-              className="xl:h-2/ rounded-2xl object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
-          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-indigo-600 flex justify-between">
+        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-blue-950/20 to-[#1b2751] flex justify-between">
             <div className="">Tailwind</div>
             <div className="font-mono">2023</div>
           </div>
-          <div className="bg-indigo-600 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center">
+          <div className="bg-blue-950/50 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
               <img
                 src="img/tailwind-logo.png"
@@ -62,37 +62,37 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">CSS Framework</div>
-                <div className="italic">Platform for Developers</div>
+                <div className="italic text-lg">Platform for Developers</div>
               </div>
             </div>
             <img
-              src="img/preview-min.png"
+              src="img/mockup.jpg"
               alt=""
-              className="h-2/5 xl:h-3/5 xl:p-3 rounded-lg"
+              className="w-full h-full object-cover"
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-50 hover:brightness-100">
-          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-sky-600 flex justify-between">
+        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+          <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-neutral-900 flex justify-between">
             <div className="">React</div>
             <div className="font-mono">2024</div>
           </div>
-          <div className="bg-sky-600 brightness-75 relative h-96 mt-3 rounded-2xl flex items-center justify-center xl:p-5">
+          <div className="bg-neutral-900 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
               <img
                 src="img/react-logo.png"
                 alt=""
-                className="w-12 opacity-60 saturate-0 brightness-200 p-1"
+                className="w-12 opacity-100 saturate-0 brightness-0 invert p-1"
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">Javascript Library</div>
-                <div className="italic">For Local Retailers</div>
+                <div className="italic text-lg">For Local Retailers</div>
               </div>
             </div>
             <img
-              src="img/Trending Tailwind templates _ Tailwind Awesome - Google Chrome 4_18_2024 5_19_34 PM-min.png"
+              src="img/mockup2.png"
               alt=""
-              className="h-2/5 xl:h-2/5 rounded-lg object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         </FadeIn>

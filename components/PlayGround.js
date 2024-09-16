@@ -34,7 +34,7 @@ function PlayGround() {
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-gray-300 from-40% to-amber-700 p-10">
               <video
                 src="img/video1.mov"
-                className="rounded-[10px]"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}
@@ -71,7 +71,7 @@ function PlayGround() {
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-neutral-950 from-40% to-red-700 p-10">
               <video
                 src="img/video2.mp4"
-                className="rounded-[10px]"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}
@@ -108,7 +108,7 @@ function PlayGround() {
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-pink-400 to-cyan-500 p-10">
               <video
                 src="img/video3.mp4"
-                className="rounded-[10px]"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}
@@ -145,7 +145,7 @@ function PlayGround() {
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-amber-950 to-zinc-400 p-10">
               <video
                 src="img/video4.mov"
-                className="rounded-[10px]"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}
@@ -182,7 +182,7 @@ function PlayGround() {
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-white to-teal-500 p-10">
               <video
                 src="img/video5.mp4"
-                className="rounded-[10px]"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}
@@ -216,10 +216,10 @@ function PlayGround() {
             duration="1.9"
             className="bg-pink-600 brightness-75 relative h-72 rounded-2xl flex items-center justify-center"
           >
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-orange-600 to-orange-900 p-10">
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br from-orange-600 to-black p-10">
               <video
-                src="img/video.mov"
-                className="rounded-[10px]"
+                src="img/video6.mov"
+                className="rounded-[10px] mb-4"
                 muted
                 loop
                 onMouseEnter={(e) => e.currentTarget.play()}

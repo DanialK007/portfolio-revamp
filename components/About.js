@@ -26,7 +26,10 @@ function About() {
       </div>
       {/*  small device */}
       <div className="grid grid-cols-1 gap-5 p-5 md:hidden">
-        <div className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10">
+        <FadeIn
+          duration="1.2"
+          className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10"
+        >
           <div className="">
             Frontend Developer with <br />2 years of experience, focused on
             creating functional and user-centered digital products with visually
@@ -68,8 +71,11 @@ function About() {
               Resume
             </a>
           </div>
-        </div>
-        <div className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10">
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
+          className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10"
+        >
           <img
             src="img/profile.jpeg"
             alt=""
@@ -94,8 +100,11 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="p-6 relative bg-white/5 rounded-2xl border border-white/10">
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
+          className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+        >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
           </div>
@@ -129,8 +138,11 @@ function About() {
             </div>
             <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
           </div>
-        </div>
-        <div className="p-6 relative bg-white/5 rounded-2xl border border-white/10">
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
+          className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+        >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
           </div>
@@ -195,126 +207,156 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10">
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
+          className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10"
+        >
           <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" />
-        </div>
-        <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
+          className="p-6 bg-white/5 rounded-2xl border border-white/10"
+        >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
           <div className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
             <img
               src="img/htmlLogo.png"
               alt=""
+              title="HTML"
               className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
             />
             <img
               src="img/cssLogo.png"
               alt=""
+              title="CSS"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-950 px-2 py-[0.35rem] border border-gray-700 rounded-xl"
             />
             <img
               src="img/jsLogo.png"
               alt=""
+              title="Javascript"
               className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-yellow-950 border p-2 border-gray-700 rounded-xl"
             />
             <img
               src="img/react-logo.png"
               alt=""
+              title="React.js"
               className="grid-cols-1 hover:shadow-sm hover:border-cyan-500 hover:shadow-cyan-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 py-2 px-[0.4rem] border border-gray-700 rounded-xl"
             />
             <img
               src="img/nextjs.svg"
               alt=""
-              className="grid-cols-1 hover:shadow-sm bg-slate-200 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 p-1 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+              title="Next.js"
+              className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-gray-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-gray-400 rounded-xl"
             />
             <img
               src="img/tailwind-logo.png"
               alt=""
+              title="Tailwind CSS"
               className="grid-cols-1 hover:shadow-sm hover:border-teal-500 hover:shadow-teal-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 px-1 py-[0.6rem] border border-gray-700 rounded-xl"
             />
             <img
               src="img/bootstrap-logo.png"
               alt=""
+              title="Bootstrap"
               className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-1 px-[0.2rem] border border-gray-700 rounded-xl"
+            />
+            <img
+              src="img/node.png"
+              alt=""
+              title="Node.js"
+              className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+            />
+            <img
+              src="img/express.png"
+              alt=""
+              title="Express.js"
+              className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-gray-500 hover:shadow-gray-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-300 rounded-xl"
+            />
+            <img
+              src="img/mongo.png"
+              alt=""
+              title="MongoDB"
+              className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+            />
+            <img
+              src="img/framer-motion.svg"
+              alt=""
+              title="Framer Motion"
+              className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+            />
+            <img
+              src="img/gsap.svg"
+              alt=""
+              title="GSAP Motion"
+              className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+            />
+            <img
+              src="img/lenis.png"
+              alt=""
+              title="Lenis Scroll"
+              className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
             <img
               src="img/phpIcon].png"
               alt=""
-              className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-3 px-1 border border-gray-700 rounded-xl"
+              title="PHP"
+              className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-400/20 py-3 px-1 border border-gray-700 rounded-xl"
             />
-            {/*  <img
-                  src="img/laravel-icon.png"
-                  alt=""
-                  className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-red-600/10 p-2 border border-gray-700 rounded-xl"
-                /> */}
             <img
               src="img/mysql.png"
               alt=""
-              className="grid-cols-1 hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 bg-white  hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+              title="MySQL"
+              className="grid-cols-1 bg-orange-500/20 hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
             <img
               src="img/pythonLogo.png"
               alt=""
-              className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-50 p-2 border border-gray-700 rounded-xl"
+              title="Python"
+              className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-500/30 p-2 border border-gray-700 rounded-xl"
             />
             <img
               src="img/C++Icon.png"
               alt=""
+              title="C++"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-indigo-950 py-[0.4rem] px-2 border border-gray-700 rounded-xl"
             />
             <img
               src="img/figmaIcon.webp"
               alt=""
+              title="Figma"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
             <img
-              src="img/gptIcon.webp"
+              src="img/gpt.png"
               alt=""
-              className="grid-cols-1 hover:shadow-sm hover:border-white hover:shadow-white hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
-            <img
-              src="img/express.png"
-              alt=""
-              className="grid-cols-1 hover:shadow-sm p-2 bg-slate-200 hover:border-indigo-500 hover:shadow-indigo-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
-            <img
-              src="img/framer-motion.svg"
-              alt=""
-              className="grid-cols-1 hover:shadow-sm bg-slate-200 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
-            <img
-              src="img/lenis.png"
-              alt=""
-              className="grid-cols-1 hover:shadow-sm bg-slate-200 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
-            <img
-              src="img/gsap.svg"
-              alt=""
-              className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-slate-200 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
-            <img
-              src="img/mongo.png"
-              alt=""
-              className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-slate-200 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+              title="Chat GPT"
+              className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
             <img
               src="img/git.png"
               alt=""
+              title="Git"
               className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
             />
             <img
               src="img/github.png"
               alt=""
+              title="GitHub"
               className="grid-cols-1 hover:shadow-sm bg-slate-200 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 p-1 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
           </div>
-        </div>
+        </FadeIn>
         {/*  </div> */}
       </div>
       {/*  md device */}
       <div className="grid-cols-3 gap-5 p-5 hidden md:grid">
         <div className="col-span-1 flex flex-col gap-5">
-          <FadeIn duration="1.2" className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10">
+          <FadeIn
+            duration="1.2"
+            className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10"
+          >
             <div className="">
               Frontend Developer with <br />2 years of experience, focused on
               creating functional and user-centered digital products with
@@ -357,7 +399,10 @@ function About() {
               </a>
             </div>
           </FadeIn>
-          <FadeIn duration="1.2" className="p-6 relative bg-white/5 rounded-2xl border border-white/10">
+          <FadeIn
+            duration="1.2"
+            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+          >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
             </div>
@@ -424,7 +469,10 @@ function About() {
           </FadeIn>
         </div>
         <div className="col-span-1 flex flex-col gap-5">
-          <FadeIn duration="1.5" className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10">
+          <FadeIn
+            duration="1.5"
+            className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10"
+          >
             <img
               src="img/profile.jpeg"
               alt=""
@@ -450,7 +498,10 @@ function About() {
               </div>
             </div>
           </FadeIn>
-          <FadeIn duration="1.5" className="p-6 relative bg-white/5 rounded-2xl border border-white/10">
+          <FadeIn
+            duration="1.5"
+            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+          >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Biography
             </div>
@@ -475,12 +526,18 @@ function About() {
               <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
             </div>
           </FadeIn>
-          <FadeIn duration="1.5" className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10">
+          <FadeIn
+            duration="1.5"
+            className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10"
+          >
             <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" />
           </FadeIn>
         </div>
         <div className="col-span-1 flex flex-col gap-5">
-          <FadeIn duration="1.9" className="p-6 relative bg-white/5 rounded-2xl border border-white/10">
+          <FadeIn
+            duration="1.9"
+            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+          >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
             </div>
@@ -550,7 +607,10 @@ function About() {
               </div>
             </div>
           </FadeIn>
-          <FadeIn duration="1.9" className="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <FadeIn
+            duration="1.9"
+            className="p-6 bg-white/5 rounded-2xl border border-white/10"
+          >
             <div className="font-mono font-semibold pb-2 text-lg">
               TOOL STACK
             </div>
@@ -583,7 +643,7 @@ function About() {
                 src="img/nextjs.svg"
                 alt=""
                 title="Next.js"
-                className="grid-cols-1 hover:shadow-sm bg-slate-200 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 p-1 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-gray-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-gray-400 rounded-xl"
               />
               <img
                 src="img/tailwind-logo.png"
@@ -601,61 +661,55 @@ function About() {
                 src="img/node.png"
                 alt=""
                 title="Node.js"
-                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-slate-200 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/express.png"
                 alt=""
                 title="Express.js"
-                className="grid-cols-1 hover:shadow-sm p-2 bg-slate-200 hover:border-indigo-500 hover:shadow-indigo-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-gray-500 hover:shadow-gray-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-300 rounded-xl"
               />
               <img
                 src="img/mongo.png"
                 alt=""
                 title="MongoDB"
-                className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-slate-200 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/framer-motion.svg"
                 alt=""
                 title="Framer Motion"
-                className="grid-cols-1 hover:shadow-sm bg-slate-200 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/gsap.svg"
                 alt=""
                 title="GSAP Motion"
-                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-slate-200 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/lenis.png"
                 alt=""
                 title="Lenis Scroll"
-                className="grid-cols-1 hover:shadow-sm bg-slate-200 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/phpIcon].png"
                 alt=""
                 title="PHP"
-                className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-3 px-1 border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-400/20 py-3 px-1 border border-gray-700 rounded-xl"
               />
-              {/*  <img
-                  src="img/laravel-icon.png"
-                  alt=""
-                  title=""
-                  className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-red-600/10 p-2 border border-gray-700 rounded-xl"
-                /> */}
               <img
                 src="img/mysql.png"
                 alt=""
                 title="MySQL"
-                className="grid-cols-1 bg-white hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 bg-orange-500/20 hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/pythonLogo.png"
                 alt=""
                 title="Python"
-                className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-50 p-2 border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-500/30 p-2 border border-gray-700 rounded-xl"
               />
               <img
                 src="img/C++Icon.png"
@@ -670,10 +724,10 @@ function About() {
                 className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
-                src="img/gptIcon.webp"
+                src="img/gpt.png"
                 alt=""
                 title="Chat GPT"
-                className="grid-cols-1 hover:shadow-sm hover:border-white hover:shadow-white hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
               <img
                 src="img/git.png"
