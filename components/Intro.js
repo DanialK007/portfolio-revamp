@@ -13,11 +13,11 @@ function Intro() {
             the last <span className="text-white"> detail</span>.
           </div>
           <div className="grid grid-cols-2 py-4">
-            <div className="p-5 text-white/30 text-sm">
+            <div className="p-5 text-white/40 text-sm">
               I've done multiple frontend projects with
               <span className="text-white"> High Quality Contents</span>.
             </div>
-            <div className="p-5 text-white/30 text-sm">
+            <div className="p-5 text-white/40 text-sm">
               Currently, learning at
               <span className="text-white"> MIBA university</span>.
             </div>

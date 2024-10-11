@@ -10,7 +10,7 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <div className="bg-black overflow-hidden -mt-1">
+    <main className="bg-black overflow-hidden -mt-1">
       <Header />
       <Hero2 />
       <Intro />
@@ -18,6 +18,6 @@ export default function Home() {
       <PlayGround />
       <About />
       <Footer />
-    </div>
+    </main>
   );
 } 
