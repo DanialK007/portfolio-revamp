@@ -13,16 +13,31 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="description" content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."/>
-        <meta property="og:image" content="https://kcube-portfolio.vercel.app/img/link-preview.png"/>
-        <meta property="og:site_name" content="Kcube's Portfolio"/>
-        <meta property="og:title" content="Kcube's Portfolio"/>
-        <meta property="og:description" content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development." />
-        <meta property="og:url" content="https://kcube-portfolio.vercel.app/"/>
-        <meta property="twitter:image" content="https://kcube-portfolio.vercel.app/img/link-preview.png"/>
-        <meta property="twitter:card" content="https://kcube-portfolio.vercel.app/img/link-preview.png"/>
-        <meta property="twitter:title" content="Kcube's Portfolio"/>
-        <meta property="twitter:description" content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."/>
+        <meta
+          property="description"
+          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
+        />
+        <meta
+          property="og:image"
+          content="https://kcube-portfolio.vercel.app/img/link-preview.png"
+        />
+        <meta property="og:site_name" content="Kcube's Portfolio" />
+        <meta property="og:title" content="Kcube's Portfolio" />
+        <meta
+          property="og:description"
+          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
+        />
+        <meta property="og:url" content="https://kcube-portfolio.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Kcube's Portfolio" />
+        <meta
+          name="twitter:image"
+          content="https://kcube-portfolio.vercel.app/img/link-preview.png"
+        />
+        <meta
+          property="twitter:description"
+          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
+        />
         <title>Kcube's Portfolio</title>
         <link rel="icon" href="/img/Kcube.svg" />
       </head>
