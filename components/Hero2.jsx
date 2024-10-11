@@ -21,6 +21,7 @@ function Hero2() {
         <video
           ref={videoRef}
           src="img/hero.mp4"
+          poster="img/hero-preview.png"
           autoPlay
           muted
           loop
