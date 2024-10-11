@@ -70,7 +70,7 @@ function Hero2() {
             />
           </div>
         </div>
-        <a
+        <a aria-label="This is a link." 
           href="#scroll"
           id="scroll"
           className="flex ms-5 md:ms-8 lg:ms-10 xl:ms-12 flex-col absolute bottom-0 left-0 items-center w-24 p-4 mt-10 animate-pulse"

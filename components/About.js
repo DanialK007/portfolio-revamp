@@ -37,32 +37,32 @@ function About() {
           </div>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2">
-              <a
+              <a aria-label="This is a link." 
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
-              <a
+              <a aria-label="This is a link." 
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
-              <a
+              <a aria-label="This is a link." 
                 href="mailto:kaungkhantkyawdk@gmail.com"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/envelope-regular.svg" alt="" className="w-3" />
               </a>
-              <a
+              <a aria-label="This is a link." 
                 href="https://t.me/DanialK007"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/telegram.png" alt="" className="w-3" />
               </a>
             </div>
-            <a
+            <a aria-label="This is a link." 
               href="kkk-resume.pdf"
               download
               className="text-xs font-semibold px-3 py-1 flex items-center gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20"
@@ -162,7 +162,7 @@ function About() {
             </div>
             <div className="col-span-3 py-2 text-sm">
               <div className="font-semibold">Started programming journey</div>
-              <div className="text-gray-500">- Learned C, C++, MIT scratch</div>
+              <div className="text-white/60">- Learned C, C++, MIT scratch</div>
             </div>
             <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
               2021-2022
@@ -171,7 +171,7 @@ function About() {
               <div className="font-semibold">
                 Got scholarship twice from Coding-Night School
               </div>
-              <div className="text-gray-500">
+              <div className="text-white/60">
                 - Learned Python : basic to intermediate
               </div>
             </div>
@@ -180,14 +180,14 @@ function About() {
             </div>
             <div className="col-span-3 py-2 text-sm">
               <div className="font-semibold">Entered Web Development Field</div>
-              <div className="text-gray-500">- Learned HTML, CSS</div>
+              <div className="text-white/60">- Learned HTML, CSS</div>
             </div>
             <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
               2023-2024
             </div>
             <div className="col-span-3 py-2 text-sm">
               <div className="font-semibold">Joined MIBA university</div>
-              <div className="text-gray-500">
+              <div className="text-white/60">
                 - Learned Frontend Development
               </div>
             </div>
@@ -198,11 +198,11 @@ function About() {
               <div className="font-semibold">
                 Previously claimed a scholarship from CodeMal Academy
               </div>
-              <div className="text-gray-500">
+              <div className="text-white/60">
                 - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
                 MySQL, Figma
               </div>
-              <div className="text-gray-500">
+              <div className="text-white/60">
                 - Learning NodeJS, React, Jquery, Laravel
               </div>
             </div>
@@ -364,32 +364,32 @@ function About() {
             </div>
             <div className="mx-auto flex justify-between py-4 pe-2">
               <div className="flex gap-2">
-                <a
+                <a aria-label="This is a link." 
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
                   <img src="img/facebookIcon.svg" alt="" className="w-3" />
                 </a>
-                <a
+                <a aria-label="This is a link." 
                   href="mailto:kaungkhantkyawdk@gmail.com"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
                   <img src="img/envelope-regular.svg" alt="" className="w-3" />
                 </a>
-                <a
+                <a aria-label="This is a link." 
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
                   <img src="img/linkedin.svg" alt="" className="w-3" />
                 </a>
-                <a
+                <a aria-label="This is a link." 
                   href="https://t.me/DanialK007"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
                   <img src="img/telegram.png" alt="" className="w-3" />
                 </a>
               </div>
-              <a
+              <a aria-label="This is a link." 
                 href="kkk-resume.pdf"
                 download
                 className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
@@ -557,7 +557,7 @@ function About() {
               </div>
               <div className="col-span-3 py-2 text-sm">
                 <div className="font-semibold">Started programming journey</div>
-                <div className="text-gray-500">
+                <div className="text-white/60">
                   - Learned C, C++, MIT scratch
                 </div>
               </div>
@@ -568,7 +568,7 @@ function About() {
                 <div className="font-semibold">
                   Got scholarship twice from Coding-Night School
                 </div>
-                <div className="text-gray-500">
+                <div className="text-white/60">
                   - Learned Python : basic to intermediate
                 </div>
               </div>
@@ -579,14 +579,14 @@ function About() {
                 <div className="font-semibold">
                   Entered Web Development Field
                 </div>
-                <div className="text-gray-500">- Learned HTML, CSS</div>
+                <div className="text-white/60">- Learned HTML, CSS</div>
               </div>
               <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
                 2023-2024
               </div>
               <div className="col-span-3 py-2 text-sm">
                 <div className="font-semibold">Joined MIBA university</div>
-                <div className="text-gray-500">
+                <div className="text-white/60">
                   - Learned Frontend Development
                 </div>
               </div>
@@ -597,11 +597,11 @@ function About() {
                 <div className="font-semibold">
                   Previously claimed a scholarship from CodeMal Academy
                 </div>
-                <div className="text-gray-500">
+                <div className="text-white/60">
                   - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
                   MySQL, Figma
                 </div>
-                <div className="text-gray-500">
+                <div className="text-white/60">
                   - Learning NodeJS, React, Jquery, Laravel
                 </div>
               </div>

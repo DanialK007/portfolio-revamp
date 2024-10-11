@@ -45,7 +45,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Morph
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://morph-digital-ij1w0tbl4-danials-projects-222e55aa.vercel.app"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
@@ -82,7 +82,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Gymnast
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://gymnast.onrender.com/"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
@@ -119,7 +119,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Leiga
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://leiga.onrender.com/"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
@@ -156,7 +156,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Acme
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://acme-online-shop.vercel.app/"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
@@ -193,7 +193,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Pireal
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://pireal.onrender.com/"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
@@ -230,7 +230,7 @@ function PlayGround() {
               <div className="text-xl brightness-200 text-gray-50">
                 <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300 group-hover:">
                   Portfolio
-                  <a
+                  <a aria-label="This is a link." 
                     href="https://santonio.vercel.app/"
                     target="_blank"
                     className="flex items-center justify-center bg-zinc-500/35 backdrop-blur-sm text-black rounded-full py-1 px-2 scale-90 hover:scale-95 gap-1 opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"

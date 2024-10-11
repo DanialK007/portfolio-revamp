@@ -36,7 +36,7 @@ function Footer() {
           </div>
           <div className="text-sm">
             <div className="h-16 w-full my-8 flex items-center justify-end px-2">
-              <a
+              <a aria-label="This is a link." 
                 href="#top"
                 className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/40 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
               >
@@ -68,7 +68,7 @@ function Footer() {
             <div className="font-semibold">Created with ❤️ in Myanmar</div>
             <div className="font-mono">Made in Mandalay</div>
             <div className="w-full flex items-center justify-end px-5">
-              <a
+              <a aria-label="This is a link." 
                 href="#top"
                 className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
               >

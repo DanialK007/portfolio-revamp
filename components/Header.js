@@ -32,7 +32,7 @@ function Header() {
             : ""
         }`}
       >
-        <a href="" className="pt-1">
+        <a aria-label="This is a link."  href="" className="pt-1">
           <img src="img/Kcube.svg" alt="" className="h-14" />
         </a>
         <button
@@ -63,15 +63,15 @@ function Header() {
         }`}
       >
         <ul className="p-4 flex flex-col gap-3">
-          <a href="#work" className="hover:text-red-500">
+          <a aria-label="This is a link."  href="#work" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">01</div>
             <div className="font-semibold">Work</div>
           </a>
-          <a href="#playground" className="hover:text-red-500">
+          <a aria-label="This is a link."  href="#playground" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">02</div>
             <div className="font-semibold">Playground</div>
           </a>
-          <a href="#about" className="hover:text-red-500">
+          <a aria-label="This is a link."  href="#about" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">03</div>
             <div className="font-semibold">About Me</div>
           </a>
@@ -85,15 +85,15 @@ function Header() {
             : "opacity-100 z-40 translate-y-0"
         }`}
       >
-        <a href="#work" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#work" className="px-3 hover:text-red-500">
           <div className="font-mono">01</div>
           <div className="font-semibold">Work</div>
         </a>
-        <a href="#playground" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#playground" className="px-3 hover:text-red-500">
           <div className="font-mono">02</div>
           <div className="font-semibold">Playground</div>
         </a>
-        <a href="#about" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#about" className="px-3 hover:text-red-500">
           <div className="font-mono">03</div>
           <div className="font-semibold">About Me</div>
         </a>
@@ -105,22 +105,22 @@ function Header() {
             : "opacity-0 -z-10 translate-x-40"
         }`}
       >
-        <a href="#work" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#work" className="px-3 hover:text-red-500">
           <div className="font-mono">01</div>
           <div className="font-semibold">Work</div>
         </a>
-        <a href="#playground" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#playground" className="px-3 hover:text-red-500">
           <div className="font-mono">02</div>
           <div className="font-semibold">Playground</div>
         </a>
-        <a href="#about" className="px-3 hover:text-red-500">
+        <a aria-label="This is a link."  href="#about" className="px-3 hover:text-red-500">
           <div className="font-mono">03</div>
           <div className="font-semibold">About Me</div>
         </a>
       </div>
 
       {/*  Side Bar */}
-      <a
+      <a aria-label="This is a link." 
         href="tel:+959255599863"
         className="fixed -right-3 bottom-32 p-3 -rotate-90 z-20 bg-black/95"
       >
@@ -134,25 +134,25 @@ function Header() {
         }`}
       >
         <div className="mx-auto flex justify-center gap-2">
-          <a
+          <a aria-label="This is a link." 
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
-          <a
+          <a aria-label="This is a link." 
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/linkedin.svg" alt="" className="w-3" />
           </a>
-          <a
+          <a aria-label="This is a link." 
             href="mailto:kaungkhantkyawdk@gmail.com"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/envelope-regular.svg" alt="" className="w-3" />
           </a>
-          <a
+          <a aria-label="This is a link." 
             href="https://t.me/DanialK007"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
