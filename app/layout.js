@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <title>Danial's Portfolio</title>
         <link rel="icon" href="/img/Kcube.svg" />
       </head>
-      <body className={`bg-[#7c0b27] text-white overflow-hidden ${inter.className}`}>
+      <body className={`bg-[#7c0b27] text-white ${inter.className}`}>
         {children}
         <Analytics />
       </body>
