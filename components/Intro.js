@@ -28,31 +28,31 @@ function Intro() {
         >
           <div className="grid grid-cols-5 grid-rows-5 gap-3 lg:gap-5 w-full aspect-square group">
             <FadeIn duration="0.8" className="col-span-1 row-span-1 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid1.png" className="w-full h-full" />
+              <img alt="image" src="img/grid1.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="1" className="col-span-1 row-span-1 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid2.png" className="w-full h-full" />
+              <img alt="image" src="img/grid2.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="1.2" className="col-span-1 row-span-1 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid3.png" className="w-full h-full" />
+              <img alt="image" src="img/grid3.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="1.5" className="col-span-2 row-span-2 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid4.png" className="w-full h-full" />
+              <img alt="image" src="img/grid4.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="1.9" className="col-span-3 row-span-2 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid5.png" className="w-full h-full" />
+              <img alt="image" src="img/grid5.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="2.1" className="col-span-2 row-span-1 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid6.png" className="w-full h-full" />
+              <img alt="image" src="img/grid6.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="2.2" className="col-span-2 row-span-2 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid7.png" className="w-full h-full" />
+              <img alt="image" src="img/grid7.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="2.5" className="col-span-1 row-span-2 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid8.png" className="w-full h-full" />
+              <img alt="image" src="img/grid8.png" className="w-full h-full" />
             </FadeIn>
             <FadeIn duration="2.9" className="col-span-2 row-span-2 bg-neutral-900 hover:scale-105 duration-300 brightness-75 hover:brightness-100 overflow-hidden group-hover:saturate-0 group-hover:blur-sm hover:saturate-100 saturate-100 blur-0 hover:blur-0 rounded-[14px] lg:rounded-[16px]">
-              <img src="img/grid9.png" className="w-full h-full" />
+              <img alt="image" src="img/grid9.png" className="w-full h-full" />
             </FadeIn>
           </div>
         </div>
