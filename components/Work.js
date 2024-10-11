@@ -5,7 +5,7 @@ function Work() {
     <div className="my-5 xl:mt-20 relative">
       <div id="work" className="absolute -top-16"></div>
       <div className="py-8">
-        <div className="flex justify-center cap1 text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl">
+        <div className="flex justify-center cap1 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl">
           <span className="font-thin" id="selectW">
             SELECT
           </span>
@@ -24,7 +24,7 @@ function Work() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-5 gap-3">
-        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-black from-30% to-[#020f60c7] flex justify-between">
             <div className="">Next.js</div>
             <div className="font-mono">2024</div>
@@ -38,7 +38,7 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">React Framework</div>
-                <div className="italic text-lg">Virtual Tour</div>
+                <div className="italic text-lg">For Building Fast, Scalable Websites</div>
               </div>
             </div>
             <img
@@ -48,7 +48,7 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-blue-950/20 to-[#1b2751] flex justify-between">
             <div className="">Tailwind</div>
             <div className="font-mono">2023</div>
@@ -62,7 +62,7 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">CSS Framework</div>
-                <div className="italic text-lg">Platform for Developers</div>
+                <div className="italic text-lg">Utility-First CSS UI Development</div>
               </div>
             </div>
             <img
@@ -72,7 +72,7 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-white/5 rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-neutral-900 flex justify-between">
             <div className="">React</div>
             <div className="font-mono">2024</div>
@@ -86,7 +86,7 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">Javascript Library</div>
-                <div className="italic text-lg">For Local Retailers</div>
+                <div className="italic text-lg">For Building User Interfaces</div>
               </div>
             </div>
             <img

@@ -7,7 +7,7 @@ function PlayGround() {
     <div className="my-5 xl:mt-20 relative">
       <div id="playground" className="absolute -top-16"></div>
       <div className="py-8">
-        <div className="flex justify-center cap1 text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl">
+        <div className="flex justify-center cap1 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl">
           <span className="font-thin" id="playG">
             PLAY
           </span>

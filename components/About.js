@@ -5,7 +5,7 @@ function About() {
     <div className="my-5 xl:mt-20 relative">
       <div id="about" className="absolute -top-16"></div>
       <div className="py-8">
-        <div className="flex justify-center cap1 text-6xl md:text-8xl xl:text-10xl">
+        <div className="flex justify-center cap1 myFont text-6xl md:text-8xl xl:text-10xl">
           <span className="font-thin" id="aboutM">
             ABOUT
           </span>
@@ -28,7 +28,7 @@ function About() {
       <div className="grid grid-cols-1 gap-5 p-5 md:hidden">
         <FadeIn
           duration="1.2"
-          className="p-6 pb-0 bg-white/5 rounded-2xl text-2xl border border-white/10"
+          className="p-6 pb-0 bg-[#111] rounded-2xl text-2xl border border-white/10"
         >
           <div className="">
             Frontend Developer with <br />2 years of experience, focused on
@@ -50,7 +50,7 @@ function About() {
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
               <a
-                href="kaungkhantkyawdk@gmail.com"
+                href="mailto:kaungkhantkyawdk@gmail.com"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/envelope-regular.svg" alt="" className="w-3" />
@@ -74,7 +74,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10"
+          className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
         >
           <img
             src="img/profile.jpeg"
@@ -103,7 +103,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+          className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
@@ -132,7 +132,7 @@ function About() {
             <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
               Age
             </div>
-            <div className="col-span-3 py-1 text-sm">20</div>
+            <div className="col-span-3 py-1 text-sm">21</div>
             <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
               City
             </div>
@@ -141,7 +141,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+          className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
@@ -216,7 +216,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 bg-white/5 rounded-2xl border border-white/10"
+          className="p-6 rounded-2xl border border-white/10 bg-[#111]"
         >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
           <div className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
@@ -355,7 +355,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
-            className="p-6 pb-0 bg-black rounded-2xl text-2xl border border-white/10"
+            className="p-6 pb-0 bg-[#111] rounded-2xl text-2xl border border-white/10"
           >
             <div className="">
               Frontend Developer with <br />2 years of experience, focused on
@@ -371,7 +371,7 @@ function About() {
                   <img src="img/facebookIcon.svg" alt="" className="w-3" />
                 </a>
                 <a
-                  href="kaungkhantkyawdk@gmail.com"
+                  href="mailto:kaungkhantkyawdk@gmail.com"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
                   <img src="img/envelope-regular.svg" alt="" className="w-3" />
@@ -401,7 +401,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.2"
-            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
@@ -409,7 +409,7 @@ function About() {
             <div className="text-sm text-gray-400">
               <div className="py-2">
                 Hey there! I'm Kaung Khant Kyaw, a passionate individual from
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Mandalay
                 </span>
                 on a journey through the fascinating world of programming and
@@ -420,19 +420,19 @@ function About() {
                 mom's help, who bought me a 2.5 lakh laptop. I started with Edx
                 courses from Wikipedia, diving into programming concepts and MIT
                 scratch game projects.
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   I learned C and eventually mastered C++
                 </span>
                 , gaining valuable insights along the way.
               </div>
               <div className="py-2">
                 In 2021, my commitment to learning
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   earned me a scholarship
                 </span>
                 for an online Python Basics Course, further fueling my passion
                 for programming. Subsequently, I received
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   another scholarship for a Python Intermediate Course
                 </span>
                 , expanding my skills and determination to excel in programming.
@@ -441,26 +441,26 @@ function About() {
                 In 2022, I delved into web development, sparking a passion for
                 creating engaging websites. By 2023, at MIBA University, I honed
                 my CSS skills and mastered frameworks like
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Tailwind
                 </span>
                 and
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Bootstrap
                 </span>
                 . Completing
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   PHP
                 </span>
                 projects with
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   MySQL
                 </span>
                 integration, I showcased my ability to build dynamic web apps.
                 Utilizing free hosting, I independently developed and deployed
                 numerous websites, showcasing proficiency across the entire web
                 development process. Now,
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500">
+                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
                   I'm ready
                 </span>
                 to tackle any challenge with confidence.
@@ -471,7 +471,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.5"
-            className="relative overflow-hidden bg-white/5 rounded-2xl border border-white/10"
+            className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
           >
             <img
               src="img/profile.jpeg"
@@ -500,7 +500,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Biography
@@ -519,7 +519,7 @@ function About() {
               <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                 Age
               </div>
-              <div className="col-span-3 py-1 text-sm">20</div>
+              <div className="col-span-3 py-1 text-sm">21</div>
               <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                 City
               </div>
@@ -536,7 +536,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.9"
-            className="p-6 relative bg-white/5 rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
@@ -609,7 +609,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.9"
-            className="p-6 bg-white/5 rounded-2xl border border-white/10"
+            className="p-6 rounded-2xl border border-white/10 bg-[#111]"
           >
             <div className="font-mono font-semibold pb-2 text-lg">
               TOOL STACK

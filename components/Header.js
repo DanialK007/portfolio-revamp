@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 
 function Header() {
-  const [ menuOpen, setMenu ] = useState(false);
-  const [ isScrolled, setScrolled] = useState(false);
-  
-  const toggleMenu = function(){
+  const [menuOpen, setMenu] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
+
+  const toggleMenu = function () {
     setMenu(!menuOpen);
   };
 
@@ -19,15 +19,19 @@ function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return (
-      window.addEventListener("scroll", handleScroll)
-    )
+    return window.addEventListener("scroll", handleScroll);
   });
 
   return (
     <nav>
       {/*  Navigation Bar */}
-      <div className="flex justify-between p-3 fixed w-screen top-0 bg-gradient-to-b from-black/90 to-60% to-transparent z-40 md:px-12">
+      <div
+        className={`flex justify-between p-3 fixed w-screen top-0 z-40 md:px-12 ${
+          isScrolled
+            ? "bg-gradient-to-b from-black/90 to-60% to-transparent"
+            : ""
+        }`}
+      >
         <a href="" className="pt-1">
           <img src="img/Kcube.svg" alt="" className="h-14" />
         </a>
@@ -45,35 +49,41 @@ function Header() {
             src="img/cube.svg"
             id="menuIcon2"
             alt=""
-            className={`h-12 w-12 p-3 animate-spin brightness-0 invert saturate-0 ${menuOpen ? "" : "hidden"}`}
+            className={`h-12 w-12 p-3 animate-spin brightness-0 invert saturate-0 ${
+              menuOpen ? "" : "hidden"
+            }`}
           />
         </button>
       </div>
-      <div className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-40 ${menuOpen ? "z-10 translate-x-0 bg-white/5 backdrop-blur-lg" : "-z-10 text-transparent translate-x-10 bg-white/0 backdrop-blur-none"}`}>
+      <div
+        className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-40 ${
+          menuOpen
+            ? "z-10 translate-x-0 bg-white/5 backdrop-blur-lg"
+            : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-none"
+        }`}
+      >
         <ul className="p-4 flex flex-col gap-3">
-          <a href="#work"className="hover:text-red-500">
+          <a href="#work" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">01</div>
-            <div className="font-semibold">
-              Work
-            </div>
+            <div className="font-semibold">Work</div>
           </a>
-          <a href="#playground"className="hover:text-red-500">
+          <a href="#playground" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">02</div>
-            <div className="font-semibold">
-              Playground
-            </div>
+            <div className="font-semibold">Playground</div>
           </a>
-          <a href="#about"className="hover:text-red-500">
+          <a href="#about" className="hover:text-red-500">
             <div className="opacity-50 font-bold font-mono">03</div>
-            <div className="font-semibold">
-              About Me
-            </div>
+            <div className="font-semibold">About Me</div>
           </a>
         </ul>
       </div>
       {/* large screen */}
       <div
-        className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${isScrolled ? "opacity-0 -z-10 -translate-y-40" : "opacity-100 z-40 translate-y-0"}`}
+        className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
+          isScrolled
+            ? "opacity-0 -z-10 -translate-y-40"
+            : "opacity-100 z-40 translate-y-0"
+        }`}
       >
         <a href="#work" className="px-3 hover:text-red-500">
           <div className="font-mono">01</div>
@@ -89,7 +99,11 @@ function Header() {
         </a>
       </div>
       <div
-        className={`hidden md:grid fixed top-3 right-10 z-40 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${isScrolled ? "opacity-100 z-40 translate-x-0" : "opacity-0 -z-10 translate-x-40"}`}
+        className={`hidden md:grid fixed top-3 right-10 z-40 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
+          isScrolled
+            ? "opacity-100 z-40 translate-x-0"
+            : "opacity-0 -z-10 translate-x-40"
+        }`}
       >
         <a href="#work" className="px-3 hover:text-red-500">
           <div className="font-mono">01</div>
@@ -115,30 +129,32 @@ function Header() {
 
       {/*  Bottom navbar : initially hidden */}
       <div
-        className={`fixed z-40 bottom-0 left-0 w-full text-white py-4 px-6 duration-700 ${isScrolled ? "translate-y-0" : "translate-y-20"}`}
+        className={`fixed z-40 bottom-0 left-0 w-full text-white py-4 px-6 duration-700 ${
+          isScrolled ? "translate-y-0" : "translate-y-20"
+        }`}
       >
         <div className="mx-auto flex justify-center gap-2">
           <a
-            href="#"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:shadow-sm hover:shadow-blue-500 hover:border-blue-500 duration-300 bg-white/10"
+            href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
           <a
-            href="#"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:shadow-sm hover:shadow-green-500 hover:border-green-500 duration-300 bg-white/10"
-          >
-            <img src="img/envelope-regular.svg" alt="" className="w-3" />
-          </a>
-          <a
-            href="#"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:shadow-sm hover:shadow-purple-500 hover:border-purple-500 duration-300 bg-white/10"
+            href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/linkedin.svg" alt="" className="w-3" />
           </a>
           <a
+            href="mailto:kaungkhantkyawdk@gmail.com"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+          >
+            <img src="img/envelope-regular.svg" alt="" className="w-3" />
+          </a>
+          <a
             href="https://t.me/DanialK007"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:shadow-sm hover:shadow-blue-500 hover:border-blue-500 duration-300 bg-white/10"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
           >
             <img src="img/telegram.png" alt="" className="w-3" />
           </a>
