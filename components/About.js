@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 import FadeIn from "./framer-motion/FadeIn";
 
 function About() {
@@ -86,7 +87,7 @@ function About() {
           className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
         >
           <img
-            src="img/profile.jpeg"
+            src="img/image.png"
             alt=""
             className="w-full object-cover brightness-50 saturate-0"
           />
@@ -508,7 +509,7 @@ function About() {
             className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
           >
             <img
-              src="img/profile.jpeg"
+              src="img/image.png"
               alt=""
               className="w-full object-cover brightness-50 saturate-0"
             />
@@ -562,9 +563,10 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10"
+            className="rounded-2xl brightness-75 duration-300 border border-white/10"
           >
-            <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" />
+            {/* <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" /> */}
+            <Carousel />
           </FadeIn>
         </div>
         <div className="col-span-1 flex flex-col gap-5">
