@@ -72,7 +72,6 @@ function Hero2() {
         </div>
         <a aria-label="This is a link." 
           href="#scroll"
-          id="scroll"
           className="flex ms-5 md:ms-8 lg:ms-10 xl:ms-12 flex-col absolute bottom-0 left-0 items-center w-24 p-4 mt-10 animate-pulse"
         >
           <div className="font-mono">SCROLL</div>
@@ -80,6 +79,7 @@ function Hero2() {
             <ArrowDown />
           </div>
         </a>
+        <div id="scroll" className="absolute bottom-10"></div>
 
         <Particles
         className="fixed pointer-events-none top-0 left-0 w-full h-full"

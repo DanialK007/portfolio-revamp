@@ -37,37 +37,46 @@ function About() {
           </div>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2">
-              <a aria-label="This is a link." 
+              <a
+                aria-label="This is a link."
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
-              <a aria-label="This is a link." 
+              <a
+                aria-label="This is a link."
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
-              <a aria-label="This is a link." 
+              <a
+                aria-label="This is a link."
                 href="mailto:kaungkhantkyawdk@gmail.com"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/envelope-regular.svg" alt="" className="w-3" />
               </a>
-              <a aria-label="This is a link." 
+              <a
+                aria-label="This is a link."
                 href="https://t.me/DanialK007"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
               >
                 <img src="img/telegram.png" alt="" className="w-3" />
               </a>
             </div>
-            <a aria-label="This is a link." 
+            <a
+              aria-label="Download my resume as PDF"
               href="kkk-resume.pdf"
               download
-              className="text-xs font-semibold px-3 py-1 flex items-center gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20"
+              className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
             >
-              <img src="img/download-icon.svg" alt="" className="h-4" />
+              <img
+                src="img/download-icon.svg"
+                alt="Download icon"
+                className="h-4"
+              />
               Resume
             </a>
           </div>
@@ -364,37 +373,62 @@ function About() {
             </div>
             <div className="mx-auto flex justify-between py-4 pe-2">
               <div className="flex gap-2">
-                <a aria-label="This is a link." 
+                <a
+                  aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
-                  <img src="img/facebookIcon.svg" alt="" className="w-3" />
+                  <img
+                    src="img/facebookIcon.svg"
+                    alt="Facebook icon"
+                    className="w-3"
+                  />
                 </a>
-                <a aria-label="This is a link." 
+                <a
+                  aria-label="Send me an email"
                   href="mailto:kaungkhantkyawdk@gmail.com"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
-                  <img src="img/envelope-regular.svg" alt="" className="w-3" />
+                  <img
+                    src="img/envelope-regular.svg"
+                    alt="Email icon"
+                    className="w-3"
+                  />
                 </a>
-                <a aria-label="This is a link." 
+                <a
+                  aria-label="Visit my LinkedIn profile"
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
-                  <img src="img/linkedin.svg" alt="" className="w-3" />
+                  <img
+                    src="img/linkedin.svg"
+                    alt="LinkedIn icon"
+                    className="w-3"
+                  />
                 </a>
-                <a aria-label="This is a link." 
+                <a
+                  aria-label="Send me a message on Telegram"
                   href="https://t.me/DanialK007"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
                 >
-                  <img src="img/telegram.png" alt="" className="w-3" />
+                  <img
+                    src="img/telegram.png"
+                    alt="Telegram icon"
+                    className="w-3"
+                  />
                 </a>
               </div>
-              <a aria-label="This is a link." 
+              <a
+                aria-label="Download my resume as PDF"
                 href="kkk-resume.pdf"
                 download
                 className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
               >
-                <img src="img/download-icon.svg" alt="" className="h-4" />
+                <img
+                  src="img/download-icon.svg"
+                  alt="Download icon"
+                  className="h-4"
+                />
                 Resume
               </a>
             </div>
