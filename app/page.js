@@ -10,7 +10,7 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <main className="bg-black -mt-1">
+    <main className="bg-black">
       <Header />
       <Hero2 />
       <Intro />

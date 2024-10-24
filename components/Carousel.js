@@ -39,7 +39,7 @@ const Carousel = () => {
       setCurrentIndex(newIndex);
       setFadeOut(false); // Reset fade out after changing index
       setFadeIn(true); // Trigger fade in
-    }, 300); // Wait for fade out to finish
+    }, 240); // Wait for fade out to finish
   };
 
   const nextSlide = () => {
@@ -51,7 +51,7 @@ const Carousel = () => {
       setCurrentIndex(newIndex);
       setFadeOut(false); // Reset fade out after changing index
       setFadeIn(true); // Trigger fade in
-    }, 300); // Wait for fade out to finish
+    }, 240); // Wait for fade out to finish
   };
 
   return (

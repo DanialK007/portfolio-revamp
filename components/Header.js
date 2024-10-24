@@ -160,7 +160,7 @@ function Header() {
       <a
         aria-label="This is a link."
         href="tel:+959255599863"
-        className="fixed -right-3 bottom-32 p-3 -rotate-90 z-20 bg-black/95"
+        className="fixed hidden -right-3 bottom-32 p-3 -rotate-90 z-20 bg-black/95"
       >
         Contact
       </a>
@@ -175,28 +175,39 @@ function Header() {
           <a
             aria-label="This is a link."
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="This is a link."
+            href="mailto:kaungkhantkyawdk@gmail.com"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="text-lg"
+              height="14px"
+              width="14px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
+            </svg>
+          </a>
+          <a
+            aria-label="This is a link."
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
           >
             <img src="img/linkedin.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="This is a link."
-            href="mailto:kaungkhantkyawdk@gmail.com"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
-          >
-            <img src="img/envelope-regular.svg" alt="" className="w-3" />
-          </a>
-          <a
-            aria-label="This is a link."
             href="https://t.me/DanialK007"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img src="img/telegram.png" alt="" className="w-3" />
           </a>

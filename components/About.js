@@ -1,12 +1,14 @@
 import Carousel from "./Carousel";
 import FadeIn from "./framer-motion/FadeIn";
+import { RainbowButton } from "./ui/rainbow-button";
+import HyperText from "./ui/hyper-text";
 
 function About() {
   return (
     <div className="my-5 xl:mt-20 relative">
       <div id="about" className="absolute -top-16"></div>
       <div className="py-8">
-        <div className="flex justify-center cap1 myFont text-6xl md:text-8xl xl:text-10xl">
+        <div className="flex justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl">
           <span className="font-thin" id="aboutM">
             ABOUT
           </span>
@@ -20,9 +22,9 @@ function About() {
           </span>
         </div>
         <div className="flex justify-between text-sm font-mono px-5">
-          <div className="">BASED IN MANDALAY</div>
-          <div className="">DETAIL-ORIENTED</div>
-          <div className="">CURIOUS</div>
+          <HyperText text="BASED IN MANDALAY" />
+          <HyperText text="DETAIL-ORIENTED" />
+          <HyperText text="CURIOUS" />
         </div>
       </div>
       {/*  small device */}
@@ -37,41 +39,53 @@ function About() {
             stunning designs.
           </div>
           <div className="mx-auto flex justify-between py-4 pe-2">
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <a
                 aria-label="This is a link."
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
                 <img src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
               <a
                 aria-label="This is a link."
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
               >
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
               <a
                 aria-label="This is a link."
                 href="mailto:kaungkhantkyawdk@gmail.com"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
               >
-                <img src="img/envelope-regular.svg" alt="" className="w-3" />
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  class="text-lg"
+                  height="14px"
+                  width="14px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
+                </svg>
               </a>
               <a
                 aria-label="This is a link."
                 href="https://t.me/DanialK007"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/20"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
                 <img src="img/telegram.png" alt="" className="w-3" />
               </a>
             </div>
-            <a
+            <RainbowButton
               aria-label="Download my resume as PDF"
               href="kkk-resume.pdf"
               download
-              className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+              className="text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 bg-white/10 rounded-full duration-1000"
+              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
             >
               <img
                 src="img/download-icon.svg"
@@ -79,7 +93,7 @@ function About() {
                 className="h-4"
               />
               Resume
-            </a>
+            </RainbowButton>
           </div>
         </FadeIn>
         <FadeIn
@@ -118,16 +132,6 @@ function About() {
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
           </div>
-          {/*  <div className="text-sm">
-                            <div className="font-semibold text-white/60 font-mono">2020 - 2021</div>
-                            <div className="font-semibold text-gray-50">After High School</div>
-                            <ul className="text-white/60 text-xs">
-                                <li className="">March 2020: Started programming journey just after high school</li>
-                                <li className="">Explored Edx courses via Wikipedia</li>
-                                <li className="">Delved into programming concepts, MIT scratch games, C language</li>
-                                <li className="">Mastered C++, gained insights</li>
-                            </ul>
-                        </div> */}
           <div className="grid grid-cols-5">
             <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
               Name
@@ -156,16 +160,6 @@ function About() {
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
           </div>
-          {/*  <div className="text-sm">
-                            <div className="font-semibold text-white/60 font-mono">2020 - 2021</div>
-                            <div className="font-semibold text-gray-50">After High School</div>
-                            <ul className="text-white/60 text-xs">
-                                <li className="">March 2020: Started programming journey just after high school</li>
-                                <li className="">Explored Edx courses via Wikipedia</li>
-                                <li className="">Delved into programming concepts, MIT scratch games, C language</li>
-                                <li className="">Mastered C++, gained insights</li>
-                            </ul>
-                        </div> */}
           <div className="grid grid-cols-5">
             <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
               2020-2021
@@ -358,7 +352,6 @@ function About() {
             />
           </div>
         </FadeIn>
-        {/*  </div> */}
       </div>
       {/*  md device */}
       <div className="grid-cols-3 gap-5 p-5 hidden md:grid">
@@ -373,11 +366,11 @@ function About() {
               visually stunning designs.
             </div>
             <div className="mx-auto flex justify-between py-4 pe-2">
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <a
                   aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/facebookIcon.svg"
@@ -388,18 +381,25 @@ function About() {
                 <a
                   aria-label="Send me an email"
                   href="mailto:kaungkhantkyawdk@gmail.com"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
-                  <img
-                    src="img/envelope-regular.svg"
-                    alt="Email icon"
-                    className="w-3"
-                  />
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="text-lg"
+                    height="14px"
+                    width="14px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
+                  </svg>
                 </a>
                 <a
                   aria-label="Visit my LinkedIn profile"
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/linkedin.svg"
@@ -410,7 +410,7 @@ function About() {
                 <a
                   aria-label="Send me a message on Telegram"
                   href="https://t.me/DanialK007"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/telegram.png"
@@ -419,19 +419,27 @@ function About() {
                   />
                 </a>
               </div>
-              <a
+              <RainbowButton
                 aria-label="Download my resume as PDF"
                 href="kkk-resume.pdf"
                 download
-                className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                className="group overflow-hidden text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-1000"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
               >
-                <img
-                  src="img/download-icon.svg"
-                  alt="Download icon"
-                  className="h-4"
-                />
+                <div className="relative">
+                  <img
+                    src="img/download-icon.svg"
+                    alt="Download icon"
+                    className="h-4 group-hover:translate-y-8 duration-300"
+                  />
+                  <img
+                    src="img/download-icon.svg"
+                    alt="Download icon"
+                    className="h-4 absolute bottom-8 group-hover:translate-y-8 duration-300"
+                  />
+                </div>
                 Resume
-              </a>
+              </RainbowButton>
             </div>
           </FadeIn>
           <FadeIn
@@ -441,10 +449,10 @@ function About() {
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
             </div>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-neutral-400 myFont">
               <div className="py-2">
                 Hey there! I'm Kaung Khant Kyaw, a passionate individual from
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Mandalay
                 </span>
                 on a journey through the fascinating world of programming and
@@ -455,19 +463,19 @@ function About() {
                 mom's help, who bought me a 2.5 lakh laptop. I started with Edx
                 courses from Wikipedia, diving into programming concepts and MIT
                 scratch game projects.
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   I learned C and eventually mastered C++
                 </span>
                 , gaining valuable insights along the way.
               </div>
               <div className="py-2">
                 In 2021, my commitment to learning
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   earned me a scholarship
                 </span>
                 for an online Python Basics Course, further fueling my passion
                 for programming. Subsequently, I received
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   another scholarship for a Python Intermediate Course
                 </span>
                 , expanding my skills and determination to excel in programming.
@@ -476,26 +484,26 @@ function About() {
                 In 2022, I delved into web development, sparking a passion for
                 creating engaging websites. By 2023, at MIBA University, I honed
                 my CSS skills and mastered frameworks like
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Tailwind
                 </span>
                 and
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   Bootstrap
                 </span>
                 . Completing
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   PHP
                 </span>
                 projects with
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   MySQL
                 </span>
                 integration, I showcased my ability to build dynamic web apps.
                 Utilizing free hosting, I independently developed and deployed
                 numerous websites, showcasing proficiency across the entire web
                 development process. Now,
-                <span className="underline text-gray-50 hover:cursor-pointer hover:text-red-500 px-1">
+                <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
                   I'm ready
                 </span>
                 to tackle any challenge with confidence.
@@ -565,7 +573,6 @@ function About() {
             duration="1.5"
             className="rounded-2xl brightness-75 duration-300 border border-white/10"
           >
-            {/* <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" /> */}
             <Carousel />
           </FadeIn>
         </div>
@@ -577,16 +584,6 @@ function About() {
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
             </div>
-            {/*  <div className="text-sm">
-                            <div className="font-semibold text-white/60 font-mono">2020 - 2021</div>
-                            <div className="font-semibold text-gray-50">After High School</div>
-                            <ul className="text-white/60 text-xs">
-                                <li className="">March 2020: Started programming journey just after high school</li>
-                                <li className="">Explored Edx courses via Wikipedia</li>
-                                <li className="">Delved into programming concepts, MIT scratch games, C language</li>
-                                <li className="">Mastered C++, gained insights</li>
-                            </ul>
-                        </div> */}
             <div className="grid grid-cols-5">
               <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
                 2020-2021
@@ -655,79 +652,79 @@ function About() {
                 src="img/htmlLogo.png"
                 alt=""
                 title="HTML"
-                className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/cssLogo.png"
                 alt=""
                 title="CSS"
-                className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-950 px-2 py-[0.35rem] border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-950 px-2 py-[0.35rem] border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/jsLogo.png"
                 alt=""
                 title="Javascript"
-                className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-yellow-950 border p-2 border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-yellow-950 border p-2 border-neutral-700 rounded-xl"
               />
               <img
                 src="img/react-logo.png"
                 alt=""
                 title="React.js"
-                className="grid-cols-1 hover:shadow-sm hover:border-cyan-500 hover:shadow-cyan-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 py-2 px-[0.4rem] border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-cyan-500 hover:shadow-cyan-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 py-2 px-[0.4rem] border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/nextjs.svg"
                 alt=""
                 title="Next.js"
-                className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-gray-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-gray-400 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-neutral-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-neutral-400 rounded-xl"
               />
               <img
                 src="img/tailwind-logo.png"
                 alt=""
                 title="Tailwind CSS"
-                className="grid-cols-1 hover:shadow-sm hover:border-teal-500 hover:shadow-teal-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 px-1 py-[0.6rem] border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-teal-500 hover:shadow-teal-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 px-1 py-[0.6rem] border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/bootstrap-logo.png"
                 alt=""
                 title="Bootstrap"
-                className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-1 px-[0.2rem] border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-1 px-[0.2rem] border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/node.png"
                 alt=""
                 title="Node.js"
-                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/express.png"
                 alt=""
                 title="Express.js"
-                className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-gray-500 hover:shadow-gray-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-300 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-neutral-500 hover:shadow-neutral-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-300 rounded-xl"
               />
               <img
                 src="img/mongo.png"
                 alt=""
                 title="MongoDB"
-                className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/framer-motion.svg"
                 alt=""
                 title="Framer Motion"
-                className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/gsap.svg"
                 alt=""
                 title="GSAP Motion"
-                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/lenis.png"
                 alt=""
                 title="Lenis Scroll"
-                className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
+                className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
               <img
                 src="img/phpIcon].png"

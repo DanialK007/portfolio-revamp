@@ -1,4 +1,5 @@
 import FadeIn from "./framer-motion/FadeIn";
+import HyperText from "./ui/hyper-text";
 
 function Work() {
   return (
@@ -19,8 +20,8 @@ function Work() {
           </span>
         </div>
         <div className="flex justify-between text-sm font-mono px-5">
-          <div className="">CASE STUDIES</div>
-          <div className="">DESIGN PROCESS</div>
+        <HyperText text="CASE STUDIES"/>
+        <HyperText text="DESIGN PROCESS"/>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-5 gap-3">

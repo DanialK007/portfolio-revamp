@@ -1,6 +1,7 @@
 "use client";
 import { ArrowDown } from "lucide-react";
 import React, { useEffect, useRef } from "react";
+import HyperText from "./ui/hyper-text";
 
 function Footer() {
   const videoRef = useRef(null);
@@ -32,19 +33,24 @@ function Footer() {
           <div className="text-sm">
             <img src="img/Kcube.svg" alt="" className="h-16 my-8" />
             <div className="font-semibold">© 2024 · Danial Kcube</div>
-            <div className="font-mono">All Right Reserved</div>
+            <HyperText className="font-mono" text="All Right Reserved" />
           </div>
           <div className="text-sm">
             <div className="h-16 w-full my-8 flex items-center justify-end px-2">
-              <a aria-label="This is a link." 
+              <a
+                aria-label="This is a link."
                 href="#top"
                 className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/40 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
               >
-                <img src="img/upArrow.svg" alt="" className="brightness-0 invert" />
+                <img
+                  src="img/upArrow.svg"
+                  alt=""
+                  className="brightness-0 invert"
+                />
               </a>
             </div>
             <div className="font-semibold">Created with ❤️ in Myanmar</div>
-            <div className="font-mono">Made in Mandalay</div>
+            <HyperText className="font-mono" text="Made in Mandalay" />
           </div>
         </div>
         <div className="flex justify-center myFont cap1 text-6xl md:text-8xl xl:text-10xl italic font-semibold animate-foot pb-5">
@@ -62,19 +68,20 @@ function Footer() {
           <div className="text-sm">
             <img src="img/Kcube.svg" alt="" className="h-16 my-2 mx-auto" />
             <div className="font-semibold">© 2024 · Danial Kcube</div>
-            <div className="font-mono">All Right Reserved</div>
+            <HyperText className="font-mono" text="All Right Reserved" />
           </div>
-          <div className="text-sm w-full pt-8">
+          <div className="text-sm w-full pt-8 flex flex-col items-center">
             <div className="font-semibold">Created with ❤️ in Myanmar</div>
-            <div className="font-mono">Made in Mandalay</div>
-            <div className="w-full flex items-center justify-end px-5">
-              <a aria-label="This is a link." 
-                href="#top"
-                className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
-              >
-                <img src="img/upArrow.svg" alt="" className="brightness-50" />
-              </a>
-            </div>
+            <HyperText className="font-mono" text="Made in Mandalay" />
+          </div>
+          <div className="w-full flex items-center justify-end px-5">
+            <a
+              aria-label="This is a link."
+              href="#top"
+              className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
+            >
+              <img src="img/upArrow.svg" alt="" className="brightness-0 invert" />
+            </a>
           </div>
         </div>
       </div>
