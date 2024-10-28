@@ -61,15 +61,15 @@ const Carousel = () => {
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
-          className={`w-full h-full object-cover duration-500 ease-in-out ${
-            fadeOut ? "opacity-0 scale-110" : "opacity-100"
+          className={`w-full h-full object-cover duration-500 ${
+            fadeOut ? "opacity-0 scale-110 blur-sm" : "opacity-100 blur-none"
           }`}
         />
         <img
           src={images[nextIndex]}
           alt={`Slide ${nextIndex}`}
-          className={`absolute w-full h-full object-cover duration-500 ease-in-out ${
-            fadeIn ? "opacity-100" : "opacity-0 scale-110"
+          className={`absolute w-full h-full object-cover duration-500 ${
+            fadeIn ? "opacity-100 blur-none" : "opacity-0 scale-110 blur-sm"
           }`}
         />
       </div>

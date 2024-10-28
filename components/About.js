@@ -2,13 +2,38 @@ import Carousel from "./Carousel";
 import FadeIn from "./framer-motion/FadeIn";
 import { RainbowButton } from "./ui/rainbow-button";
 import HyperText from "./ui/hyper-text";
+import { TextBlur } from "./ui/text-blur";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { BlurAnimation } from "./ui/BlurAnimation";
+
+const words = [
+  { text: "Frontend" },
+  { text: "Developer" },
+  { text: "with" },
+  { text: "2" },
+  { text: "years" },
+  { text: "of" },
+  { text: "experience," },
+  { text: "focused" },
+  { text: "on" },
+  { text: "creating" },
+  { text: "functional" },
+  { text: "and" },
+  { text: "user-centered" },
+  { text: "digital" },
+  { text: "products" },
+  { text: "with" },
+  { text: "visually" },
+  { text: "stunning" },
+  { text: "designs." },
+];
 
 function About() {
   return (
     <div className="my-5 xl:mt-20 relative">
       <div id="about" className="absolute -top-16"></div>
       <div className="py-8">
-        <div className="flex justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl">
+        <BlurAnimation duration={1.2} className="flex items-center justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl">
           <span className="font-thin" id="aboutM">
             ABOUT
           </span>
@@ -20,12 +45,12 @@ function About() {
           <span className="italic font-bold pe-2" id="Ame">
             ME
           </span>
-        </div>
-        <div className="flex justify-between text-sm font-mono px-5">
+        </BlurAnimation>
+        <BlurAnimation className="flex justify-between text-sm font-mono px-5">
           <HyperText text="BASED IN MANDALAY" />
           <HyperText text="DETAIL-ORIENTED" />
           <HyperText text="CURIOUS" />
-        </div>
+        </BlurAnimation>
       </div>
       {/*  small device */}
       <div className="grid grid-cols-1 gap-5 p-5 md:hidden">
@@ -33,11 +58,12 @@ function About() {
           duration="1.2"
           className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
         >
-          <div className="">
-            Frontend Developer with <br />2 years of experience, focused on
+          <TextBlur
+            words={`Frontend Developer with 2 years of experience, focused on
             creating functional and user-centered digital products with visually
-            stunning designs.
-          </div>
+            stunning designs.`}
+            className=""
+          ></TextBlur>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2 items-center">
               <a
@@ -106,7 +132,7 @@ function About() {
             className="w-full object-cover brightness-50 saturate-0"
           />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end text-sm">
-            <div className="p-3 space-y-1">
+            <BlurAnimation className="p-3 -space-y-[0.4rem]">
               <div className="bg-white/15 px-2 inline-block rounded-s-full rounded-e-full">
                 Hola! 👋
               </div>
@@ -122,7 +148,7 @@ function About() {
               <div className="bg-white/15 px-2 inline-block rounded-s-full rounded-e-full">
                 Grab my email and get in touch 🤞
               </div>
-            </div>
+            </BlurAnimation>
           </div>
         </FadeIn>
         <FadeIn
@@ -132,26 +158,32 @@ function About() {
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
           </div>
-          <div className="grid grid-cols-5">
-            <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-              Name
+          <BlurAnimation duration={1} delay={0.3}>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                Name
+              </div>
+              <div className="col-span-3 py-1 text-sm">Kaung Khant Kyaw</div>
             </div>
-            <div className="col-span-3 py-1 text-sm">Kaung Khant Kyaw</div>
-            <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-              Nickname
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                Nickname
+              </div>
+              <div className="col-span-3 py-1 text-sm">
+                Danial, K<sup>3</sup>
+              </div>
             </div>
-            <div className="col-span-3 py-1 text-sm">
-              Danial, K<sup>3</sup>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                Age
+              </div>
+              <div className="col-span-3 py-1 text-sm">21</div>
+              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                City
+              </div>
+              <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
             </div>
-            <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-              Age
-            </div>
-            <div className="col-span-3 py-1 text-sm">21</div>
-            <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-              City
-            </div>
-            <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
-          </div>
+          </BlurAnimation>
         </FadeIn>
         <FadeIn
           duration="1.2"
@@ -160,57 +192,73 @@ function About() {
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
           </div>
-          <div className="grid grid-cols-5">
-            <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-              2020-2021
-            </div>
-            <div className="col-span-3 py-2 text-sm">
-              <div className="font-semibold">Started programming journey</div>
-              <div className="text-white/60">- Learned C, C++, MIT scratch</div>
-            </div>
-            <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-              2021-2022
-            </div>
-            <div className="col-span-3 py-2 text-sm">
-              <div className="font-semibold">
-                Got scholarship twice from Coding-Night School
+          <BlurAnimation>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                2020-2021
               </div>
-              <div className="text-white/60">
-                - Learned Python : basic to intermediate
+              <div className="col-span-3 py-2 text-sm">
+                <div className="font-semibold pb-1">
+                  Started programming journey
+                </div>
+                <div className="text-white/60">
+                  - Learned C, C++, MIT scratch
+                </div>
               </div>
             </div>
-            <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-              2022-2023
-            </div>
-            <div className="col-span-3 py-2 text-sm">
-              <div className="font-semibold">Entered Web Development Field</div>
-              <div className="text-white/60">- Learned HTML, CSS</div>
-            </div>
-            <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-              2023-2024
-            </div>
-            <div className="col-span-3 py-2 text-sm">
-              <div className="font-semibold">Joined MIBA university</div>
-              <div className="text-white/60">
-                - Learned Frontend Development
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                2021-2022
+              </div>
+              <div className="col-span-3 py-2 text-sm">
+                <div className="font-semibold pb-1">
+                  Got scholarship twice from Coding-Night School
+                </div>
+                <div className="text-white/60">
+                  - Learned Python : basic to intermediate
+                </div>
               </div>
             </div>
-            <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-              2024 - Now
-            </div>
-            <div className="col-span-3 py-2 text-sm">
-              <div className="font-semibold">
-                Previously claimed scholarship at UoPeople Califonia
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                2022-2023
               </div>
-              <div className="text-white/60">
-                - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
-                MySQL, Figma
-              </div>
-              <div className="text-white/60">
-                - Learning NodeJS, React, Jquery, Laravel
+              <div className="col-span-3 py-2 text-sm">
+                <div className="font-semibold pb-1">
+                  Entered Web Development Field
+                </div>
+                <div className="text-white/60">- Learned HTML, CSS</div>
               </div>
             </div>
-          </div>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                2023-2024
+              </div>
+              <div className="col-span-3 py-2 text-sm">
+                <div className="font-semibold pb-1">Joined MIBA university</div>
+                <div className="text-white/60">
+                  - Learned Frontend Development
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-5">
+              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                2024 - Now
+              </div>
+              <div className="col-span-3 py-2 text-sm">
+                <div className="font-semibold pb-1">
+                  Previously claimed scholarship at UoPeople
+                </div>
+                <div className="text-white/60">
+                  - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
+                  MySQL, Figma
+                </div>
+                <div className="text-white/60">
+                  - Learning NodeJS, React, Jquery, Laravel
+                </div>
+              </div>
+            </div>
+          </BlurAnimation>
         </FadeIn>
         <FadeIn
           duration="1.2"
@@ -223,7 +271,7 @@ function About() {
           className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
         >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
-          <div className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
+          <BlurAnimation className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
             <img
               src="img/htmlLogo.png"
               alt=""
@@ -350,23 +398,22 @@ function About() {
               title="GitHub"
               className="grid-cols-1 hover:shadow-sm bg-slate-200 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 p-1 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-          </div>
+          </BlurAnimation>
         </FadeIn>
       </div>
       {/*  md device */}
       <div className="grid-cols-3 gap-5 p-5 hidden md:grid">
-        <div className="col-span-1 flex flex-col gap-5">
+        <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
             className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
           >
-            <div className="">
-              Frontend Developer with <br />2 years of experience, focused on
-              creating functional and user-centered digital products with
-              visually stunning designs.
-            </div>
-            <div className="mx-auto flex justify-between py-4 pe-2">
-              <div className="flex gap-2 items-center">
+            <TextGenerateEffect words={words} duration={1} />
+            <BlurAnimation
+              delay={2}
+              className="mx-auto flex justify-between py-4 pe-2"
+            >
+              <BlurAnimation wait={1} className="flex gap-2 items-center">
                 <a
                   aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
@@ -418,7 +465,7 @@ function About() {
                     className="w-3"
                   />
                 </a>
-              </div>
+              </BlurAnimation>
               <RainbowButton
                 aria-label="Download my resume as PDF"
                 href="kkk-resume.pdf"
@@ -440,7 +487,7 @@ function About() {
                 </div>
                 Resume
               </RainbowButton>
-            </div>
+            </BlurAnimation>
           </FadeIn>
           <FadeIn
             duration="1.2"
@@ -449,7 +496,7 @@ function About() {
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
             </div>
-            <div className="text-sm text-neutral-400 myFont">
+            <BlurAnimation className="text-sm text-neutral-400 myFont">
               <div className="py-2">
                 Hey there! I'm Kaung Khant Kyaw, a passionate individual from
                 <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
@@ -508,10 +555,10 @@ function About() {
                 </span>
                 to tackle any challenge with confidence.
               </div>
-            </div>
+            </BlurAnimation>
           </FadeIn>
-        </div>
-        <div className="col-span-1 flex flex-col gap-5">
+        </BlurAnimation>
+        <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.5"
             className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5"
@@ -522,7 +569,7 @@ function About() {
               className="w-full object-cover brightness-50 saturate-0"
             />
             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end text-sm">
-              <div className="p-3 space-y-1">
+              <BlurAnimation className="p-3 -space-y-[0.4rem]">
                 <div className="bg-white/15 px-2 inline-block rounded-s-full rounded-e-full">
                   Hola! 👋
                 </div>
@@ -538,7 +585,7 @@ function About() {
                 <div className="bg-white/15 px-2 inline-block rounded-s-full rounded-e-full">
                   Grab my email and get in touch 🤞
                 </div>
-              </div>
+              </BlurAnimation>
             </div>
           </FadeIn>
           <FadeIn
@@ -548,26 +595,32 @@ function About() {
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Biography
             </div>
-            <div className="grid grid-cols-5">
-              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-                Name
+            <BlurAnimation duration={1} delay={0.3}>
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                  Name
+                </div>
+                <div className="col-span-3 py-1 text-sm">Kaung Khant Kyaw</div>
               </div>
-              <div className="col-span-3 py-1 text-sm">Kaung Khant Kyaw</div>
-              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-                Nickname
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                  Nickname
+                </div>
+                <div className="col-span-3 py-1 text-sm">
+                  Danial, K<sup>3</sup>
+                </div>
               </div>
-              <div className="col-span-3 py-1 text-sm">
-                Danial, K<sup>3</sup>
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                  Age
+                </div>
+                <div className="col-span-3 py-1 text-sm">21</div>
+                <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
+                  City
+                </div>
+                <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
               </div>
-              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-                Age
-              </div>
-              <div className="col-span-3 py-1 text-sm">21</div>
-              <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
-                City
-              </div>
-              <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
-            </div>
+            </BlurAnimation>
           </FadeIn>
           <FadeIn
             duration="1.5"
@@ -575,8 +628,8 @@ function About() {
           >
             <Carousel />
           </FadeIn>
-        </div>
-        <div className="col-span-1 flex flex-col gap-5">
+        </BlurAnimation>
+        <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.9"
             className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
@@ -584,61 +637,75 @@ function About() {
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
             </div>
-            <div className="grid grid-cols-5">
-              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-                2020-2021
-              </div>
-              <div className="col-span-3 py-2 text-sm">
-                <div className="font-semibold">Started programming journey</div>
-                <div className="text-white/60">
-                  - Learned C, C++, MIT scratch
+            <BlurAnimation>
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                  2020-2021
+                </div>
+                <div className="col-span-3 py-2 text-sm">
+                  <div className="font-semibold pb-1">
+                    Started programming journey
+                  </div>
+                  <div className="text-white/60">
+                    - Learned C, C++, MIT scratch
+                  </div>
                 </div>
               </div>
-              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-                2021-2022
-              </div>
-              <div className="col-span-3 py-2 text-sm">
-                <div className="font-semibold">
-                  Got scholarship twice from Coding-Night School
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                  2021-2022
                 </div>
-                <div className="text-white/60">
-                  - Learned Python : basic to intermediate
-                </div>
-              </div>
-              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-                2022-2023
-              </div>
-              <div className="col-span-3 py-2 text-sm">
-                <div className="font-semibold">
-                  Entered Web Development Field
-                </div>
-                <div className="text-white/60">- Learned HTML, CSS</div>
-              </div>
-              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-                2023-2024
-              </div>
-              <div className="col-span-3 py-2 text-sm">
-                <div className="font-semibold">Joined MIBA university</div>
-                <div className="text-white/60">
-                  - Learned Frontend Development
+                <div className="col-span-3 py-2 text-sm">
+                  <div className="font-semibold pb-1">
+                    Got scholarship twice from Coding-Night School
+                  </div>
+                  <div className="text-white/60">
+                    - Learned Python : basic to intermediate
+                  </div>
                 </div>
               </div>
-              <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
-                2024 - Now
-              </div>
-              <div className="col-span-3 py-2 text-sm">
-                <div className="font-semibold">
-                  Previously claimed scholarship at UoPeople Califonia
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                  2022-2023
                 </div>
-                <div className="text-white/60">
-                  - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
-                  MySQL, Figma
-                </div>
-                <div className="text-white/60">
-                  - Learning NodeJS, React, Jquery, Laravel
+                <div className="col-span-3 py-2 text-sm">
+                  <div className="font-semibold pb-1">
+                    Entered Web Development Field
+                  </div>
+                  <div className="text-white/60">- Learned HTML, CSS</div>
                 </div>
               </div>
-            </div>
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                  2023-2024
+                </div>
+                <div className="col-span-3 py-2 text-sm">
+                  <div className="font-semibold pb-1">
+                    Joined MIBA university
+                  </div>
+                  <div className="text-white/60">
+                    - Learned Frontend Development
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-5">
+                <div className="col-span-2 py-2 text-sm text-white/60 font-mono">
+                  2024 - Now
+                </div>
+                <div className="col-span-3 py-2 text-sm">
+                  <div className="font-semibold pb-1">
+                    Previously claimed scholarship at UoPeople
+                  </div>
+                  <div className="text-white/60">
+                    - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind,
+                    PHP, MySQL, Figma
+                  </div>
+                  <div className="text-white/60">
+                    - Learning NodeJS, React, Jquery, Laravel
+                  </div>
+                </div>
+              </div>
+            </BlurAnimation>
           </FadeIn>
           <FadeIn
             duration="1.9"
@@ -647,7 +714,10 @@ function About() {
             <div className="font-mono font-semibold pb-2 text-lg">
               TOOL STACK
             </div>
-            <div className="grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2">
+            <BlurAnimation
+              delay={0.1}
+              className="grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2"
+            >
               <img
                 src="img/htmlLogo.png"
                 alt=""
@@ -774,9 +844,9 @@ function About() {
                 title="GitHub"
                 className="grid-cols-1 hover:shadow-sm bg-slate-200 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 p-1 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
-            </div>
+            </BlurAnimation>
           </FadeIn>
-        </div>
+        </BlurAnimation>
       </div>
     </div>
   );

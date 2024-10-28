@@ -1,4 +1,5 @@
 import FadeIn from "./framer-motion/FadeIn";
+import { BlurAnimation } from "./ui/BlurAnimation";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const words = [
@@ -20,10 +21,34 @@ const words = [
   { text: "detail.", className: "text-white" },
 ];
 
+const words2 = [
+  { text: "I've" },
+  { text: "done" },
+  { text: "multiple" },
+  { text: "frontend" },
+  { text: "projects" },
+  { text: "with" },
+  { text: "High", className: "text-white" },
+  { text: "Quality", className: "text-white" },
+  { text: "Contents", className: "text-white" },
+];
+
+const words3 = [
+  { text: "Currently," },
+  { text: "learning" },
+  { text: "at" },
+  { text: "MIBA", className: "text-white" },
+  { text: "university", className: "text-white" },
+];
+
 function Intro() {
   return (
-    <div id="intro">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+    <div id="intro" className="mt-5">
+      <BlurAnimation
+        duration={1.5}
+        delay={2}
+        className="grid grid-cols-1 lg:grid-cols-2"
+      >
         <FadeIn duration="1.2" className="col-span-1 lg:p-8">
           {/* <div className="text-4xl xl:text-5xl text-white/60 p-5 sm:pt-10 lg:pt-16">
             Junior
@@ -32,16 +57,21 @@ function Intro() {
             <span className="text-white"> 0➝1</span> digital experiences till
             the last <span className="text-white"> detail</span>.
           </div> */}
-          <TextGenerateEffect className="text-4xl xl:text-5xl text-white/60 p-5 sm:pt-10 lg:pt-16" words={words} />
+          <TextGenerateEffect
+            className="text-4xl xl:text-5xl text-white/60 p-5 sm:pt-10 lg:pt-16"
+            words={words}
+          />
           <div className="grid grid-cols-2 py-4">
-            <div className="p-5 text-white/60 text-sm">
-              I've done multiple frontend projects with
-              <span className="text-white"> High Quality Contents</span>.
-            </div>
-            <div className="p-5 text-white/60 text-sm">
-              Currently, learning at
-              <span className="text-white"> MIBA university</span>.
-            </div>
+            <TextGenerateEffect
+              wait={1}
+              words={words2}
+              className="p-5 text-white/60 text-sm"
+            ></TextGenerateEffect>
+            <TextGenerateEffect
+              wait={1}
+              words={words3}
+              className="p-5 text-white/60 text-sm"
+            ></TextGenerateEffect>
           </div>
         </FadeIn>
         <div className="col-span-1 lg:flex items-center justify-center p-5 lg:p-10">
@@ -102,7 +132,7 @@ function Intro() {
             </div>
           </div>
         </div>
-      </div>
+      </BlurAnimation>
     </div>
   );
 }

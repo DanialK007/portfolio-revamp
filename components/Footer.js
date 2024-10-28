@@ -3,6 +3,7 @@ import { ArrowDown } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import HyperText from "./ui/hyper-text";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import { BlurAnimation } from "./ui/BlurAnimation";
 
 function Footer() {
   const videoRef = useRef(null);
@@ -17,12 +18,12 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="relative mt-16">
+    <BlurAnimation className="relative mt-16">
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <BackgroundGradientAnimation containerClassName="w-full h-full" />
       </div>
       <div className="pb-16 hidden lg:block relative z-10 bg-gradient-to-b from-black from-40%">
-        <div className="flex items-center justify-between pb-8 px-5 lg:px-16">
+        <BlurAnimation duration={1} className="flex items-center justify-between pb-8 px-5 lg:px-16">
           <div className="text-sm">
             <img src="img/Kcube.svg" alt="" className="h-16 my-8" />
             <div className="font-semibold">© 2024 · Danial Kcube</div>
@@ -45,8 +46,8 @@ function Footer() {
             <div className="font-semibold">Created with ❤️ in Myanmar</div>
             <HyperText className="font-mono" text="Made in Mandalay" />
           </div>
-        </div>
-        <div className="flex justify-center myFont cap1 text-6xl md:text-8xl xl:text-10xl italic font-semibold animate-foot pb-5">
+        </BlurAnimation>
+        <BlurAnimation duration={1.2} className="flex items-center justify-center myFont cap1 text-6xl md:text-8xl xl:text-10xl italic font-semibold animate-foot pb-5">
           <span className="pe-2">THANK</span>
           <img
             src="img/cube.svg"
@@ -54,7 +55,7 @@ function Footer() {
             alt=""
           />
           <span className="pe-2">YOU</span>
-        </div>
+        </BlurAnimation>
       </div>
       <div className="pb-5 lg:hidden relative z-10">
         <div className="py-8 flex flex-col items-center justify-center text-center">
@@ -78,7 +79,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </BlurAnimation>
   );
 }
 
