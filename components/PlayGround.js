@@ -118,13 +118,13 @@ function PlayGround() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group bg-white/5 rounded-3xl overflow-hidden border border-white/10 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-50 hover:brightness-100 duration-500"
+            className="group bg-white/5 rounded-3xl overflow-hidden border border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-50 hover:brightness-100 duration-500"
           >
             <FadeIn
               duration="1.9"
               className={`${project.bgColor} brightness-75 relative aspect-[6/4] rounded-2xl flex items-center justify-center`}
             >
-              <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-300 bg-gradient-to-br p-10 ${project.gradient}`}>
+              <div className={`absolute hidden top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 duration-500 bg-gradient-to-br p-10 ${project.gradient}`}>
                 <video
                   src={project.videoSrc}
                   className="rounded-[10px] mb-4"

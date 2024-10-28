@@ -25,7 +25,7 @@ function Work() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row p-5 gap-3">
-        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-black from-30% to-[#020f60c7] flex justify-between">
             <div className="">Next.js</div>
             <div className="font-mono">2024</div>
@@ -49,7 +49,7 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.5" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.3" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-blue-950/20 to-[#1b2751] flex justify-between">
             <div className="">Tailwind</div>
             <div className="font-mono">2023</div>
@@ -73,7 +73,7 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.9" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/10 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn duration="1.4" className="p-2 hover:scale-95 lg:hover:scale-100 duration-500 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 lg:brightness-[0.6] hover:brightness-100">
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-neutral-900 flex justify-between">
             <div className="">React</div>
             <div className="font-mono">2024</div>

@@ -26,7 +26,7 @@ function Header() {
     <nav>
       {/*  Navigation Bar */}
       <div
-        className={`flex justify-between p-3 fixed w-screen top-0 z-40 md:px-12 ${
+        className={`flex justify-between p-3 fixed w-screen top-0 z-50 md:px-12 ${
           isScrolled
             ? "bg-gradient-to-b from-black/90 to-60% to-transparent"
             : ""
@@ -36,7 +36,7 @@ function Header() {
           <img src="img/Kcube.svg" alt="" className="h-14" />
         </a>
         <button
-          className="my-2 h-12 me-1 flex items-center md:hidden backdrop-blur rounded-xl border border-white/10 bg-white/5"
+          className="my-2 h-12 me-1 flex items-center md:hidden backdrop-blur rounded-xl border border-white/5 bg-white/5"
           onClick={toggleMenu}
         >
           <img
@@ -56,7 +56,7 @@ function Header() {
         </button>
       </div>
       <div
-        className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-40 ${
+        className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-50 ${
           menuOpen
             ? "z-10 translate-x-0 bg-white/5 backdrop-blur-lg"
             : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-none"
@@ -95,7 +95,7 @@ function Header() {
         className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
           isScrolled
             ? "opacity-0 -z-10 -translate-y-40"
-            : "opacity-100 z-40 translate-y-0"
+            : "opacity-100 z-50 translate-y-0"
         }`}
       >
         <a
@@ -124,7 +124,7 @@ function Header() {
         </a>
       </div>
       <div
-        className={`hidden md:grid fixed top-3 right-10 z-40 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
+        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
           isScrolled
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-40 pointer-events-none"
@@ -167,7 +167,7 @@ function Header() {
 
       {/*  Bottom navbar : initially hidden */}
       <div
-        className={`fixed z-40 bottom-0 left-0 w-full text-white py-4 px-6 duration-700 ${
+        className={`fixed z-50 bottom-0 left-0 w-full text-white py-4 px-6 duration-700 ${
           isScrolled ? "translate-y-0" : "translate-y-20"
         }`}
       >
@@ -175,14 +175,14 @@ function Header() {
           <a
             aria-label="This is a link."
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="This is a link."
             href="mailto:kaungkhantkyawdk@gmail.com"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
           >
             <svg
               stroke="currentColor"
@@ -200,14 +200,14 @@ function Header() {
           <a
             aria-label="This is a link."
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
           >
             <img src="img/linkedin.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="This is a link."
             href="https://t.me/DanialK007"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img src="img/telegram.png" alt="" className="w-3" />
           </a>

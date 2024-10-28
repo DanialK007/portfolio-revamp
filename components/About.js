@@ -31,7 +31,7 @@ function About() {
       <div className="grid grid-cols-1 gap-5 p-5 md:hidden">
         <FadeIn
           duration="1.2"
-          className="p-6 pb-0 bg-[#111] rounded-2xl text-2xl border border-white/10"
+          className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
         >
           <div className="">
             Frontend Developer with <br />2 years of experience, focused on
@@ -43,21 +43,21 @@ function About() {
               <a
                 aria-label="This is a link."
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
                 <img src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
               <a
                 aria-label="This is a link."
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
               >
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
               <a
                 aria-label="This is a link."
                 href="mailto:kaungkhantkyawdk@gmail.com"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
               >
                 <svg
                   stroke="currentColor"
@@ -75,7 +75,7 @@ function About() {
               <a
                 aria-label="This is a link."
                 href="https://t.me/DanialK007"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
                 <img src="img/telegram.png" alt="" className="w-3" />
               </a>
@@ -84,8 +84,8 @@ function About() {
               aria-label="Download my resume as PDF"
               href="kkk-resume.pdf"
               download
-              className="text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 bg-white/10 rounded-full duration-1000"
-              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+              className="text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 bg-white/10 rounded-full duration-[1200ms]"
+              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
             >
               <img
                 src="img/download-icon.svg"
@@ -98,7 +98,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
+          className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5"
         >
           <img
             src="img/image.png"
@@ -127,7 +127,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
+          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
@@ -155,7 +155,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
+          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
@@ -200,7 +200,7 @@ function About() {
             </div>
             <div className="col-span-3 py-2 text-sm">
               <div className="font-semibold">
-                Previously claimed a scholarship from CodeMal Academy
+                Previously claimed scholarship at UoPeople Califonia
               </div>
               <div className="text-white/60">
                 - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
@@ -214,13 +214,13 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/10"
+          className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/5"
         >
           <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" />
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 rounded-2xl border border-white/10 bg-[#111]"
+          className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
         >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
           <div className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
@@ -358,7 +358,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
-            className="p-6 pb-0 bg-[#111] rounded-2xl text-2xl border border-white/10"
+            className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
           >
             <div className="">
               Frontend Developer with <br />2 years of experience, focused on
@@ -370,7 +370,7 @@ function About() {
                 <a
                   aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/facebookIcon.svg"
@@ -381,7 +381,7 @@ function About() {
                 <a
                   aria-label="Send me an email"
                   href="mailto:kaungkhantkyawdk@gmail.com"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <svg
                     stroke="currentColor"
@@ -399,7 +399,7 @@ function About() {
                 <a
                   aria-label="Visit my LinkedIn profile"
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/linkedin.svg"
@@ -410,7 +410,7 @@ function About() {
                 <a
                   aria-label="Send me a message on Telegram"
                   href="https://t.me/DanialK007"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <img
                     src="img/telegram.png"
@@ -423,8 +423,8 @@ function About() {
                 aria-label="Download my resume as PDF"
                 href="kkk-resume.pdf"
                 download
-                className="group overflow-hidden text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-1000"
-                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                className="group overflow-hidden text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
               >
                 <div className="relative">
                   <img
@@ -444,7 +444,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.2"
-            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
@@ -514,7 +514,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.5"
-            className="relative overflow-hidden bg-[#111] rounded-2xl border border-white/10"
+            className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5"
           >
             <img
               src="img/image.png"
@@ -543,7 +543,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Biography
@@ -571,7 +571,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="rounded-2xl brightness-75 duration-300 border border-white/10"
+            className="rounded-2xl brightness-75 duration-300 border border-white/5"
           >
             <Carousel />
           </FadeIn>
@@ -579,7 +579,7 @@ function About() {
         <div className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.9"
-            className="p-6 relative bg-[#111] rounded-2xl border border-white/10"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
@@ -628,7 +628,7 @@ function About() {
               </div>
               <div className="col-span-3 py-2 text-sm">
                 <div className="font-semibold">
-                  Previously claimed a scholarship from CodeMal Academy
+                  Previously claimed scholarship at UoPeople Califonia
                 </div>
                 <div className="text-white/60">
                   - Experted in HTML, CSS, Javascript, Bootstrap, Tailwind, PHP,
@@ -642,7 +642,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.9"
-            className="p-6 rounded-2xl border border-white/10 bg-[#111]"
+            className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
           >
             <div className="font-mono font-semibold pb-2 text-lg">
               TOOL STACK

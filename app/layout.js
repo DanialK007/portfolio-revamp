@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         <title>Kcube's Portfolio</title>
         <link rel="icon" href="/img/Kcube.svg" />
       </head>
-      <body className={`bg-black text-white overflow-x-hidden ${inter.className}`}>
+      <body className={`bg-black text-white/80 overflow-x-hidden myLoad ${inter.className}`}>
         {children}
         <Analytics />
       </body>

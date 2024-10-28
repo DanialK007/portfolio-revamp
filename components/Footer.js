@@ -2,6 +2,7 @@
 import { ArrowDown } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import HyperText from "./ui/hyper-text";
+import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 
 function Footer() {
   const videoRef = useRef(null);
@@ -18,17 +19,9 @@ function Footer() {
   return (
     <footer className="relative mt-16">
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <video
-          ref={videoRef}
-          src="img/hero.mp4"
-          poster="img/hero-preview.png"
-          autoPlay
-          muted
-          loop
-          className="w-full h-full object-cover brightness-50"
-        ></video>
+        <BackgroundGradientAnimation containerClassName="w-full h-full" />
       </div>
-      <div className="pb-16 hidden lg:block relative z-10">
+      <div className="pb-16 hidden lg:block relative z-10 bg-gradient-to-b from-black from-40%">
         <div className="flex items-center justify-between pb-8 px-5 lg:px-16">
           <div className="text-sm">
             <img src="img/Kcube.svg" alt="" className="h-16 my-8" />
@@ -40,7 +33,7 @@ function Footer() {
               <a
                 aria-label="This is a link."
                 href="#top"
-                className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/40 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
+                className="w-11 h-11 rounded-full bg-white/5 duration-1000 flex items-center justify-center hover:bg-black border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
               >
                 <img
                   src="img/upArrow.svg"
@@ -78,7 +71,7 @@ function Footer() {
             <a
               aria-label="This is a link."
               href="#top"
-              className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center hover:bg-black duration-300 border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
+              className="w-11 h-11 rounded-full bg-white/5 duration-1000 flex items-center justify-center hover:bg-black border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
             >
               <img src="img/upArrow.svg" alt="" className="brightness-0 invert" />
             </a>

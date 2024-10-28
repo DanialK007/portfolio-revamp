@@ -29,7 +29,9 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       {isOpen && (
         <div className="py-20 px-5">
           <div
-            className="bg-black rounded-3xl rounded-tr-2xl overflow-hidden p-5 w-full max-w-5xl mx-auto relative"
+            className={`bg-black rounded-3xl rounded-tr-2xl overflow-hidden p-5 w-full max-w-5xl mx-auto relative duration-500 ${
+              isOpen ? "scale-100" : "scale-0"
+            }`}
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal when clicking inside
           >
             <button
@@ -42,7 +44,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               <div className="overflow-x-scroll">
                 <div className="flex gap-5 w-[2500px]">
                   <div
-                    className={`w-full p-5 lg:p-10 bg-gradient-to-br rounded-3xl ${project.gradient}`}
+                    className={`w-full h-[360px] p-5 lg:p-10 bg-gradient-to-br rounded-3xl ${project.gradient}`}
                   >
                     <video
                       autoPlay
@@ -50,14 +52,17 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                       loop
                       src={project.videoSrc}
                       className="h-full rounded-2xl"
+                      playsInline
+                      preload="none"
                     ></video>
                   </div>
-                  {project.photos.map((photos) => (
-                    <div className="w-full">
+                  {project.photos.map((photo, index) => (
+                    <div className="w-full" key={index}>
                       <img
-                        src={photos}
+                        src={photo}
                         alt={`${project.title} screenshot`}
-                        className="w-full h-full rounded-3xl object-cover"
+                        className="w-full h-[360px] rounded-3xl object-cover"
+                        loading="lazy"
                       />
                     </div>
                   ))}

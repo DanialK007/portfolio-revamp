@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react";
 
 const images = [
-    "img/profile.jpeg",
-    "img/photo-5.jpg",
-    "img/photo-8.jpg",
-    "img/photo-4.jpg",
-    "img/photo-6.jpg",
-    "img/photo-7.jpg",
-    "img/photo-9.jpeg",
-    "img/photo-1.jpg",
-//   "img/photo-7.jpg",
-//   "img/photo-8.jpg",
+  "img/profile.jpeg",
+  "img/photo-5.jpg",
+  "img/photo-8.jpg",
+  "img/photo-4.jpg",
+  "img/photo-6.jpg",
+  "img/photo-7.jpg",
+  "img/photo-9.jpeg",
+  "img/photo-1.jpg",
+  //   "img/photo-7.jpg",
+  //   "img/photo-8.jpg",
 ];
 
 const Carousel = () => {
@@ -55,7 +55,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full max-w-[600px] mx-auto relative">
+    <div className="w-full max-w-[600px] mx-auto relative brightness-90">
       {/* Images */}
       <div className="w-full h-[500px] rounded-2xl overflow-hidden relative">
         <img
@@ -76,7 +76,7 @@ const Carousel = () => {
 
       {/* Left Arrow */}
       <button
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
+        className="absolute active:scale-75 hover:scale-110 duration-300 top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={prevSlide}
       >
         &#8249;
@@ -84,30 +84,36 @@ const Carousel = () => {
 
       {/* Right Arrow */}
       <button
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
+        className="absolute active:scale-75 hover:scale-110 duration-300 top-1/2 right-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={nextSlide}
       >
         &#8250;
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-4 right-1/2 translate-x-1/2 flex justify-center mt-4 space-x-2">
+      <div className="absolute bottom-4 right-1/2 translate-x-1/2 flex justify-center mt-4">
         {images.map((_, idx) => (
           <div
             key={idx}
-            className={`h-2 rounded-[4px] cursor-pointer duration-200 ${
-              idx === currentIndex ? "bg-red-500 w-10" : "bg-gray-300 w-2"
+            className={`p-1 duration-300 ${
+              idx === currentIndex ? "hover:scale-110" : "hover:scale-[2]"
             }`}
-            onClick={() => {
-              setFadeOut(true); // Trigger fade out
-              setNextIndex(idx); // Set the next index
-              setTimeout(() => {
-                setCurrentIndex(idx);
-                setFadeOut(false); // Reset fade out after changing index
-                setFadeIn(true); // Trigger fade in
-              }, 500); // Wait for fade out to finish
-            }}
-          />
+          >
+            <div
+              className={`h-2 rounded-[4px] cursor-pointer duration-200 ${
+                idx === currentIndex ? "bg-red-500 w-10" : "bg-gray-300/50 backdrop-blur-md w-2"
+              }`}
+              onClick={() => {
+                setFadeOut(true); // Trigger fade out
+                setNextIndex(idx); // Set the next index
+                setTimeout(() => {
+                  setCurrentIndex(idx);
+                  setFadeOut(false); // Reset fade out after changing index
+                  setFadeIn(true); // Trigger fade in
+                }, 500); // Wait for fade out to finish
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>
