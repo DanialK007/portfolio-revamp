@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "img/profile.jpeg",
+  "img/photo-10.jpg",
   "img/photo-5.jpg",
   "img/photo-8.jpg",
   "img/photo-4.jpg",
@@ -11,6 +11,7 @@ const images = [
   "img/photo-7.jpg",
   "img/photo-9.jpeg",
   "img/photo-1.jpg",
+  "img/profile.jpeg",
   //   "img/photo-7.jpg",
   //   "img/photo-8.jpg",
 ];
@@ -39,7 +40,7 @@ const Carousel = () => {
       setCurrentIndex(newIndex);
       setFadeOut(false); // Reset fade out after changing index
       setFadeIn(true); // Trigger fade in
-    }, 240); // Wait for fade out to finish
+    }, 340); // Wait for fade out to finish
   };
 
   const nextSlide = () => {
@@ -51,7 +52,7 @@ const Carousel = () => {
       setCurrentIndex(newIndex);
       setFadeOut(false); // Reset fade out after changing index
       setFadeIn(true); // Trigger fade in
-    }, 240); // Wait for fade out to finish
+    }, 340); // Wait for fade out to finish
   };
 
   return (

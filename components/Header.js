@@ -1,26 +1,38 @@
 "use client";
 import { useEffect, useState } from "react";
+import lenis from "../lib/lenis";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
-  const toggleMenu = function () {
-    setMenu(!menuOpen);
-  };
+  const toggleMenu = () => setMenu(!menuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 480) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 480);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return window.addEventListener("scroll", handleScroll);
-  });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const target = e.target.closest("a[href^='#']");
+      if (target) {
+        e.preventDefault();
+        const section = document.querySelector(target.getAttribute("href"));
+        if (section) {
+          lenis.scrollTo(section);
+        }
+      }
+    };
+    document.addEventListener("click", handleAnchorClick);
+    return () => {
+      document.removeEventListener("click", handleAnchorClick);
+    };
+  }, []);
 
   return (
     <nav>
@@ -124,7 +136,7 @@ function Header() {
         </a>
       </div>
       <div
-        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
+        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 border border-white/5 backdrop-blur-lg rounded-[8px] duration-700 ${
           isScrolled
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-40 pointer-events-none"
@@ -182,7 +194,7 @@ function Header() {
           <a
             aria-label="This is a link."
             href="mailto:kaungkhantkyawdk@gmail.com"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
           >
             <svg
               stroke="currentColor"
@@ -200,7 +212,7 @@ function Header() {
           <a
             aria-label="This is a link."
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
           >
             <img src="img/linkedin.svg" alt="" className="w-3" />
           </a>

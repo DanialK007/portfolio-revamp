@@ -103,7 +103,7 @@ function PlayGround() {
     },
     {
       title: "Portfolio",
-      href: "https://santonio.vercel.app/",
+      href: "https://danial-portfolio-git-orange-danials-projects-222e55aa.vercel.app/",
       imgSrc: "img/orange.png",
       photos: [
         "img/orange.png",
@@ -202,7 +202,7 @@ function PlayGround() {
                 <img
                   src={project.imgSrc}
                   alt={`${project.title} screenshot`}
-                  className="w-full h-full hover:scale-110 duration-700 object-cover rounded-lg shadow-lg"
+                  className="w-full h-full group-hover:scale-110 duration-700 object-cover rounded-lg shadow-lg"
                 />
               </FadeIn>
             </div>

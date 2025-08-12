@@ -4,8 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+::selection {
+    background: #c33b33; /* Highlight background color */
+    color: #ffffff;      /* Selected text color */
 }
 
 .myFont {

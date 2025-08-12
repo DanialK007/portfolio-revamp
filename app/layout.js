@@ -4,6 +4,7 @@ import Lenis from "@studio-freight/lenis";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+// import LenisProvider from "./LenisProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,7 +42,9 @@ export default function RootLayout({ children }) {
         <title>Kcube's Portfolio</title>
         <link rel="icon" href="/img/Kcube.svg" />
       </head>
-      <body className={`bg-black text-white/80 overflow-x-hidden myL oad ${inter.className}`}>
+      <body
+        className={`bg-black text-white/80 overflow-x-hidden myL oad ${inter.className}`}
+      >
         {children}
         <Analytics />
       </body>

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { motion, useInView, useAnimate, stagger } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export const TextBlur = ({
   words,

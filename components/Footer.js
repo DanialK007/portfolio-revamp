@@ -1,22 +1,11 @@
 "use client";
 import { ArrowDown } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import HyperText from "./ui/hyper-text";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { BlurAnimation } from "./ui/BlurAnimation";
 
 function Footer() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const videoElement = videoRef.current;
-
-    if (videoElement) {
-      videoElement.play(); // Ensure the video starts playing
-      videoElement.playbackRate = 1.5; // Set video speed to 0.5x
-    }
-  }, []);
-
   return (
     <BlurAnimation className="relative mt-16">
       <div className="absolute top-0 left-0 w-full h-full z-0">

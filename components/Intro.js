@@ -35,10 +35,12 @@ const words2 = [
 
 const words3 = [
   { text: "Currently," },
-  { text: "learning" },
+  { text: "Working" },
+  { text: "as" },
+  { text: "ICT", className: "text-white" },
+  { text: "Trainer", className: "text-white" },
   { text: "at" },
-  { text: "MIBA", className: "text-white" },
-  { text: "university", className: "text-white" },
+  { text: "Logiscool", className: "text-white" },
 ];
 
 function Intro() {

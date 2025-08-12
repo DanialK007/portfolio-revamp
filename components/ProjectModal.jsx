@@ -1,8 +1,24 @@
 // ProjectModal.js
 import React, { useEffect } from "react";
 import { LuExternalLink } from "react-icons/lu";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
+import lenis from "../lib/lenis";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
+  useEffect(() => {
+    if (isOpen) {
+      lenis.stop(); // disable smooth scroll
+    } else {
+      lenis.start(); // enable again
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     // Disable scrolling on the body when the modal is open
     if (isOpen) {
@@ -21,71 +37,80 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black/25 z-50 overflow-y-scroll duration-500 ease-out ${
-        isOpen ? "backdrop-blur-xl" : "opacity-0 pointer-events-none"
+      className={`fixed flex items-center justify-center inset-0 bg-black/25 z-50 overflow-y-scroll duration-500 ease-out ${
+        isOpen ? "backdrop-blur-xl" : "opacity-0 blur-xl pointer-events-none"
       }`}
       onClick={onClose} // Close the modal on backdrop click
     >
       {isOpen && (
-        <div className="py-20 px-5">
+        <div className="flex items-center justify-center size-full px-5 md:px-10 lg:px-20 overflow-y-scroll">
           <div
-            className={`bg-black rounded-3xl rounded-tr-2xl overflow-hidden p-5 w-full max-w-5xl mx-auto relative duration-500 ${
+            className={`bg-black grow max-h-[95%] border border-neutral-800 rounded-[28px] overflow-hidden w-full max-w-5xl mx-auto relative duration-500 ${
               isOpen ? "scale-100" : "scale-0"
             }`}
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal when clicking inside
           >
             <button
-              className="absolute top-0 right-0 text-3xl py-1 px-5 rounded-bl-2xl bg-white text-black duration-200 scale-125 active:scale-100"
+              className="hidden absolute top-8 right-4 text-3xl size-10 rounded-full bg-black/75 text-white duration-200 scale-125 active:scale-100"
               onClick={onClose}
             >
               &times;
             </button>
             <div className="flex flex-col gap-4">
-              <div className="overflow-x-scroll">
-                <div className="flex gap-5 w-[2500px]">
-                  <div
-                    className={`w-full h-[360px] p-5 lg:p-10 bg-gradient-to-br rounded-3xl ${project.gradient}`}
-                  >
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      src={project.videoSrc}
-                      className="h-full rounded-2xl"
-                      playsInline
-                      preload="none"
-                    ></video>
-                  </div>
-                  {project.photos.map((photo, index) => (
-                    <div className="w-full" key={index}>
-                      <img
-                        src={photo}
-                        alt={`${project.title} screenshot`}
-                        className="w-full h-[360px] rounded-3xl object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
-                </div>
+              <div className="pt-5">
+                <Carousel
+                  opts={{
+                    align: "start",
+                  }}
+                  className="w-full px-5"
+                >
+                  <CarouselContent>
+                    <CarouselItem className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing">
+                      <div
+                        className={`h-full p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl ${project.gradient}`}
+                      >
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          src={project.videoSrc}
+                          className="rounded-xl"
+                          playsInline
+                          preload="none"
+                        ></video>
+                      </div>
+                    </CarouselItem>
+                    {project.photos.map((photo, index) => (
+                      <CarouselItem key={index} className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing">
+                        <div className="">
+                          <img
+                            src={photo}
+                            alt={`${project.title} screenshot`}
+                            className="rounded-3xl object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
               </div>
+
               {/* Add more images or content as needed */}
-              <h2 className="text-2xl lg:text-3xl myFont">{project.title}</h2>
-              <p className="text-gray-700 hidden">{project.description}</p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus earum recusandae magnam adipisci ullam, quos rem
-                ad enim eveniet illum, deserunt dolor corporis aut voluptatum
-                minus praesentium quia officiis nulla. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Numquam labore quam obcaecati
-                deleniti animi, quis in reprehenderit optio quibusdam minus
-                libero consequatur eligendi! Assumenda vel ex dolores sequi
-                praesentium asperiores.
+              <h2 className="px-5 pt-5 text-2xl lg:text-3xl myFont">
+                {project.title}
+              </h2>
+              <p className="px-5 text-gray-700 hidden">{project.description}</p>
+              <p className="px-5">
+                A website that turns every scroll into a moment of awe
               </p>
-              <div className="flex flex-col items-start lg:flex-row gap-2">
+              <div className="px-5 pb-5 flex flex-col items-start lg:flex-row gap-2">
                 <a
                   href="#"
                   target="_blank"
-                  className="flex items-center justify-center border-2 border-white hover:bg-white hover:text-black duration-300 rounded-xl py-2 px-4"
+                  className="hidden flex items-center justify-center border-2 border-white hover:bg-white hover:text-black duration-300 rounded-xl py-2 px-4"
                   rel="noopener noreferrer"
                 >
                   Learn More
@@ -93,7 +118,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 <a
                   href={project.href}
                   target="_blank"
-                  className="flex items-center justify-center border-2 border-white bg-white text-black rounded-xl py-2 px-4"
+                  className="flex items-center justify-center border-2 border-neutral-200 bg-neutral-200 text-black hover:text-neutral-200 hover:bg-black rounded-full active:scale-95 duration-300 py-2 px-4"
                   rel="noopener noreferrer"
                 >
                   View Original Website <LuExternalLink className="ml-2" />
