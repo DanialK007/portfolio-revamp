@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
-import lenis from "../lib/lenis";
+import { initLenis, getLenis } from "../lib/lenis";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setMenu(!menuOpen);
-
+  useEffect(() => {
+    initLenis();
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = document.querySelector("#hero")?.offsetHeight || 480;
@@ -25,6 +27,7 @@ function Header() {
         e.preventDefault();
         const section = document.querySelector(target.getAttribute("href"));
         if (section) {
+          const lenis = getLenis(); // get the global instance
           lenis.scrollTo(section);
         }
       }

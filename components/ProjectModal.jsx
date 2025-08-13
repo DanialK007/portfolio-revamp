@@ -8,15 +8,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
-import lenis from "../lib/lenis";
+import { getLenis } from '../lib/lenis';
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
-  useEffect(() => {
-    if (isOpen) {
-      lenis.stop(); // disable smooth scroll
-    } else {
-      lenis.start(); // enable again
-    }
+      useEffect(() => {
+    const lenis = getLenis(); // get the global instance
+    if (isOpen) lenis.stop();
+    else lenis.start();
   }, [isOpen]);
 
   useEffect(() => {
