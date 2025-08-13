@@ -13,11 +13,11 @@ import Work from "../components/Work";
 export default function Home() {
   return (
     <main className="bg-black">
-      <Header />
+      {/* <Header /> */}
       <Hero3 />
       <Intro />
       <Work />
-      {/* <PlayGround /> */}
+      <PlayGround />
       <About />
       <Footer />
     </main>
