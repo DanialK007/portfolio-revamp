@@ -177,7 +177,7 @@ function About() {
               <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                 Age
               </div>
-              <div className="col-span-3 py-1 text-sm">21</div>
+              <div className="col-span-3 py-1 text-sm">22</div>
               <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                 City
               </div>
@@ -614,7 +614,7 @@ function About() {
                 <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                   Age
                 </div>
-                <div className="col-span-3 py-1 text-sm">21</div>
+                <div className="col-span-3 py-1 text-sm">22</div>
                 <div className="col-span-2 py-1 text-sm text-white/60 font-semibold font-mon">
                   City
                 </div>

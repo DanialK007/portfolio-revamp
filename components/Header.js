@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { initLenis, getLenis } from "../lib/lenis";
+import { MdMenuOpen } from "react-icons/md";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
@@ -52,29 +53,36 @@ function Header() {
           <img src="img/Kcube.svg" alt="" className="h-14" />
         </a>
         <button
-          className="my-2 h-12 me-1 flex items-center md:hidden backdrop-blur rounded-xl border border-white/5 bg-white/5"
+          className={`my-2 size-12 relative active:scale-75 duration-300 me-1 flex items-center md:hidden backdrop-blur border border-white/5 bg-white/5 rounded-xl ${
+            menuOpen ? "" : ""
+          }`}
           onClick={toggleMenu}
         >
-          <img
-            src="img/menu.svg"
-            id="menuIcon1"
-            alt=""
-            className={`h-12 w-12 p-4 ${menuOpen ? "hidden" : ""}`}
-          />
-          <img
-            src="img/cube.svg"
-            id="menuIcon2"
-            alt=""
-            className={`h-12 w-12 p-3 animate-spin brightness-0 invert saturate-0 ${
-              menuOpen ? "" : "hidden"
+          <div
+            className={`absolute inset-0 text-3xl p-2.5 flex items-center justify-center duration-300 ${
+              menuOpen ? "scale-0" : ""
             }`}
-          />
+          >
+            <MdMenuOpen />
+          </div>
+          <div
+            className={`absolute inset-0 duration-300 ${
+              menuOpen ? "" : "scale-0"
+            }`}
+          >
+            <img
+              src="img/cube.svg"
+              id="menuIcon2"
+              alt=""
+              className={`size-full p-3 duration-300 brightness-0 invert saturate-0 animate-spin`}
+            />
+          </div>
         </button>
       </div>
       <div
         className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-50 ${
           menuOpen
-            ? "z-10 translate-x-0 bg-white/5 backdrop-blur-lg"
+            ? "z-10 translate-x-0 bg-white/5 border border-white/5 backdrop-blur-lg"
             : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-none"
         }`}
       >

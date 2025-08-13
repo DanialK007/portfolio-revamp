@@ -15,7 +15,7 @@ function Hero3() {
       gradientBackgroundEnd="#111"
       thirdColor="#e3591e"
     >
-      <div className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%">
+      <div id="top" className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%">
         <div className="backdrop-blur-md flex items-end lg:justify-center pb-5">
           <TextGenerateEffect
             words={words}
