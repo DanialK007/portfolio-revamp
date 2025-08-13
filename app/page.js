@@ -13,9 +13,8 @@ import Work from "../components/Work";
 export default function Home() {
   return (
     <main className="bg-black">
-      {/* <MouseFollower /> */}
       <Header />
-      <Hero3 />
+      {/* <Hero3 /> */}
       <Intro />
       <Work />
       <PlayGround />
