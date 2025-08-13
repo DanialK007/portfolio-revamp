@@ -25,7 +25,7 @@ function Hero3() {
           <div className="lg:hidden font-bold uppercase text-white/60 px-10 sm:px-16">
             <div className="text-[5rem] leading-[1.4]">Hello!</div>
             <div className="text-[3.4rem] leading-[1.4]">
-              <spanc className="text-white"> Welcome </spanc> home
+              <span className="text-white"> Welcome </span> home
             </div>
           </div>
         </div>

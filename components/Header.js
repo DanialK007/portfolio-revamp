@@ -10,7 +10,8 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 480);
+      const heroHeight = document.querySelector("#hero")?.offsetHeight || 480;
+      setScrolled(window.scrollY > heroHeight * 0.8);
     };
 
     window.addEventListener("scroll", handleScroll);
