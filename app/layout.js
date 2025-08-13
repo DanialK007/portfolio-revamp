@@ -1,6 +1,3 @@
-"use client";
-import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
