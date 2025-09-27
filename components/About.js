@@ -10,7 +10,7 @@ const words = [
   { text: "Frontend" },
   { text: "Developer" },
   { text: "with" },
-  { text: "2" },
+  { text: "3" },
   { text: "years" },
   { text: "of" },
   { text: "experience," },
@@ -33,7 +33,10 @@ function About() {
     <div className="my-5 xl:mt-20 relative">
       <div id="about" className="absolute -top-16"></div>
       <div className="py-8">
-        <BlurAnimation duration={1.2} className="flex items-center justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl">
+        <BlurAnimation
+          duration={1.2}
+          className="flex items-center justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl"
+        >
           <span className="font-thin" id="aboutM">
             ABOUT
           </span>
@@ -59,28 +62,31 @@ function About() {
           className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
         >
           <TextBlur
-            words={`Frontend Developer with 2 years of experience, focused on
+            words={`Frontend Developer with 3 years of experience, focused on
             creating functional and user-centered digital products with visually
             stunning designs.`}
             className=""
           ></TextBlur>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2 items-center">
-              <a target="_blank"
+              <a
+                target="_blank"
                 aria-label="This is a link."
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
                 <img src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
-              <a target="_blank"
+              <a
+                target="_blank"
                 aria-label="This is a link."
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
               >
                 <img src="img/linkedin.svg" alt="" className="w-3" />
               </a>
-              <a target="_blank"
+              <a
+                target="_blank"
                 aria-label="This is a link."
                 href="mailto:kaungkhantkyawdk@gmail.com"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
@@ -98,7 +104,8 @@ function About() {
                   <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
                 </svg>
               </a>
-              <a target="_blank"
+              <a
+                target="_blank"
                 aria-label="This is a link."
                 href="https://t.me/DanialK007"
                 className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
@@ -268,6 +275,12 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
+          className="rounded-2xl -mt-5 brightness-75 border border-white/5 bg-[#0a0a0a]"
+        >
+          <Carousel />
+        </FadeIn>
+        <FadeIn
+          duration="1.2"
           className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
         >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
@@ -380,12 +393,12 @@ function About() {
               title="Figma"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            {/* <img
               src="img/gpt.png"
               alt=""
               title="Chat GPT"
               className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-            />
+            /> */}
             <img
               src="img/git.png"
               alt=""
@@ -414,7 +427,8 @@ function About() {
               className="mx-auto flex justify-between py-4 pe-2"
             >
               <BlurAnimation wait={1} className="flex gap-2 items-center">
-                <a target="_blank"
+                <a
+                  target="_blank"
                   aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
@@ -425,7 +439,8 @@ function About() {
                     className="w-3"
                   />
                 </a>
-                <a target="_blank"
+                <a
+                  target="_blank"
                   aria-label="Send me an email"
                   href="mailto:kaungkhantkyawdk@gmail.com"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
@@ -443,7 +458,8 @@ function About() {
                     <path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path>
                   </svg>
                 </a>
-                <a target="_blank"
+                <a
+                  target="_blank"
                   aria-label="Visit my LinkedIn profile"
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
@@ -454,7 +470,8 @@ function About() {
                     className="w-3"
                   />
                 </a>
-                <a target="_blank"
+                <a
+                  target="_blank"
                   aria-label="Send me a message on Telegram"
                   href="https://t.me/DanialK007"
                   className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
@@ -826,12 +843,12 @@ function About() {
                 title="Figma"
                 className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
-              <img
+              {/* <img
                 src="img/gpt.png"
                 alt=""
                 title="Chat GPT"
                 className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
-              />
+              /> */}
               <img
                 src="img/git.png"
                 alt=""

@@ -63,21 +63,21 @@ const Carousel = () => {
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
           className={`w-full h-full object-cover duration-500 ${
-            fadeOut ? "opacity-0 scale-110 blur-sm" : "opacity-100 blur-none"
+            fadeOut ? "opacity-0 scale-110 blur-lg" : "opacity-100 blur-0"
           }`}
         />
         <img
           src={images[nextIndex]}
           alt={`Slide ${nextIndex}`}
           className={`absolute w-full h-full object-cover duration-500 ${
-            fadeIn ? "opacity-100 blur-none" : "opacity-0 scale-110 blur-sm"
+            fadeIn ? "opacity-100 blur-0" : "opacity-0 scale-110 blur-lg"
           }`}
         />
       </div>
 
       {/* Left Arrow */}
       <button
-        className="absolute active:scale-75 hover:scale-110 duration-300 top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
+        className="absolute border border-white/20 active:blur-[4px] active:scale-75 hover:scale-110 duration-300 top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={prevSlide}
       >
         &#8249;
@@ -85,7 +85,7 @@ const Carousel = () => {
 
       {/* Right Arrow */}
       <button
-        className="absolute active:scale-75 hover:scale-110 duration-300 top-1/2 right-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
+        className="absolute border border-white/20 active:blur-[4px] active:scale-75 hover:scale-110 duration-300 top-1/2 right-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={nextSlide}
       >
         &#8250;

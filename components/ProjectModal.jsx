@@ -8,10 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
-import { getLenis } from '../lib/lenis';
+import { getLenis } from "../lib/lenis";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
-      useEffect(() => {
+  const [opener, setOpener] = React.useState(false);
+  useEffect(() => {
     const lenis = getLenis(); // get the global instance
     if (isOpen) lenis.stop();
     else lenis.start();
@@ -20,6 +21,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   useEffect(() => {
     // Disable scrolling on the body when the modal is open
     if (isOpen) {
+      setOpener(true);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -35,10 +37,15 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
   return (
     <div
-      className={`fixed flex items-center justify-center inset-0 bg-black/25 z-50 overflow-y-scroll duration-500 ease-out ${
-        isOpen ? "backdrop-blur-xl" : "opacity-0 blur-xl pointer-events-none"
+      className={`fixed flex items-center justify-center inset-0 bg-black/25 z-50 overflow-y-scroll duration-700 ease-out ${
+        opener ? "backdrop-blur-xl" : "opacity-0 blur-3xl pointer-events-none"
       }`}
-      onClick={onClose} // Close the modal on backdrop click
+      onClick={() => {
+        setOpener(false);
+        setTimeout(() => {
+          onClose();
+        }, 600); // wait 300ms
+      }} // Close the modal on backdrop click
     >
       {isOpen && (
         <div className="flex items-center justify-center size-full px-5 md:px-10 lg:px-20 overflow-y-scroll">
@@ -79,7 +86,10 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                       </div>
                     </CarouselItem>
                     {project.photos.map((photo, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing">
+                      <CarouselItem
+                        key={index}
+                        className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing"
+                      >
                         <div className="">
                           <img
                             src={photo}

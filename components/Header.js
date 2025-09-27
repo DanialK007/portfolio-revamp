@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { initLenis, getLenis } from "../lib/lenis";
-import { MdMenuOpen } from "react-icons/md";
+import { IoMdMenu } from "react-icons/io";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
@@ -41,7 +41,7 @@ function Header() {
 
   return (
     <nav>
-      {/*  Navigation Bar */}
+      {/*  Navigation Bar - Mobile */}
       <div
         className={`flex justify-between p-3 fixed w-screen top-0 z-50 md:px-12 ${
           isScrolled
@@ -63,7 +63,7 @@ function Header() {
               menuOpen ? "scale-0" : ""
             }`}
           >
-            <MdMenuOpen />
+            <IoMdMenu />
           </div>
           <div
             className={`absolute inset-0 duration-300 ${
@@ -80,7 +80,7 @@ function Header() {
         </button>
       </div>
       <div
-        className={`md:hidden fixed top-20 right-4 rounded-[8px] duration-300 z-50 ${
+        className={`md:hidden fixed top-20 right-4 rounded-2xl duration-300 z-50 ${
           menuOpen
             ? "z-10 translate-x-0 bg-white/5 border border-white/5 backdrop-blur-lg"
             : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-none"
@@ -113,10 +113,11 @@ function Header() {
           </a>
         </ul>
       </div>
+      <button onClick={toggleMenu} className={`fixed inset-0 z-40 lg:hidden ${menuOpen ? "" : "hidden"}`}></button>
 
       {/* large screen */}
       <div
-        className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-[8px] duration-700 ${
+        className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-2xl duration-700 ${
           isScrolled
             ? "opacity-0 -z-10 -translate-y-40"
             : "opacity-100 z-50 translate-y-0"
@@ -125,7 +126,7 @@ function Header() {
         <a
           aria-label="This is a link."
           href="#work"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">01</div>
           <div className="font-semibold">Work</div>
@@ -133,7 +134,7 @@ function Header() {
         <a
           aria-label="This is a link."
           href="#playground"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">02</div>
           <div className="font-semibold">Playground</div>
@@ -141,14 +142,14 @@ function Header() {
         <a
           aria-label="This is a link."
           href="#about"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">03</div>
           <div className="font-semibold">About Me</div>
         </a>
       </div>
       <div
-        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 border border-white/5 backdrop-blur-lg rounded-[8px] duration-700 ${
+        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 border border-white/5 backdrop-blur-lg rounded-2xl duration-700 ${
           isScrolled
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-40 pointer-events-none"
@@ -157,7 +158,7 @@ function Header() {
         <a
           aria-label="Go to work section"
           href="#work"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">01</div>
           <div className="font-semibold">Work</div>
@@ -165,7 +166,7 @@ function Header() {
         <a
           aria-label="Go to playground section"
           href="#playground"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">02</div>
           <div className="font-semibold">Playground</div>
@@ -173,7 +174,7 @@ function Header() {
         <a
           aria-label="Go to about me section"
           href="#about"
-          className="px-3 hover:text-red-500"
+          className="px-2 hover:text-red-500"
         >
           <div className="font-mono">03</div>
           <div className="font-semibold">About Me</div>

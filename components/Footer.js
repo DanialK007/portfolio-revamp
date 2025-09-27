@@ -36,7 +36,7 @@ function Footer() {
             <HyperText className="font-mono" text="Made in Mandalay" />
           </div>
         </BlurAnimation>
-        <BlurAnimation duration={1.2} className="flex items-center justify-center myFont cap1 text-6xl md:text-8xl xl:text-10xl italic font-semibold animate-foot pb-5">
+        <BlurAnimation duration={1.2} className="flex items-center justify-center myFont cap1 text-6xl md:text-7xl xl:text-9xl italic font-semibold animate-foot pb-5">
           <span className="pe-2">THANK</span>
           <img
             src="img/cube.svg"
