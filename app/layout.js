@@ -23,7 +23,7 @@
           />
           <meta
             property="og:image"
-            content="https://kcube-portfolio.vercel.app/img/link-preview.png"
+            content="https://kaungkhantkyaw.online/img/link-preview.png"
           />
           <meta property="og:site_name" content="Kcube's Portfolio" />
           <meta property="og:title" content="Kcube's Portfolio" />
@@ -31,12 +31,12 @@
             property="og:description"
             content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
           />
-          <meta property="og:url" content="https://kcube-portfolio.vercel.app/" />
+          <meta property="og:url" content="https://kaungkhantkyaw.online/" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Kcube's Portfolio" />
           <meta
             name="twitter:image"
-            content="https://kcube-portfolio.vercel.app/img/link-preview.png"
+            content="https://kaungkhantkyaw.online/img/link-preview.png"
           />
           <meta
             property="twitter:description"
