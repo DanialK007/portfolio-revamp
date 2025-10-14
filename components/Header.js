@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { initLenis, getLenis } from "../lib/lenis";
 import { IoMdMenu } from "react-icons/io";
+import Logo from "./Logo";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
@@ -49,8 +50,9 @@ function Header() {
             : ""
         }`}
       >
-        <a aria-label="This is a link." href="" className="pt-1">
-          <img src="img/Kcube.svg" alt="" className="h-14" />
+        <a aria-label="This is a link." href="" className="pt-1 px-2">
+          {/* <img src="img/Kcube.svg" alt="" className="h-14" /> */}
+          <Logo />
         </a>
         <button
           className={`my-2 size-12 relative active:scale-75 duration-300 me-1 flex items-center md:hidden backdrop-blur border border-white/5 bg-white/5 rounded-xl ${

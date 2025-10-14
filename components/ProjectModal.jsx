@@ -62,17 +62,17 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               &times;
             </button>
             <div className="flex flex-col gap-4">
-              <div className="pt-5">
+              <div className="pt-5 px-5">
                 <Carousel
                   opts={{
                     align: "start",
                   }}
-                  className="w-full px-5"
+                  className="w-full"
                 >
                   <CarouselContent>
                     <CarouselItem className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing">
                       <div
-                        className={`h-full p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl ${project.gradient}`}
+                        className={`h-full relative p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl ${project.gradient}`}
                       >
                         <video
                           autoPlay
@@ -80,6 +80,15 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                           loop
                           src={project.videoSrc}
                           className="rounded-xl"
+                          playsInline
+                          preload="none"
+                        ></video>
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          src={project.videoSrc}
+                          className="rounded-xl absolute top-0 left-0 w-full h-full scale-125 -z-10 opacity- blur-[80px]"
                           playsInline
                           preload="none"
                         ></video>

@@ -1,32 +1,51 @@
 import FadeIn from "./framer-motion/FadeIn";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import HyperText from "./ui/hyper-text";
+import Magnetic from "./ui/Magnetic";
 
 function Work() {
   return (
     <div className="my-5 xl:mt-20 relative">
       <div id="work" className="absolute -top-16"></div>
       <div className="py-8">
-        <BlurAnimation duration={1.2} className="flex items-center justify-center cap1 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl">
-          <span className="font-thin" id="selectW">
-            SELECT
-          </span>
-          <img
-            src="img/cube.svg"
-            className="hover:invert duration-500 hover:cursor-pointer w-4 md:w-10 xl:w-16 animate-spin"
-            alt=""
-          />
-          <span className="italic font-bold pe-2" id="sWork">
-            WORK
-          </span>
-        </BlurAnimation>
+        <div className="relative">
+          <BlurAnimation
+            duration={1.2}
+            className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-16 items-center justify-center cap1 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl"
+          >
+            <div className="font-thin">SELECT</div>
+
+            <div className="italic font-bold pe-2 relative">
+              WORK
+              <div className="absolute top-3 -left-[2.2rem] sm:top-1 sm:-left-[2.8rem] md:top-2 lg:top-3 xl:top-1 md:-left-[3.2rem] lg:-left-[4.2rem]">
+                <Magnetic>
+                  <div className="pt-3 px-3 rounded-full">
+                    <img
+                      src="img/cube.svg"
+                      className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                      alt=""
+                    />
+                  </div>
+                </Magnetic>
+              </div>
+            </div>
+          </BlurAnimation>
+        </div>
+
         <BlurAnimation className="flex justify-between text-sm font-mono px-5">
-        <HyperText text="CASE STUDIES"/>
-        <HyperText text="DESIGN PROCESS"/>
+          <HyperText text="CASE STUDIES" />
+          <HyperText text="DESIGN PROCESS" />
         </BlurAnimation>
       </div>
-      <BlurAnimation duration={1.2} className="flex flex-col lg:flex-row p-5 gap-3" childClass="lg:w-1/3 lg:hover:w-5/12 duration-700">
-        <FadeIn duration="1.2" className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100">
+      <BlurAnimation
+        duration={1.2}
+        className="flex flex-col lg:flex-row p-5 gap-3"
+        childClass="lg:w-1/3 lg:hover:w-5/12 duration-700"
+      >
+        <FadeIn
+          duration="1.2"
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+        >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-black from-30% to-[#020f60c7] flex justify-between">
             <div className="">Next.js</div>
             <div className="font-mono">2024</div>
@@ -40,7 +59,9 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">React Framework</div>
-                <div className="italic text-lg">For Building Fast, Scalable Websites</div>
+                <div className="italic text-lg">
+                  For Building Fast, Scalable Websites
+                </div>
               </div>
             </div>
             <img
@@ -50,7 +71,10 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.3" className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn
+          duration="1.3"
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+        >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-blue-950/20 to-[#1b2751] flex justify-between">
             <div className="">Tailwind</div>
             <div className="font-mono">2023</div>
@@ -64,7 +88,9 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">CSS Framework</div>
-                <div className="italic text-lg">Utility-First CSS UI Development</div>
+                <div className="italic text-lg">
+                  Utility-First CSS UI Development
+                </div>
               </div>
             </div>
             <img
@@ -74,7 +100,10 @@ function Work() {
             />
           </div>
         </FadeIn>
-        <FadeIn duration="1.4" className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100">
+        <FadeIn
+          duration="1.4"
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+        >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-neutral-900 flex justify-between">
             <div className="">React</div>
             <div className="font-mono">2024</div>
@@ -88,7 +117,9 @@ function Work() {
               />
               <div className="text-xl xl:text-2xl brightness-200 text-gray-50">
                 <div className="">Javascript Library</div>
-                <div className="italic text-lg">For Building User Interfaces</div>
+                <div className="italic text-lg">
+                  For Building User Interfaces
+                </div>
               </div>
             </div>
             <img

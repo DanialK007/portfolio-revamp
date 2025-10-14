@@ -4,17 +4,30 @@ import React from "react";
 import HyperText from "./ui/hyper-text";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { BlurAnimation } from "./ui/BlurAnimation";
+import Logo from "./Logo";
 
 function Footer() {
   return (
-    <BlurAnimation className="relative mt-16">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <BackgroundGradientAnimation containerClassName="w-full h-full" />
-      </div>
-      <div className="pb-16 hidden lg:block relative z-10 bg-gradient-to-b from-black from-40%">
-        <BlurAnimation duration={1} className="flex items-center justify-between pb-8 px-5 lg:px-16">
+    <BlurAnimation className="mt-16">
+      <div className="pb-16 hidden lg:block relative">
+        <div className="absolute top-0 left-0 size-full -z-10">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="#000"
+            gradientBackgroundEnd="#111"
+            thirdColor="#e3591e"
+            containerClassName="w-full h-full"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-black/10 from-20% to-80%"></div>
+        <BlurAnimation
+          duration={1}
+          className="flex items-center justify-between pb-8 px-5 lg:px-16"
+        >
           <div className="text-sm">
-            <img src="img/Kcube.svg" alt="" className="h-16 my-8" />
+            {/* <img src="img/Kcube.svg" alt="" className="h-16 my-8" /> */}
+            <div className="w-fit">
+              <Logo />
+            </div>
             <div className="font-semibold">© 2024 · Danial Kcube</div>
             <HyperText className="font-mono" text="All Right Reserved" />
           </div>
@@ -36,7 +49,10 @@ function Footer() {
             <HyperText className="font-mono" text="Made in Mandalay" />
           </div>
         </BlurAnimation>
-        <BlurAnimation duration={1.2} className="flex items-center justify-center myFont cap1 text-6xl md:text-7xl xl:text-9xl italic font-semibold animate-foot pb-5">
+        <BlurAnimation
+          duration={1.2}
+          className="flex items-center justify-center myFont cap1 text-6xl md:text-7xl xl:text-9xl italic font-semibold animate-foot pb-5"
+        >
           <span className="pe-2">THANK</span>
           <img
             src="img/cube.svg"
@@ -46,10 +62,22 @@ function Footer() {
           <span className="pe-2">YOU</span>
         </BlurAnimation>
       </div>
-      <div className="pb-5 lg:hidden relative z-10">
-        <div className="py-8 flex flex-col items-center justify-center text-center">
+      <div className="pb-5 lg:hidden relative">
+        <div className="absolute top-0 left-0 size-full -z-10">
+          <BackgroundGradientAnimation
+            gradientBackgroundStart="#000"
+            gradientBackgroundEnd="#111"
+            thirdColor="#e3591e"
+            containerClassName="w-full h-full"
+          />
+        </div>
+        <div className="absolute inset-0 -z-0 bg-gradient-to-b from-black to-black/10 to-80%"></div>
+        <div className="py-8 relative z-10 flex flex-col items-center justify-center text-center">
           <div className="text-sm">
-            <img src="img/Kcube.svg" alt="" className="h-16 my-2 mx-auto" />
+            {/* <img src="img/Kcube.svg" alt="" className="h-16 my-2 mx-auto" /> */}
+            <div className="w-fit mx-auto">
+              <Logo />
+            </div>
             <div className="font-semibold">© 2024 · Danial Kcube</div>
             <HyperText className="font-mono" text="All Right Reserved" />
           </div>
@@ -63,7 +91,11 @@ function Footer() {
               href="#top"
               className="w-11 h-11 rounded-full bg-white/5 duration-1000 flex items-center justify-center hover:bg-black border border-white/20 hover:shadow-md hover:border-red-500 hover:shadow-red-500/40"
             >
-              <img src="img/upArrow.svg" alt="" className="brightness-0 invert" />
+              <img
+                src="img/upArrow.svg"
+                alt=""
+                className="brightness-0 invert"
+              />
             </a>
           </div>
         </div>

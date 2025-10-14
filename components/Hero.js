@@ -3,9 +3,18 @@ import { BackgroundGradientAnimation } from "./ui/background-gradient-animation"
 import { ArrowDown } from "lucide-react";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import Magnetic from "./ui/Magnetic";
 
-const words = [{ text: "Hi," }, { text: "WELCOME", className : "text-white" }, { text: "HOME" }];
-const words2 = [{ text: "IT'S" }, { text: "ME" }, { text: "K-cube", className : "text-white" }];
+const words = [
+  { text: "Hi," },
+  { text: "WELCOME", className: "text-white" },
+  { text: "HOME" },
+];
+const words2 = [
+  { text: "IT'S" },
+  { text: "ME" },
+  { text: "K-cube", className: "text-white" },
+];
 
 function Hero() {
   return (
@@ -15,7 +24,10 @@ function Hero() {
       gradientBackgroundEnd="#111"
       thirdColor="#e3591e"
     >
-      <div id="top" className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%">
+      <div
+        id="top"
+        className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%"
+      >
         <div className="backdrop-blur-md flex items-end lg:justify-center pb-5">
           <TextGenerateEffect
             words={words}
@@ -41,11 +53,15 @@ function Hero() {
                 Kaung Khant Kyaw
               </div>
             </span>
-            <img
-              src="img/cube.svg"
-              alt=""
-              className="w-8 animate-spin mb-5 cursor-pointer hover:invert duration-300"
-            />
+            <Magnetic>
+              <div className="pt-3 px-3 -mx-3 rounded-full">
+                <img
+                  src="img/cube.svg"
+                  alt=""
+                  className="w-8 animate-spin mb-5 cursor-pointer hover:invert duration-300"
+                />
+              </div>
+            </Magnetic>
           </BlurAnimation>
           <div className="lg:hidden font-bold uppercase">
             <div className="text-[3rem] leading-[1.4] text-white/60">
@@ -58,11 +74,13 @@ function Hero() {
                   Kaung Khant Kyaw
                 </div>
               </span>
-              <img
-                src="img/cube.svg"
-                alt=""
-                className="w-8 animate-spin mb-10 cursor-pointer hover:invert duration-300"
-              />
+              <Magnetic>
+                <img
+                  src="img/cube.svg"
+                  alt=""
+                  className="w-8 animate-spin mb-10 cursor-pointer hover:invert duration-300"
+                />
+              </Magnetic>
             </div>
           </div>
           <a
