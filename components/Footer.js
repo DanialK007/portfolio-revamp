@@ -25,7 +25,7 @@ function Footer() {
         >
           <div className="text-sm">
             {/* <img src="img/Kcube.svg" alt="" className="h-16 my-8" /> */}
-            <div className="w-fit">
+            <div className="w-fit h-16 my-8">
               <Logo />
             </div>
             <div className="font-semibold">© 2024 · Danial Kcube</div>
@@ -75,7 +75,7 @@ function Footer() {
         <div className="py-8 relative z-10 flex flex-col items-center justify-center text-center">
           <div className="text-sm">
             {/* <img src="img/Kcube.svg" alt="" className="h-16 my-2 mx-auto" /> */}
-            <div className="w-fit mx-auto">
+            <div className="w-fit mx-auto h-16">
               <Logo />
             </div>
             <div className="font-semibold">© 2024 · Danial Kcube</div>

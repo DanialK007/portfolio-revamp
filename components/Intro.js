@@ -1,5 +1,7 @@
 import FadeIn from "./framer-motion/FadeIn";
 import { BlurAnimation } from "./ui/BlurAnimation";
+import HyperText from "./ui/hyper-text";
+import { RainbowButton } from "./ui/rainbow-button";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const words = [
@@ -40,7 +42,10 @@ const words3 = [
   { text: "ICT", className: "text-white" },
   { text: "Trainer", className: "text-white" },
   { text: "at" },
-  { text: "Logiscool", className: "text-white cursor-pointer hover:text-red-500 underline" },
+  {
+    text: "Logiscool",
+    className: "text-white cursor-pointer hover:text-red-500 underline",
+  },
 ];
 
 function Intro() {
@@ -74,6 +79,17 @@ function Intro() {
               words={words3}
               className="p-5 text-white/60 text-sm"
             ></TextGenerateEffect>
+          </div>
+          <div className="pt-3 px-2">
+            <RainbowButton
+              aria-label="Download my resume as PDF"
+              href="https://danial-k-english-u7kb6py.gamma.site/"
+              download
+              className="group w-full overflow-hidden lg:text-lg p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+            >
+              Enter English Instructor Profile
+            </RainbowButton>
           </div>
         </FadeIn>
         <div className="col-span-1 lg:flex items-center justify-center p-5 lg:p-10">

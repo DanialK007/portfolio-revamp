@@ -38,7 +38,9 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   return (
     <div
       className={`fixed flex items-center justify-center inset-0 bg-black/25 z-50 overflow-y-scroll duration-700 ease-out ${
-        opener ? "backdrop-blur-xl" : "opacity-0 blur-3xl pointer-events-none"
+        opener
+          ? "backdrop-blur-md px-5 md:px-10 lg:px-20"
+          : "px-10 md:px-20 lg:px-56 opacity-0 blur-3xl pointer-events-none"
       }`}
       onClick={() => {
         setOpener(false);
@@ -48,11 +50,9 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       }} // Close the modal on backdrop click
     >
       {isOpen && (
-        <div className="flex items-center justify-center size-full px-5 md:px-10 lg:px-20 overflow-y-scroll">
+        <div className="flex items-center justify-center size-full overflow-y-scroll">
           <div
-            className={`bg-black grow max-h-[95%] border border-neutral-800 rounded-[28px] overflow-hidden w-full max-w-5xl mx-auto relative duration-500 ${
-              isOpen ? "scale-100" : "scale-0"
-            }`}
+            className={`bg-black/65 grow max-h-[95%] border border-white/15 rounded-[28px] overflow-hidden w-full max-w-5xl mx-auto relative duration-500`}
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal when clicking inside
           >
             <button
@@ -72,7 +72,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                   <CarouselContent>
                     <CarouselItem className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing">
                       <div
-                        className={`h-full relative p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl ${project.gradient}`}
+                        className={`h-full relative p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl bg-black/30 border border-white/15 $ {project.gradient}`}
                       >
                         <video
                           autoPlay
@@ -88,7 +88,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                           muted
                           loop
                           src={project.videoSrc}
-                          className="rounded-xl absolute top-0 left-0 w-full h-full scale-125 -z-10 opacity- blur-[80px]"
+                          className="rounded-xl absolute top-0 left-0 w-full h-full scale-125 -z-10 opacity- blur-[100px]"
                           playsInline
                           preload="none"
                         ></video>
@@ -99,11 +99,11 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                         key={index}
                         className="md:basis-1/2 hover:cursor-grab active:cursor-grabbing"
                       >
-                        <div className="">
+                        <div className="border border-white/15 rounded-3xl overflow-hidden">
                           <img
                             src={photo}
                             alt={`${project.title} screenshot`}
-                            className="rounded-3xl object-cover"
+                            className="object-cover"
                             loading="lazy"
                           />
                         </div>
@@ -124,18 +124,18 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 A website that turns every scroll into a moment of awe
               </p>
               <div className="px-5 pb-5 flex flex-col items-start lg:flex-row gap-2">
-                <a
+                {/* <a
                   href="#"
                   target="_blank"
                   className="hidden flex items-center justify-center border-2 border-white hover:bg-white hover:text-black duration-300 rounded-xl py-2 px-4"
                   rel="noopener noreferrer"
                 >
                   Learn More
-                </a>
+                </a> */}
                 <a
                   href={project.href}
                   target="_blank"
-                  className="flex items-center justify-center border-2 border-neutral-200 bg-neutral-200 text-black hover:text-neutral-200 hover:bg-black rounded-full active:scale-95 duration-300 py-2 px-4"
+                  className="flex items-center justify-center border border-neutral-200 bg-neutral-200/75 text-black hover:text-neutral-200 hover:bg-transparent rounded-full active:scale-95 duration-300 py-2 px-4"
                   rel="noopener noreferrer"
                 >
                   View Original Website <LuExternalLink className="ml-2" />

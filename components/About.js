@@ -5,6 +5,7 @@ import HyperText from "./ui/hyper-text";
 import { TextBlur } from "./ui/text-blur";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { BlurAnimation } from "./ui/BlurAnimation";
+import Magnetic from "./ui/Magnetic";
 
 const words = [
   { text: "Frontend" },
@@ -35,18 +36,24 @@ function About() {
       <div className="py-8">
         <BlurAnimation
           duration={1.2}
-          className="flex items-center justify-center pb-2 myFont text-6xl md:text-8xl xl:text-10xl"
+          className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-16 items-center justify-center pb-2 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl"
         >
           <span className="font-thin" id="aboutM">
             ABOUT
           </span>
-          <img
-            src="img/cube.svg"
-            className="hover:invert duration-500 hover:cursor-pointer w-4 md:w-10 xl:w-16 animate-spin"
-            alt=""
-          />
-          <span className="italic font-bold pe-2" id="Ame">
+          <span className="italic font-bold pe-2 relative">
             ME
+            <div className="absolute top-1 -left-[2.2rem] sm:top-3 sm:-left-[2.8rem] md:top-4 lg:top-5 xl:top-4 md:-left-[3.2rem] lg:-left-[4.2rem] xl:-left-[4.4rem]">
+              <Magnetic>
+                <div className="pt-3 px-3 rounded-full">
+                  <img
+                    src="img/cube.svg"
+                    className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                    alt=""
+                  />
+                </div>
+              </Magnetic>
+            </div>
           </span>
         </BlurAnimation>
         <BlurAnimation className="flex justify-between text-sm font-mono px-5">
@@ -67,6 +74,17 @@ function About() {
             stunning designs.`}
             className=""
           ></TextBlur>
+          <div className="pt-3 px-2 flex justify-end">
+              <RainbowButton
+                aria-label="Download my resume as PDF"
+                href="https://danial-k-english-u7kb6py.gamma.site/"
+                download
+                className="group w-full overflow-hidden text-sm p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+              >
+                Enter English Instructor Profile
+              </RainbowButton>
+            </div>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2 items-center">
               <a
@@ -94,7 +112,7 @@ function About() {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 24 24"
                   class="text-lg"
                   height="14px"
@@ -422,6 +440,17 @@ function About() {
             className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
           >
             <TextGenerateEffect words={words} duration={1} />
+            <div className="pt-3 px-2 flex justify-end">
+              <RainbowButton
+                aria-label="Download my resume as PDF"
+                href="https://danial-k-english-u7kb6py.gamma.site/"
+                download
+                className="group w-full overflow-hidden text-sm p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+              >
+                Enter English Instructor Profile
+              </RainbowButton>
+            </div>
             <BlurAnimation
               delay={2}
               className="mx-auto flex justify-between py-4 pe-2"
@@ -448,7 +477,7 @@ function About() {
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
-                    stroke-width="0"
+                    strokeWidth="0"
                     viewBox="0 0 24 24"
                     class="text-lg"
                     height="14px"

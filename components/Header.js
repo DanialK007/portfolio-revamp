@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { initLenis, getLenis } from "../lib/lenis";
 import { IoMdMenu } from "react-icons/io";
 import Logo from "./Logo";
+import GradualBlur from "../components/ui/GradualBlur";
 
 function Header() {
   const [menuOpen, setMenu] = useState(false);
@@ -45,9 +46,7 @@ function Header() {
       {/*  Navigation Bar - Mobile */}
       <div
         className={`flex justify-between p-3 fixed w-screen top-0 z-50 md:px-12 ${
-          isScrolled
-            ? "bg-gradient-to-b from-black/90 to-60% to-transparent"
-            : ""
+          isScrolled ? "bg-gradient-to-b from-black/90 from-10% to-80%" : ""
         }`}
       >
         <a aria-label="This is a link." href="" className="pt-1 px-2">
@@ -82,10 +81,10 @@ function Header() {
         </button>
       </div>
       <div
-        className={`md:hidden fixed top-20 right-4 rounded-2xl duration-300 z-50 ${
+        className={`md:hidden fixed top-20 right-4 border rounded-2xl duration-300 z-50 ${
           menuOpen
-            ? "z-10 translate-x-0 bg-white/5 border border-white/5 backdrop-blur-lg"
-            : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-none"
+            ? "z-10 translate-x-0 bg-white/5 border border-white/15 backdrop-blur-md"
+            : "-z-10 pointer-events-none text-transparent translate-x-10 bg-white/0 backdrop-blur-0"
         }`}
       >
         <ul className="p-4 flex flex-col gap-3">
@@ -115,11 +114,14 @@ function Header() {
           </a>
         </ul>
       </div>
-      <button onClick={toggleMenu} className={`fixed inset-0 z-40 lg:hidden ${menuOpen ? "" : "hidden"}`}></button>
+      <button
+        onClick={toggleMenu}
+        className={`fixed inset-0 z-40 lg:hidden ${menuOpen ? "" : "hidden"}`}
+      ></button>
 
       {/* large screen */}
       <div
-        className={`hidden md:flex fixed top-3 right-10 gap-5 p-3 text-xs myAnimation2 bg-black/20 backdrop-blur-lg rounded-2xl duration-700 ${
+        className={`hidden md:flex fixed top-3 right-10 border border-white/10 gap-5 p-3 text-xs myAnimation2 bg-black/10 backdrop-blur-md rounded-2xl duration-700 ${
           isScrolled
             ? "opacity-0 -z-10 -translate-y-40"
             : "opacity-100 z-50 translate-y-0"
@@ -151,7 +153,7 @@ function Header() {
         </a>
       </div>
       <div
-        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/20 border border-white/5 backdrop-blur-lg rounded-2xl duration-700 ${
+        className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/10 border border-white/15 backdrop-blur-md rounded-2xl duration-700 ${
           isScrolled
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-40 pointer-events-none"
@@ -198,7 +200,7 @@ function Header() {
           isScrolled ? "translate-y-0" : "translate-y-20"
         }`}
       >
-        <div className="mx-auto flex justify-center gap-2">
+        <div className="mx-auto flex justify-center gap-2 z-10">
           <a
             aria-label="This is a link."
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
@@ -214,7 +216,7 @@ function Header() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               class="text-lg"
               height="14px"
@@ -240,6 +242,20 @@ function Header() {
           </a>
         </div>
       </div>
+
+      {/* <GradualBlur
+        target="parent"
+        position="bottom"
+        height="5rem"
+        strength={3}
+        divCount={8}
+        zIndex={49}
+        curve="bezier"
+        exponential={true}
+        opacity={1}
+        className={`duration-500 hidden ${isScrolled ? "" : "translate-y-10"}`}
+        target="page"
+      /> */}
     </nav>
   );
 }

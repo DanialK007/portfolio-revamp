@@ -76,6 +76,8 @@ const Carousel = () => {
         />
       </div>
 
+      <a href="#" className="absolute top-4 right-4 bg-white/20 rounded-full px-2 py-1 text-xs backdrop-blur-lg border border-white/20 hover:scale-105 active:scale-90 duration-300">See Gallery</a>
+
       {/* Left Arrow */}
       <button
         className="absolute border border-white/20 active:blur-[4px] active:scale-75 hover:scale-110 duration-300 top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
