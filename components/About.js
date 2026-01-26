@@ -133,7 +133,7 @@ function About() {
             </div>
             <RainbowButton
               aria-label="Download my resume as PDF"
-              href="kkk-resume.pdf"
+              href="KaungKhantKyaw_CV.pdf"
               download
               className="text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 bg-white/10 rounded-full duration-[1200ms]"
               // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
@@ -514,7 +514,7 @@ function About() {
               </BlurAnimation>
               <RainbowButton
                 aria-label="Download my resume as PDF"
-                href="kkk-resume.pdf"
+                href="KaungKhantKyaw_CV.pdf"
                 download
                 className="group overflow-hidden text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
                 // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
