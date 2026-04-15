@@ -86,7 +86,7 @@ function Intro() {
               aria-label="Download my resume as PDF"
               href="https://danial-k-english-u7kb6py.gamma.site/"
               download
-              className="group w-full overflow-hidden lg:text-lg p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+              className="hidden group w-full overflow-hidden lg:text-lg p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
               // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
             >
               Enter English Instructor Profile

@@ -14,7 +14,7 @@ const words = [
 function Hero() {
   return (
     <BackgroundGradientAnimation
-      containerClassName="h-screen"
+      containerClassName="h-screen min-h-[780px]"
       gradientBackgroundStart="#000"
       gradientBackgroundEnd="#111"
       thirdColor="#e3591e"
