@@ -1,5 +1,6 @@
 "use client"
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import React from "react";
+import { useEffect, useRef, useState, useMemo } from 'react';
 import * as math from 'mathjs';
 
 const DEFAULT_CONFIG = {

@@ -1,3 +1,4 @@
+import React from "react";
 import Carousel from "./Carousel";
 import FadeIn from "./framer-motion/FadeIn";
 import { RainbowButton } from "./ui/rainbow-button";

@@ -1,5 +1,7 @@
 // ProjectModal.js
-import React, { useEffect } from "react";
+"use client";
+import React from "react";
+import { useEffect } from "react";
 import { LuExternalLink } from "react-icons/lu";
 import {
   Carousel,

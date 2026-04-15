@@ -10,11 +10,6 @@ const words = [
   { text: "WELCOME", className: "text-white" },
   { text: "HOME" },
 ];
-const words2 = [
-  { text: "IT'S" },
-  { text: "ME" },
-  { text: "K-cube", className: "text-white" },
-];
 
 function Hero() {
   return (
@@ -28,9 +23,6 @@ function Hero() {
         id="top"
         className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%"
       >
-        {/* <img src="/download.png" alt="" className="scale-50 absolute top-0 left-0" /> */}
-        {/* <img src="/download-2.png" alt="" className="scale-50 absolute top-64 -right-40" /> */}
-
         <div className="flex items-end lg:justify-center pb-5">
           <TextGenerateEffect
             words={words}

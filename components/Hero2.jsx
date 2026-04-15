@@ -1,6 +1,7 @@
 "use client";
+import React from "react";
 import { ArrowDown } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Particles from "./magicui/particles";
 
 function Hero2() {

@@ -1,5 +1,6 @@
 "use client";;
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
 
 function MousePosition() {
   const [mousePosition, setMousePosition] = useState({

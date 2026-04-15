@@ -1,6 +1,5 @@
 "use client";
 import { ArrowDown } from "lucide-react";
-import React from "react";
 import HyperText from "./ui/hyper-text";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { BlurAnimation } from "./ui/BlurAnimation";

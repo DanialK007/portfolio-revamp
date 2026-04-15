@@ -1,5 +1,6 @@
 "use client"; // Add this line to enable client-side rendering
 
+import React from "react";
 import { useState, useEffect } from "react";
 
 const images = [

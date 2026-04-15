@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import FadeIn from "./framer-motion/FadeIn";
 import { LuExternalLink } from "react-icons/lu";
 import HyperText from "./ui/hyper-text";

@@ -1,9 +1,10 @@
-  "use client"
-  import { useEffect } from 'react';
-  import { Inter } from "next/font/google";
-  import "./globals.css";
-  import { Analytics } from "@vercel/analytics/react";
-  import { initLenis } from '../lib/lenis';
+"use client"
+import React from 'react';
+import { useEffect } from 'react';
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { initLenis } from '../lib/lenis';
 
   const inter = Inter({ subsets: ["latin"] });
 
@@ -46,7 +47,7 @@
           <link rel="icon" href="/img/Kcube.svg" />
         </head>
         <body
-          className={`bg-black text-white/80 overflow-x-hidden myL oad ${inter.className}`}
+          className={`bg-black text-white/80 overflow-x-hidden myLoad ${inter.className}`}
         >
           {children}
           <Analytics />

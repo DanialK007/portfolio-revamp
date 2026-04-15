@@ -1,3 +1,4 @@
+import React from "react";
 import FadeIn from "./framer-motion/FadeIn";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import HyperText from "./ui/hyper-text";
