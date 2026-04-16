@@ -24,7 +24,7 @@ function Hero() {
         id="top"
         className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%"
       >
-        <div className="flex items-end lg:justify-center pb-5">
+        <div className="hidden lg:flex items-end lg:justify-center pb-5">
           <BlurAnimation
             delay={0.2}
             duration={1.2}
@@ -35,7 +35,7 @@ function Hero() {
             <span>HOME</span>
           </BlurAnimation>
         </div>
-        <div className="lg:pt-5 flex items-start lg:justify-center px-10 sm:px-16">
+        <div className="lg:pt-5 flex items-start lg:justify-center ps-10 sm:px-16">
           <BlurAnimation
             delay={0.4}
             duration={1.2}
@@ -83,7 +83,7 @@ function Hero() {
                 <img
                   src="img/cube.svg"
                   alt=""
-                  className="w-8 animate-spin mb-10 cursor-pointer hover:invert duration-300"
+                  className="w-8 animate-spin cursor-pointer hover:invert duration-300"
                 />
               </Magnetic>
             </span>

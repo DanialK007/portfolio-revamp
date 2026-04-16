@@ -16,7 +16,7 @@ function Work() {
           >
             <div className="font-thin">SELECT</div>
 
-            <div className="italic font-bold pe-2 relative">
+            <div className="italic font-bold relative">
               WORK
               <div className="absolute top-3 -left-[2.2rem] sm:top-1 sm:-left-[2.8rem] md:top-2 lg:top-3 xl:top-1 md:-left-[3.2rem] lg:-left-[4.2rem]">
                 <Magnetic>
