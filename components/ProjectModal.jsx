@@ -13,6 +13,7 @@ import { getLenis } from "../lib/lenis";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   const [opener, setOpener] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   useEffect(() => {
     const lenis = getLenis(); // get the global instance
     if (isOpen) lenis.stop();
@@ -23,6 +24,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
     // Disable scrolling on the body when the modal is open
     if (isOpen) {
       setOpener(true);
+      setVideoLoaded(false);
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -69,14 +71,20 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                       <div
                         className={`h-full relative p-5 lg:p-10 bg-gradient-to-br flex items-center justify-center rounded-3xl bg-black/30 border border-white/15 $ {project.gradient}`}
                       >
+                        {!videoLoaded && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-8 h-8 border-2 border-white/50 border-t-white rounded-full animate-spin"></div>
+                          </div>
+                        )}
                         <video
                           autoPlay
                           muted
                           loop
                           src={project.videoSrc}
-                          className="rounded-xl"
+                          className={`rounded-xl ${videoLoaded ? "opacity-100" : "opacity-0"}`}
                           playsInline
                           preload="none"
+                          onLoadedData={() => setVideoLoaded(true)}
                         ></video>
                         <video
                           autoPlay
