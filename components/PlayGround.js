@@ -28,7 +28,7 @@ function PlayGround() {
       videoSrc: "img/video9.mov",
       bgColor: "bg-teal-500",
       gradient: "to-teal-400 from-white",
-      grid: "col-span-1 row-span-1 lg:col-span-2 lg:row-span-2",
+      grid: "col-span-1 lg:col-span-2 lg:row-span-2",
     },
     {
       title: "Leiga",
@@ -44,7 +44,7 @@ function PlayGround() {
       videoSrc: "img/video3.mp4",
       bgColor: "bg-cyan-500",
       gradient: "from-pink-400 to-cyan-500",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "Gymnast",
@@ -60,7 +60,7 @@ function PlayGround() {
       videoSrc: "img/video2.mp4",
       bgColor: "bg-red-600",
       gradient: "from-neutral-950 from-40% to-red-700",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "Morph",
@@ -76,7 +76,7 @@ function PlayGround() {
       videoSrc: "img/video1.mp4",
       bgColor: "bg-yellow-600",
       gradient: "from-gray-300 from-40% to-amber-700",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "The Venue",
@@ -92,7 +92,7 @@ function PlayGround() {
       videoSrc: "img/video7.mp4",
       bgColor: "bg-emerald-900",
       gradient: "from-slate-600 to-black",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "Acme",
@@ -108,7 +108,7 @@ function PlayGround() {
       videoSrc: "img/video4.mp4",
       bgColor: "bg-green-600",
       gradient: "from-amber-950 to-zinc-400",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "Portfolio",
@@ -124,7 +124,7 @@ function PlayGround() {
       videoSrc: "img/video6.mp4",
       bgColor: "bg-pink-600",
       gradient: "from-orange-600 to-black",
-      grid: "col-span-1 row-span-1",
+      grid: "col-span-1",
     },
     {
       title: "Wright's Harbor Mansion",
@@ -140,7 +140,7 @@ function PlayGround() {
       videoSrc: "img/video8.mp4",
       bgColor: "bg-pink-600",
       gradient: "from-lime-600 to-black",
-      grid: "col-span-1 row-span-1 lg:col-span-2 lg:row-span-2",
+      grid: "col-span-1 lg:col-span-2 lg:row-span-2",
     },
     {
       title: "Pireal",
@@ -156,7 +156,7 @@ function PlayGround() {
       videoSrc: "img/video5.mp4",
       bgColor: "bg-red-600",
       gradient: "from-white to-teal-500",
-      grid: "col-span-2 row-span-1 lg:col-span-1",
+      grid: "col-span-1 lg:col-span-1",
     },
   ];
 
@@ -184,7 +184,7 @@ function PlayGround() {
             <div className="absolute top-1 -left-[2.2rem] sm:top-2 sm:-left-[2.6rem] md:top-3 lg:top-5 xl:top-4 xl:-left-[4.6rem] md:-left-[3.2rem] lg:-left-[4.4rem]">
               <Magnetic>
                 <div className="pt-3 px-3 rounded-full">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/cube.svg"
                     className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                     alt=""
@@ -199,7 +199,7 @@ function PlayGround() {
           <HyperText text="EXPERIMENTS" />
         </BlurAnimation>
       </div>
-      <div className="grid grid-cols-2 p-5 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5">
+      <div className="grid p-5 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5">
         {projects.map((project, index) => (
           <BlurAnimation
             duration={1.6}
@@ -212,18 +212,6 @@ function PlayGround() {
               duration="1.9"
               className={`${project.bgColor} h-full relative rounded-2xl flex items-center justify-center`}
             >
-              <div
-                className={`absolute hidden top-0 left-0 w-full h-full flexx items-center justify-center opacity-0 hover:opacity-100 duration-500 bg-gradient-to-br p-10 ${project.gradient}`}
-              >
-                <video
-                  src={project.videoSrc}
-                  className="rounded-[10px] mb-4"
-                  muted
-                  loop
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => e.currentTarget.pause()}
-                ></video>
-              </div>
               <div className="absolute left-0 bottom-0 z-10 flex flex-col justify-end px-5 p-2 md:p-5 bg-gradient-to-t from-black/50 w-full">
                 <div className="text-xl brightness-200 text-gray-50">
                   <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300">
@@ -231,6 +219,7 @@ function PlayGround() {
                     <button
                       onClick={() => openModal(project)} // Open the modal instead of navigating
                       className="flex items-center justify-center md:bg-zinc-500/35 backdrop-blur-sm text-black rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
+                      aria-label="See project preview"
                     >
                       <div className="text-xs hidden md:block">see preview</div>
                       <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
@@ -242,8 +231,9 @@ function PlayGround() {
               <button
                 onClick={() => openModal(project)}
                 className="absolute z-20 inset-0 md:hidden"
+                aria-label="Open project modal"
               ></button>
-              <img
+              <img loading="lazy" decoding="async"
                 src={project.imgSrc}
                 alt={`${project.title} screenshot`}
                 className="w-full h-full group-hover:scale-110 duration-2000 ease-out object-cover shadow-lg"

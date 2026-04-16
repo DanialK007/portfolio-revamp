@@ -21,7 +21,7 @@ function Work() {
               <div className="absolute top-3 -left-[2.2rem] sm:top-1 sm:-left-[2.8rem] md:top-2 lg:top-3 xl:top-1 md:-left-[3.2rem] lg:-left-[4.2rem]">
                 <Magnetic>
                   <div className="pt-3 px-3 rounded-full">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src="img/cube.svg"
                       className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                       alt=""
@@ -53,7 +53,7 @@ function Work() {
           </div>
           <div className="bg-neutral-800 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
             <div className="cap2 absolute w-full bg-gradient-to-t from-black to-25% h-full duration-300 z-10 flex flex-col justify-between p-5">
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/nextjs.svg"
                 alt=""
                 className="w-10 invert opacity-60 saturate-0 brightness-200"
@@ -65,7 +65,7 @@ function Work() {
                 </div>
               </div>
             </div>
-            <img
+            <img loading="lazy" decoding="async"
               src="img/mockup3.jpeg"
               alt=""
               className="w-full h-full object-cover"
@@ -82,7 +82,7 @@ function Work() {
           </div>
           <div className="bg-blue-950/50 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/tailwind-logo.png"
                 alt=""
                 className="w-12 opacity-60 saturate-0 brightness-200 p-1 object-contain"
@@ -94,7 +94,7 @@ function Work() {
                 </div>
               </div>
             </div>
-            <img
+            <img loading="lazy" decoding="async"
               src="img/mockup.jpg"
               alt=""
               className="w-full h-full object-cover"
@@ -111,7 +111,7 @@ function Work() {
           </div>
           <div className="bg-neutral-900 brightness-75 relative h-96 mt-3 rounded-[16px] overflow-hidden flex items-center justify-center">
             <div className="cap2 absolute w-full h-full duration-300 z-10 flex flex-col justify-between p-5">
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/react-logo.png"
                 alt=""
                 className="w-12 opacity-100 saturate-0 brightness-0 invert p-1"
@@ -123,7 +123,7 @@ function Work() {
                 </div>
               </div>
             </div>
-            <img
+            <img loading="lazy" decoding="async"
               src="img/mockup2.png"
               alt=""
               className="w-full h-full object-cover"

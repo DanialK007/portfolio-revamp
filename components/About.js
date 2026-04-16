@@ -47,7 +47,7 @@ function About() {
             <div className="absolute top-1 -left-[2.2rem] sm:top-3 sm:-left-[2.8rem] md:top-4 lg:top-5 xl:top-4 md:-left-[3.2rem] lg:-left-[4.2rem] xl:-left-[4.4rem]">
               <Magnetic>
                 <div className="pt-3 px-3 rounded-full">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/cube.svg"
                     className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                     alt=""
@@ -67,7 +67,7 @@ function About() {
       <div className="grid grid-cols-1 gap-5 p-5 md:hidden">
         <FadeIn
           duration="1.2"
-          className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
+          className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/10"
         >
           <TextBlur
             words={`Frontend Developer with 3 years of experience, focused on
@@ -76,46 +76,46 @@ function About() {
             className=""
           ></TextBlur>
           <div className="pt-3 px-2 flex justify-end">
-              <RainbowButton
-                aria-label="Download my resume as PDF"
-                href="https://danial-k-english-u7kb6py.gamma.site/"
-                download
-                className="group w-full overflow-hidden text-sm p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
-                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
-              >
-                Enter English Instructor Profile
-              </RainbowButton>
-            </div>
+            <RainbowButton
+              aria-label="Download my resume as PDF"
+              href="https://danial-k-english-u7kb6py.gamma.site/"
+              download
+              className="group w-full overflow-hidden text-sm p-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+            >
+              Enter English Instructor Profile
+            </RainbowButton>
+          </div>
           <div className="mx-auto flex justify-between py-4 pe-2">
             <div className="flex gap-2 items-center">
               <a
                 target="_blank"
                 aria-label="This is a link."
                 href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
-                <img src="img/facebookIcon.svg" alt="" className="w-3" />
+                <img loading="lazy" decoding="async" src="img/facebookIcon.svg" alt="" className="w-3" />
               </a>
               <a
                 target="_blank"
                 aria-label="This is a link."
                 href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
               >
-                <img src="img/linkedin.svg" alt="" className="w-3" />
+                <img loading="lazy" decoding="async" src="img/linkedin.svg" alt="" className="w-3" />
               </a>
               <a
                 target="_blank"
                 aria-label="This is a link."
                 href="mailto:kaungkhantkyawdk@gmail.com"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
               >
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
                   viewBox="0 0 24 24"
-                  class="text-lg"
+                  className="text-lg"
                   height="14px"
                   width="14px"
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,9 +127,9 @@ function About() {
                 target="_blank"
                 aria-label="This is a link."
                 href="https://t.me/DanialK007"
-                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+                className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
               >
-                <img src="img/telegram.png" alt="" className="w-3" />
+                <img loading="lazy" decoding="async" src="img/telegram.png" alt="" className="w-3" />
               </a>
             </div>
             <RainbowButton
@@ -137,9 +137,9 @@ function About() {
               href="KaungKhantKyaw_CV.pdf"
               download
               className="text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 bg-white/10 rounded-full duration-[1200ms]"
-              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+              // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/download-icon.svg"
                 alt="Download icon"
                 className="h-4"
@@ -150,9 +150,9 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5"
+          className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/10"
         >
-          <img
+          <img loading="lazy" decoding="async"
             src="img/profile.jpeg"
             alt=""
             className="w-full object-cover brightness-50 saturate-0"
@@ -179,7 +179,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
+          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Biography
@@ -213,7 +213,7 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
+          className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
         >
           <div className="uppercase font-mono font-semibold text-lg mb-2">
             Experience
@@ -288,143 +288,137 @@ function About() {
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="rounded-2xl brightness-75 hover:brightness-100 duration-300 border border-white/5"
-        >
-          <img src="img/photo_1_2024-04-26_18-58-30.jpg" alt="" />
-        </FadeIn>
-        <FadeIn
-          duration="1.2"
-          className="rounded-2xl -mt-5 brightness-75 border border-white/5 bg-[#0a0a0a]"
+          className="rounded-2xl brightness-75 border border-white/10 bg-[#0a0a0a]"
         >
           <Carousel />
         </FadeIn>
         <FadeIn
           duration="1.2"
-          className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
+          className="p-6 rounded-2xl border border-white/10 bg-[#0a0a0a]"
         >
           <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
           <BlurAnimation className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2">
-            <img
+            <img loading="lazy" decoding="async"
               src="img/htmlLogo.png"
               alt=""
               title="HTML"
               className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/cssLogo.png"
               alt=""
               title="CSS"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-950 px-2 py-[0.35rem] border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/jsLogo.png"
               alt=""
               title="Javascript"
               className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-yellow-950 border p-2 border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/react-logo.png"
               alt=""
               title="React.js"
               className="grid-cols-1 hover:shadow-sm hover:border-cyan-500 hover:shadow-cyan-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 py-2 px-[0.4rem] border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/nextjs.svg"
               alt=""
               title="Next.js"
               className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-gray-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-gray-400 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/tailwind-logo.png"
               alt=""
               title="Tailwind CSS"
               className="grid-cols-1 hover:shadow-sm hover:border-teal-500 hover:shadow-teal-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 px-1 py-[0.6rem] border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/bootstrap-logo.png"
               alt=""
               title="Bootstrap"
               className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-1 px-[0.2rem] border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/node.png"
               alt=""
               title="Node.js"
               className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/express.png"
               alt=""
               title="Express.js"
               className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-gray-500 hover:shadow-gray-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-300 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/mongo.png"
               alt=""
               title="MongoDB"
               className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/framer-motion.svg"
               alt=""
               title="Framer Motion"
               className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/gsap.svg"
               alt=""
               title="GSAP Motion"
               className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/lenis.png"
               alt=""
               title="Lenis Scroll"
               className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/phpIcon].png"
               alt=""
               title="PHP"
               className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-400/20 py-3 px-1 border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/mysql.png"
               alt=""
               title="MySQL"
               className="grid-cols-1 bg-orange-500/20 hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/pythonLogo.png"
               alt=""
               title="Python"
               className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-500/30 p-2 border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/C++Icon.png"
               alt=""
               title="C++"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-indigo-950 py-[0.4rem] px-2 border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/figmaIcon.webp"
               alt=""
               title="Figma"
               className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             />
-            {/* <img
+            {/* <img loading="lazy" decoding="async"
               src="img/gpt.png"
               alt=""
               title="Chat GPT"
               className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
             /> */}
-            <img
+            <img loading="lazy" decoding="async"
               src="img/git.png"
               alt=""
               title="Git"
               className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src="img/github.png"
               alt=""
               title="GitHub"
@@ -438,7 +432,7 @@ function About() {
         <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
-            className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/5"
+            className="p-6 pb-0 bg-[#0a0a0a] rounded-2xl text-2xl border border-white/10"
           >
             <TextGenerateEffect words={words} duration={1} />
             <div className="pt-3 px-2 flex justify-end">
@@ -446,8 +440,8 @@ function About() {
                 aria-label="Download my resume as PDF"
                 href="https://danial-k-english-u7kb6py.gamma.site/"
                 download
-                className="group w-full overflow-hidden text-sm p-3 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
-                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                className="group w-full overflow-hidden text-sm p-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
               >
                 Enter English Instructor Profile
               </RainbowButton>
@@ -461,9 +455,9 @@ function About() {
                   target="_blank"
                   aria-label="Visit my Facebook profile"
                   href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/facebookIcon.svg"
                     alt="Facebook icon"
                     className="w-3"
@@ -473,14 +467,14 @@ function About() {
                   target="_blank"
                   aria-label="Send me an email"
                   href="mailto:kaungkhantkyawdk@gmail.com"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-green-500 hover:shadow hover:shadow-green-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
                   <svg
                     stroke="currentColor"
                     fill="currentColor"
                     strokeWidth="0"
                     viewBox="0 0 24 24"
-                    class="text-lg"
+                    className="text-lg"
                     height="14px"
                     width="14px"
                     xmlns="http://www.w3.org/2000/svg"
@@ -492,9 +486,9 @@ function About() {
                   target="_blank"
                   aria-label="Visit my LinkedIn profile"
                   href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-indigo-500 hover:shadow hover:shadow-indigo-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/linkedin.svg"
                     alt="LinkedIn icon"
                     className="w-3"
@@ -504,9 +498,9 @@ function About() {
                   target="_blank"
                   aria-label="Send me a message on Telegram"
                   href="https://t.me/DanialK007"
-                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
+                  className="inline-block p-2 rounded-full backdrop-blur-md border border-white/10 hover:border-blue-500 hover:shadow hover:shadow-blue-500/40 hover:bg-black/20 bg-white/10 duration-300"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/telegram.png"
                     alt="Telegram icon"
                     className="w-3"
@@ -518,15 +512,15 @@ function About() {
                 href="KaungKhantKyaw_CV.pdf"
                 download
                 className="group overflow-hidden text-xs px-3 py-2 gap-2 hover:border-red-500 border-white/20 border-collapse rounded-full duration-[1200ms]"
-                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/5 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
+                // className="text-xs font-semibold px-3 py-1 items-center flex gap-2 rounded-full backdrop-blur-md border border-white/10 hover:border-red-500 hover:shadow-md hover:shadow-red-500/40 hover:bg-black/20 bg-white/20 duration-300"
               >
                 <div className="relative">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/download-icon.svg"
                     alt="Download icon"
                     className="h-4 group-hover:translate-y-8 duration-300"
                   />
-                  <img
+                  <img loading="lazy" decoding="async"
                     src="img/download-icon.svg"
                     alt="Download icon"
                     className="h-4 absolute bottom-8 group-hover:translate-y-8 duration-300"
@@ -538,7 +532,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.2"
-            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               My Background
@@ -608,9 +602,9 @@ function About() {
         <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.5"
-            className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5"
+            className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/10"
           >
-            <img
+            <img loading="lazy" decoding="async"
               src="img/profile.jpeg"
               alt=""
               className="w-full object-cover brightness-50 saturate-0"
@@ -637,7 +631,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Biography
@@ -671,7 +665,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.5"
-            className="rounded-2xl brightness-75 duration-300 border border-white/5"
+            className="rounded-2xl brightness-75 duration-300 border border-white/10"
           >
             <Carousel />
           </FadeIn>
@@ -679,7 +673,7 @@ function About() {
         <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.9"
-            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/5"
+            className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
           >
             <div className="uppercase font-mono font-semibold text-lg mb-2">
               Experience
@@ -756,7 +750,7 @@ function About() {
           </FadeIn>
           <FadeIn
             duration="1.9"
-            className="p-6 rounded-2xl border border-white/5 bg-[#0a0a0a]"
+            className="p-6 rounded-2xl border border-white/10 bg-[#0a0a0a]"
           >
             <div className="font-mono font-semibold pb-2 text-lg">
               TOOL STACK
@@ -765,127 +759,127 @@ function About() {
               delay={0.1}
               className="grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2"
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/htmlLogo.png"
                 alt=""
                 title="HTML"
                 className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/cssLogo.png"
                 alt=""
                 title="CSS"
                 className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-950 px-2 py-[0.35rem] border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/jsLogo.png"
                 alt=""
                 title="Javascript"
                 className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-yellow-950 border p-2 border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/react-logo.png"
                 alt=""
                 title="React.js"
                 className="grid-cols-1 hover:shadow-sm hover:border-cyan-500 hover:shadow-cyan-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 py-2 px-[0.4rem] border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/nextjs.svg"
                 alt=""
                 title="Next.js"
                 className="grid-cols-1 hover:shadow-sm invert bg-slate-500/10 hover:border-black/70 brightness-110 hover:shadow-neutral-500 hover:brightness-125 duration-300 p-[0.3rem] w-full block aspect-square object-contain border border-neutral-400 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/tailwind-logo.png"
                 alt=""
                 title="Tailwind CSS"
                 className="grid-cols-1 hover:shadow-sm hover:border-teal-500 hover:shadow-teal-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-cyan-950 px-1 py-[0.6rem] border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/bootstrap-logo.png"
                 alt=""
                 title="Bootstrap"
                 className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-950 py-1 px-[0.2rem] border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/node.png"
                 alt=""
                 title="Node.js"
                 className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-600/20 hover:border-green-500 hover:shadow-green-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/express.png"
                 alt=""
                 title="Express.js"
                 className="grid-cols-1 hover:shadow-sm p-2 invert bg-slate-500/10 hover:border-neutral-500 hover:shadow-neutral-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-300 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/mongo.png"
                 alt=""
                 title="MongoDB"
                 className="grid-cols-1 hover:shadow-sm px-[0.7rem] py-1 bg-green-500/10 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/framer-motion.svg"
                 alt=""
                 title="Framer Motion"
                 className="grid-cols-1 hover:shadow-sm bg-purple-500/20 p-2 hover:border-purple-500 hover:shadow-purple-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/gsap.svg"
                 alt=""
                 title="GSAP Motion"
                 className="grid-cols-1 hover:shadow-sm p-[0.3rem] bg-green-500/20 hover:border-green-500 hover:shadow-green-500 brightness-90 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/lenis.png"
                 alt=""
                 title="Lenis Scroll"
                 className="grid-cols-1 hover:shadow-sm bg-pink-400/20 p-2 hover:border-pink-500 hover:shadow-pink-500 hover:brightness-100 brightness-90 duration-300 w-full block aspect-square object-contain border border-neutral-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/phpIcon].png"
                 alt=""
                 title="PHP"
                 className="grid-cols-1 hover:shadow-sm hover:border-purple-500 hover:shadow-purple-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-purple-400/20 py-3 px-1 border border-gray-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/mysql.png"
                 alt=""
                 title="MySQL"
                 className="grid-cols-1 bg-orange-500/20 hover:shadow-sm hover:border-orange-500 hover:shadow-orange-500 hover:brightness-105 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/pythonLogo.png"
                 alt=""
                 title="Python"
                 className="grid-cols-1 hover:shadow-sm hover:border-yellow-500 hover:shadow-yellow-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-blue-500/30 p-2 border border-gray-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/C++Icon.png"
                 alt=""
                 title="C++"
                 className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-indigo-950 py-[0.4rem] px-2 border border-gray-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/figmaIcon.webp"
                 alt=""
                 title="Figma"
                 className="grid-cols-1 hover:shadow-sm hover:border-blue-500 hover:shadow-blue-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               />
-              {/* <img
+              {/* <img loading="lazy" decoding="async"
                 src="img/gpt.png"
                 alt=""
                 title="Chat GPT"
                 className="grid-cols-1 hover:shadow-sm bg-black p-1 hover:border-white/60 hover:shadow-white hover:brightness-100 brightness-75 duration-300 w-full block aspect-square object-contain border border-gray-700 rounded-xl"
               /> */}
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/git.png"
                 alt=""
                 title="Git"
                 className="grid-cols-1 hover:shadow-sm hover:border-red-500 hover:shadow-red-500 hover:brightness-125 duration-300 w-full block aspect-square object-contain bg-orange-950 p-2 border border-gray-700 rounded-xl"
               />
-              <img
+              <img loading="lazy" decoding="async"
                 src="img/github.png"
                 alt=""
                 title="GitHub"

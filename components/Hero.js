@@ -18,31 +18,32 @@ function Hero() {
       gradientBackgroundStart="#000"
       gradientBackgroundEnd="#111"
       thirdColor="#e3591e"
+      interactive={false}
     >
       <div
         id="top"
         className="absolute z-20 inset-0 flex flex-col items-start lg:items-center justify-center text-white bg-gradient-to-t from-black to-80% from-10%"
       >
         <div className="flex items-end lg:justify-center pb-5">
-          <TextGenerateEffect
-            words={words}
-            duration={1.6}
-            className="hidden lg:flex text-3xl sm:text-5xl md:text-6xl text-white/60 lg:text-7xl xl:text-[5.2rem] font-bold"
-          ></TextGenerateEffect>
-          <div className="lg:hidden font-bold uppercase text-white/60 px-10 sm:px-16">
-            <div className="text-[5rem] leading-[1.4]">Hello!</div>
-            <div className="text-[3.4rem] leading-[1.4]">
-              <span className="text-white"> Welcome </span> home
-            </div>
-          </div>
-        </div>
-        <div className="pt-5 flex items-start lg:justify-center px-10 sm:px-16">
           <BlurAnimation
-            duration={2}
-            className="hidden lg:flex text-3xl sm:text-5xl md:text-6xl text-white/60 lg:text-7xl xl:text-[5.2rem] font-bold"
+            delay={0.2}
+            duration={1.2}
+            className="hidden lg:flex gap-5 text-3xl sm:text-5xl md:text-6xl text-white/60 lg:text-7xl xl:text-[5.2rem] font-bold"
           >
-            It's me,
-            <span className="capitalize text-white ps-2 md:ps-5 relative pb-5 md:pb-3 lg:pb-2">
+            <span>Hi,</span>
+            <span className="text-white">WELCOME</span>
+            <span>HOME</span>
+          </BlurAnimation>
+        </div>
+        <div className="lg:pt-5 flex items-start lg:justify-center px-10 sm:px-16">
+          <BlurAnimation
+            delay={0.4}
+            duration={1.2}
+            className="hidden lg:flex gap-5 text-3xl sm:text-5xl md:text-6xl text-white/60 lg:text-7xl xl:text-[5.2rem] font-bold"
+          >
+            <span>It's</span>
+            <span>me,</span>
+            <span className="capitalize text-white relative pb-5 md:pb-3 lg:pb-2">
               Kcube
               <div className="absolute left-0 bottom-0 w-full text-end px-1 text-[0.5rem] md:text-xs uppercase font-normal">
                 Kaung Khant Kyaw
@@ -58,26 +59,35 @@ function Hero() {
               </div>
             </Magnetic>
           </BlurAnimation>
-          <div className="lg:hidden font-bold uppercase">
+          <BlurAnimation
+            delay={0.4}
+            duration={1.2}
+            className="lg:hidden font-bold uppercase -mt-5"
+          >
+            <div className="text-[4rem] text-white/60">Hello!</div>
+            <span className="text-white text-[3.4rem] leading-[1.4] me-2">
+              Welcome
+            </span>
+            <span className="text-[4.5rem] leading-[1.4] text-white/60">
+              home
+            </span>
             <div className="text-[3rem] leading-[1.4] text-white/60">
               It's me,
             </div>
-            <div className="text-[5.8rem] leading-[1.2] flex">
-              <span className="capitalize text-white relative pb-5 md:pb-3 lg:pb-2">
-                Kcube
-                <div className="absolute left-0 bottom-3 w-full text-end px-1 text-[1rem] md:text-xs uppercase font-normal">
-                  Kaung Khant Kyaw
-                </div>
-              </span>
-              <Magnetic>
+            <span className="text-[5.8rem] leading-[1.2] relative capitalize text-white pb-5 md:pb-3 lg:pb-2">
+              Kcube
+              <div className="absolute left-0 bottom-3 w-full text-end px-1 text-[1rem] md:text-xs uppercase font-normal">
+                Kaung Khant Kyaw
+              </div>
+              <Magnetic className="absolute top-2 -right-5">
                 <img
                   src="img/cube.svg"
                   alt=""
                   className="w-8 animate-spin mb-10 cursor-pointer hover:invert duration-300"
                 />
               </Magnetic>
-            </div>
-          </div>
+            </span>
+          </BlurAnimation>
           <a
             aria-label="This is a link."
             href="#scroll"

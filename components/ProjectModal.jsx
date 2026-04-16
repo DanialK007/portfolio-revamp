@@ -1,7 +1,6 @@
 // ProjectModal.js
 "use client";
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { LuExternalLink } from "react-icons/lu";
 import {
   Carousel,
@@ -13,7 +12,7 @@ import {
 import { getLenis } from "../lib/lenis";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
-  const [opener, setOpener] = React.useState(false);
+  const [opener, setOpener] = useState(false);
   useEffect(() => {
     const lenis = getLenis(); // get the global instance
     if (isOpen) lenis.stop();
@@ -42,7 +41,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       className={`fixed flex items-center justify-center inset-0 bg-black/25 z-50 overflow-y-scroll duration-700 ease-out ${
         opener
           ? "backdrop-blur-md px-5 md:px-10 lg:px-20"
-          : "px-10 md:px-20 lg:px-56 opacity-0 blur-3xl pointer-events-none"
+          : "px-10 md:px-20 lg:px-56 scale-150 opacity-0 blur-3xl pointer-events-none"
       }`}
       onClick={() => {
         setOpener(false);
@@ -54,15 +53,9 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       {isOpen && (
         <div className="flex items-center justify-center size-full overflow-y-scroll">
           <div
-            className={`bg-black/65 grow max-h-[95%] border border-white/15 rounded-[28px] overflow-hidden w-full max-w-5xl mx-auto relative duration-500`}
+            className={`bg-black/75 grow max-h-[95%] border border-white/15 rounded-[28px] overflow-hidden w-full max-w-5xl mx-auto relative duration-500`}
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal when clicking inside
           >
-            <button
-              className="hidden absolute top-8 right-4 text-3xl size-10 rounded-full bg-black/75 text-white duration-200 scale-125 active:scale-100"
-              onClick={onClose}
-            >
-              &times;
-            </button>
             <div className="flex flex-col gap-4">
               <div className="pt-5 px-5">
                 <Carousel
@@ -121,19 +114,10 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               <h2 className="px-5 pt-5 text-2xl lg:text-3xl myFont">
                 {project.title}
               </h2>
-              <p className="px-5 text-gray-700 hidden">{project.description}</p>
               <p className="px-5">
                 A website that turns every scroll into a moment of awe
               </p>
               <div className="px-5 pb-5 flex flex-col items-start lg:flex-row gap-2">
-                {/* <a
-                  href="#"
-                  target="_blank"
-                  className="hidden flex items-center justify-center border-2 border-white hover:bg-white hover:text-black duration-300 rounded-xl py-2 px-4"
-                  rel="noopener noreferrer"
-                >
-                  Learn More
-                </a> */}
                 <a
                   href={project.href}
                   target="_blank"

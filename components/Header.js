@@ -49,8 +49,8 @@ function Header() {
           isScrolled ? "bg-gradient-to-b from-black/90 from-10% to-80%" : ""
         }`}
       >
-        <a aria-label="This is a link." href="" className="pt-1 px-2">
-          {/* <img src="img/Kcube.svg" alt="" className="h-14" /> */}
+        <a aria-label="Go to home section" href="" className="pt-1 px-2">
+          {/* <img loading="lazy" decoding="async" src="img/Kcube.svg" alt="" className="h-14" /> */}
           <Logo />
         </a>
         <button
@@ -58,6 +58,7 @@ function Header() {
             menuOpen ? "" : ""
           }`}
           onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
         >
           <div
             className={`absolute inset-0 text-3xl p-2.5 flex items-center justify-center duration-300 ${
@@ -71,7 +72,7 @@ function Header() {
               menuOpen ? "" : "scale-0"
             }`}
           >
-            <img
+            <img loading="lazy" decoding="async"
               src="img/cube.svg"
               id="menuIcon2"
               alt=""
@@ -88,35 +89,42 @@ function Header() {
         }`}
       >
         <ul className="p-4 flex flex-col gap-3">
-          <a
-            aria-label="This is a link."
-            href="#work"
-            className="hover:text-red-500"
-          >
-            <div className="opacity-50 font-bold font-mono">01</div>
-            <div className="font-semibold">Work</div>
-          </a>
-          <a
-            aria-label="This is a link."
-            href="#playground"
-            className="hover:text-red-500"
-          >
-            <div className="opacity-50 font-bold font-mono">02</div>
-            <div className="font-semibold">Playground</div>
-          </a>
-          <a
-            aria-label="This is a link."
-            href="#about"
-            className="hover:text-red-500"
-          >
-            <div className="opacity-50 font-bold font-mono">03</div>
-            <div className="font-semibold">About Me</div>
-          </a>
+          <li>
+            <a
+              aria-label="Go to work section"
+              href="#work"
+              className="hover:text-red-500"
+            >
+              <div className="opacity-50 font-bold font-mono">01</div>
+              <div className="font-semibold">Work</div>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Go to playground section"
+              href="#playground"
+              className="hover:text-red-500"
+            >
+              <div className="opacity-50 font-bold font-mono">02</div>
+              <div className="font-semibold">Playground</div>
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Go to about me section"
+              href="#about"
+              className="hover:text-red-500"
+            >
+              <div className="opacity-50 font-bold font-mono">03</div>
+              <div className="font-semibold">About Me</div>
+            </a>
+          </li>
         </ul>
       </div>
       <button
         onClick={toggleMenu}
         className={`fixed inset-0 z-40 lg:hidden ${menuOpen ? "" : "hidden"}`}
+        aria-label="Close navigation menu"
       ></button>
 
       {/* large screen */}
@@ -128,7 +136,7 @@ function Header() {
         }`}
       >
         <a
-          aria-label="This is a link."
+          aria-label="Go to work section"
           href="#work"
           className="px-2 hover:text-red-500"
         >
@@ -136,7 +144,7 @@ function Header() {
           <div className="font-semibold">Work</div>
         </a>
         <a
-          aria-label="This is a link."
+          aria-label="Go to playground section"
           href="#playground"
           className="px-2 hover:text-red-500"
         >
@@ -144,7 +152,7 @@ function Header() {
           <div className="font-semibold">Playground</div>
         </a>
         <a
-          aria-label="This is a link."
+          aria-label="Go to about me section"
           href="#about"
           className="px-2 hover:text-red-500"
         >
@@ -187,7 +195,7 @@ function Header() {
 
       {/*  Side Bar */}
       <a
-        aria-label="This is a link."
+        aria-label="Call contact number"
         href="tel:+959255599863"
         className="fixed hidden -right-3 bottom-32 p-3 -rotate-90 z-20 bg-black/95"
       >
@@ -202,14 +210,14 @@ function Header() {
       >
         <div className="mx-auto flex justify-center gap-2 z-10">
           <a
-            aria-label="This is a link."
+            aria-label="Visit Facebook profile"
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
-            <img src="img/facebookIcon.svg" alt="" className="w-3" />
+            <img loading="lazy" decoding="async" src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
           <a
-            aria-label="This is a link."
+            aria-label="Send email"
             href="mailto:kaungkhantkyawdk@gmail.com"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
           >
@@ -218,7 +226,7 @@ function Header() {
               fill="currentColor"
               strokeWidth="0"
               viewBox="0 0 24 24"
-              class="text-lg"
+              className="text-lg"
               height="14px"
               width="14px"
               xmlns="http://www.w3.org/2000/svg"
@@ -227,18 +235,18 @@ function Header() {
             </svg>
           </a>
           <a
-            aria-label="This is a link."
+            aria-label="Visit LinkedIn profile"
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
           >
-            <img src="img/linkedin.svg" alt="" className="w-3" />
+            <img loading="lazy" decoding="async" src="img/linkedin.svg" alt="" className="w-3" />
           </a>
           <a
-            aria-label="This is a link."
+            aria-label="Visit Telegram profile"
             href="https://t.me/DanialK007"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
-            <img src="img/telegram.png" alt="" className="w-3" />
+            <img loading="lazy" decoding="async" src="img/telegram.png" alt="" className="w-3" />
           </a>
         </div>
       </div>

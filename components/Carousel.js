@@ -4,16 +4,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const images = [
-  "img/photo-10.jpg",
+  "img/profile.jpeg",
   "img/photo-5.jpg",
-  "img/photo-8.jpg",
+  "img/photo-12.jpg",
   "img/photo-4.jpg",
-  "img/photo-6.jpg",
+  "img/photo-13.jpg",
   "img/photo-7.jpg",
   "img/photo-9.jpeg",
   "img/photo-1.jpg",
-  "img/profile.jpeg",
   "img/photo-11.jpg",
+  // "img/photo-10.jpg",
+  // "img/photo-8.jpg",
+  // "img/photo-6.jpg",
   //   "img/photo-7.jpg",
   //   "img/photo-8.jpg",
 ];
@@ -60,15 +62,15 @@ const Carousel = () => {
   return (
     <div className="w-full max-w-[600px] mx-auto relative brightness-90">
       {/* Images */}
-      <div className="w-full h-[500px] rounded-2xl overflow-hidden relative">
-        <img
+      <div className="w-full h-[500px] border border-white/15 rounded-2xl overflow-hidden relative">
+        <img loading="lazy" decoding="async"
           src={images[currentIndex]}
           alt={`Slide ${currentIndex}`}
           className={`w-full h-full object-cover duration-500 ${
             fadeOut ? "opacity-0 scale-110 blur-lg" : "opacity-100 blur-0"
           }`}
         />
-        <img
+        <img loading="lazy" decoding="async"
           src={images[nextIndex]}
           alt={`Slide ${nextIndex}`}
           className={`absolute w-full h-full object-cover duration-500 ${
@@ -77,12 +79,13 @@ const Carousel = () => {
         />
       </div>
 
-      <a href="#" className="absolute top-4 right-4 bg-white/20 rounded-full px-2 py-1 text-xs backdrop-blur-lg border border-white/20 hover:scale-105 active:scale-90 duration-300">See Gallery</a>
+      <a href="/gallery" className="absolute top-4 right-4 bg-white/20 rounded-full px-2 py-1 text-xs backdrop-blur-lg border border-white/20 hover:scale-105 active:scale-90 duration-300">See Gallery</a>
 
       {/* Left Arrow */}
       <button
         className="absolute border border-white/20 active:blur-[4px] active:scale-75 hover:scale-110 duration-300 top-1/2 left-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={prevSlide}
+        aria-label="Previous slide"
       >
         &#8249;
       </button>
@@ -91,6 +94,7 @@ const Carousel = () => {
       <button
         className="absolute border border-white/20 active:blur-[4px] active:scale-75 hover:scale-110 duration-300 top-1/2 right-5 transform -translate-y-1/2 size-8 backdrop-blur-lg bg-white/10 rounded-full shadow-md focus:outline-none"
         onClick={nextSlide}
+        aria-label="Next slide"
       >
         &#8250;
       </button>

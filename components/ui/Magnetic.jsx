@@ -3,7 +3,7 @@ import React from "react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-function Magnetic({ children }) {
+function Magnetic({ children, className }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Magnetic({ children }) {
       ref.current.addEventListener("mouseleave", mouseLeave);
     };
   }, []);
-  return <div className="z-30" ref={ref}>{children}</div>;
+  return <div className={`z-30 ${className}`} ref={ref}>{children}</div>;
 }
 
 export default Magnetic;
