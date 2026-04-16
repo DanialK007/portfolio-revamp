@@ -4,10 +4,12 @@ import HyperText from "./ui/hyper-text";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import Logo from "./Logo";
+import Magnetic from "./ui/Magnetic";
 
 function Footer() {
   return (
     <BlurAnimation className="mt-16">
+      {/* lg device */}
       <div className="pb-16 hidden lg:block relative">
         <div className="absolute top-0 left-0 size-full -z-10">
           <BackgroundGradientAnimation
@@ -50,17 +52,28 @@ function Footer() {
         </BlurAnimation>
         <BlurAnimation
           duration={1.2}
-          className="flex items-center justify-center myFont cap1 text-6xl md:text-7xl xl:text-9xl italic font-semibold animate-foot pb-5"
+          className="flex gap-16 items-center justify-center myFont cap1 text-6xl md:text-7xl lg:text-8xl xl:text-9xl italic font-semibold animate-foot pb-5"
         >
           <span className="pe-2">THANK</span>
-          <img
-            src="img/cube.svg"
-            className="hover:invert duration-500 hover:cursor-pointer w-4 md:w-10 xl:w-16 animate-spin"
-            alt=""
-          />
-          <span className="pe-2">YOU</span>
+          <span className="pe-2 relative">
+            YOU
+            <div className="absolute -left-[4.4rem] top-1/2 -translate-y-1/2">
+              <Magnetic>
+                <div className="pt-3 px-3 rounded-full">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="img/cube.svg"
+                    className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                    alt=""
+                  />
+                </div>
+              </Magnetic>
+            </div>
+          </span>
         </BlurAnimation>
       </div>
+      {/* mobile */}
       <div className="pb-5 lg:hidden relative">
         <div className="absolute top-0 left-0 size-full -z-10">
           <BackgroundGradientAnimation

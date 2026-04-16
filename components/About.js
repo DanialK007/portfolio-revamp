@@ -428,7 +428,7 @@ function About() {
         </FadeIn>
       </div>
       {/*  md device */}
-      <div className="grid-cols-3 gap-5 p-5 hidden md:grid">
+      <div className="md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 hidden md:grid">
         <BlurAnimation className="col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.2"
@@ -670,7 +670,7 @@ function About() {
             <Carousel />
           </FadeIn>
         </BlurAnimation>
-        <BlurAnimation className="col-span-1 flex flex-col gap-5">
+        <BlurAnimation className="col-span-2 lg:col-span-1 flex flex-col gap-5">
           <FadeIn
             duration="1.9"
             className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
@@ -757,7 +757,7 @@ function About() {
             </div>
             <BlurAnimation
               delay={0.1}
-              className="grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2"
+              className="grid md:grid-cols-12 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2"
             >
               <img loading="lazy" decoding="async"
                 src="img/htmlLogo.png"

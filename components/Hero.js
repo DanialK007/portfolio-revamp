@@ -64,17 +64,17 @@ function Hero() {
             duration={1.2}
             className="lg:hidden font-bold uppercase -mt-5"
           >
-            <div className="text-[4rem] text-white/60">Hello!</div>
-            <span className="text-white text-[3.4rem] leading-[1.4] me-2">
+            <div className="text-[4rem] md:text-[5rem] text-white/60">Hello!</div>
+            <span className="text-[3.4rem] md:text-[4rem] text-white leading-[1.4] me-2">
               Welcome
             </span>
-            <span className="text-[4.5rem] leading-[1.4] text-white/60">
+            <span className="text-[4.5rem] md:text-[5rem] leading-[1.4] text-white/60">
               home
             </span>
-            <div className="text-[3rem] leading-[1.4] text-white/60">
+            <div className="text-[3rem] md:text-[4rem] leading-[1.4] text-white/60">
               It's me,
             </div>
-            <span className="text-[5.8rem] leading-[1.2] relative capitalize text-white pb-5 md:pb-3 lg:pb-2">
+            <span className="text-[5.8rem] md:text-[6rem] leading-[1.2] relative capitalize text-white pb-5 md:pb-3 lg:pb-2">
               Kcube
               <div className="absolute left-0 bottom-3 w-full text-end px-1 text-[1rem] md:text-xs uppercase font-normal">
                 Kaung Khant Kyaw

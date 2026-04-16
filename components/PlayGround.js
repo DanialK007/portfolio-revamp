@@ -176,7 +176,7 @@ function PlayGround() {
       <div className="py-8">
         <BlurAnimation
           duration={1.2}
-          className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-16 items-center justify-center cap1 myFont text-[2.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl"
+          className="flex gap-6 sm:gap-8 md:gap-10 lg:gap-16 items-center justify-center cap1 myFont text-[2.6rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl"
         >
           <span className="font-thin">PLAY</span>
           <span className="italic font-bold pe-2 relative">
