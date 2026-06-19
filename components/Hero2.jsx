@@ -90,6 +90,7 @@ function Hero2() {
         color={"#fff"}
       />
       </div>
+      
     </div>
   );
 }

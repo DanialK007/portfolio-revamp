@@ -54,7 +54,7 @@ function Intro() {
     <div id="intro" className="mt-5">
       <BlurAnimation
         duration={1.5}
-        delay={2}
+        delay={1}
         className="grid grid-cols-1 lg:grid-cols-2"
       >
         <FadeIn duration="1.2" className="col-span-1 lg:p-8">

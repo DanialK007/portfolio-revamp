@@ -101,6 +101,7 @@ function Hero() {
           <div id="scroll" className="absolute bottom-10"></div>
         </div>
       </div>
+
     </BackgroundGradientAnimation>
   );
 }
