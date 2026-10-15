@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
-import Carousel from "./Carousel";
+import MorphSlider from "./MorphSlider";
+import MagicBento from "./MagicBento";
 import HyperText from "./ui/hyper-text";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import Magnetic from "./ui/Magnetic";
-import BlurFadeIn from "./framer-motion/BlurFadeIn";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 import BioCard from "./about/BioCard";
 import ProfileCard from "./about/ProfileCard";
@@ -13,6 +15,91 @@ import ToolStackCard from "./about/ToolStackCard";
 import BackgroundCard from "./about/BackgroundCard";
 
 function About() {
+  const bp = useBreakpoint();
+
+  // Responsive bento config — null means not yet measured (SSR), default mobile-first
+  const bentoCols =
+    bp === null || bp === "xs" || bp === "sm" ? 1 : bp === "md" ? 2 : 3;
+  const bentoRowHeight =
+    bp === null || bp === "xs" || bp === "sm" ? 20 : bp === "md" ? 32 : 30;
+
+  const sliderItems = [
+    { image: "/img/profile.jpeg" },
+    { image: "/img/photo-5.jpg" },
+    { image: "/img/photo-12.jpg" },
+    { image: "/img/photo-4.jpg" },
+    { image: "/img/photo-13.jpg" },
+    { image: "/img/photo-7.jpg" },
+    { image: "/img/photo-9.jpeg" },
+    { image: "/img/photo-1.jpg" },
+    { image: "/img/photo-11.jpg" },
+  ];
+
+  const bentoItems = [
+    {
+      title: "Bio",
+      content: <BioCard />,
+      colSpan: 1,
+      rowSpan: 8,
+    }, {
+      title: "Profile",
+      content: <ProfileCard duration="1.5" />,
+      colSpan: 1,
+      rowSpan: 12,
+    },
+    {
+      title: "Experience",
+      content: <ExperienceCard duration="1.9" />,
+      colSpan: 1,
+      rowSpan: 14,
+    },
+    {
+      title: "Background",
+      content: <BackgroundCard />,
+      colSpan: 1,
+      rowSpan: 18,
+    },
+    {
+      title: "Biography",
+      content: <BiographyCard duration="1.5" />,
+      colSpan: 1,
+      rowSpan: 5,
+    },
+    {
+      title: "Tool Stack",
+      content: <ToolStackCard duration="1.9" />,
+      colSpan: 1,
+      rowSpan: 6,
+    },
+    {
+      title: "Gallery",
+      content: (
+        <div className="w-full h-full relative overflow-hidden rounded-[20px]">
+          <MorphSlider
+            className="w-full h-full"
+            items={sliderItems}
+            autoplay={true}
+            autoplayDelay={5}
+            transition="melt"
+            duration={1.1}
+            showCaptions={false}
+            showControls={true}
+            showIndicators={true}
+            radius={20}
+          />
+          <a
+            href="/gallery"
+            className="absolute top-4 right-4 bg-white/20 rounded-full px-2 py-1 text-xs backdrop-blur-lg border border-white/20 hover:scale-105 active:scale-90 duration-300 z-10"
+          >
+            See Gallery
+          </a>
+        </div>
+      ),
+      colSpan: 1,
+      rowSpan: 14,
+    },
+  ];
+
   return (
     <div className="my-5 xl:mt-20 relative">
       <div id="about" className="absolute -top-16"></div>
@@ -52,33 +139,24 @@ function About() {
         </BlurAnimation>
       </div>
 
-      {/* ── Single responsive grid — no more duplicate markup ── */}
-      <div className="grid grid-cols-1 gap-5 p-5 md:grid-cols-2 lg:grid-cols-3">
-
-        {/* Column 1: Bio + Background (desktop only) */}
-        <BlurFadeIn className="flex flex-col gap-5">
-          <BioCard />
-          {/* Background card — desktop only, inside column 1 */}
-          <div className="hidden md:block">
-            <BackgroundCard />
-          </div>
-        </BlurFadeIn>
-
-        {/* Column 2: Profile + Biography + Carousel (desktop) */}
-        <div className="flex flex-col gap-5">
-          <ProfileCard duration="1.5" />
-          <BiographyCard duration="1.5" />
-          <BlurFadeIn duration={1.5} className="rounded-2xl border border-white/10 overflow-hidden">
-            <Carousel />
-          </BlurFadeIn>
-        </div>
-
-        {/* Column 3: Experience + Tool Stack (desktop) */}
-        <div className="flex flex-col gap-5">
-          <ExperienceCard duration="1.9" />
-          <ToolStackCard duration="1.9" />
-        </div>
-
+      {/* ── MagicBento Grid ── */}
+      <div className="p-5">
+        <MagicBento
+          items={bentoItems}
+          columns={bentoCols}
+          rowHeight={bentoRowHeight}
+          gap={12}
+          radius={20}
+          theme="dark"
+          // glowColor="#18181b"
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={false}
+          enableMagnetism={false}
+          clickEffect={true}
+          intro={true}
+          textAutoHide={false}
+        />
       </div>
     </div>
   );

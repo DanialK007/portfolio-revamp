@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import BlurFadeIn from "../framer-motion/BlurFadeIn";
 
 const tools = [
   { src: "img/htmlLogo.png", title: "HTML", bg: "bg-orange-950", hoverBorder: "hover:border-orange-500 hover:shadow-orange-500" },
@@ -27,27 +26,9 @@ const tools = [
 
 function ToolStackCard({ duration = "1.2" }) {
   return (
-    <BlurFadeIn
-      duration={1.9}
-      className="p-6 rounded-2xl border border-white/10 bg-[#0a0a0a]"
-    >
+    <div className="p-6">
       <div className="font-mono font-semibold pb-2 text-lg">TOOL STACK</div>
-      {/* Mobile grid */}
-      <div className="grid grid-cols-6 sm:grid-cols-12 gap-2 py-2 md:hidden">
-        {tools.map((tool, i) => (
-          <img
-            key={i}
-            loading="lazy"
-            decoding="async"
-            src={tool.src}
-            alt={tool.title}
-            title={tool.title}
-            className={`${tool.bg} ${tool.invert ? "invert" : ""} hover:shadow-sm ${tool.hoverBorder} hover:brightness-125 duration-300 w-full block aspect-square object-contain p-2 border border-gray-700 rounded-xl hover:scale-110`}
-          />
-        ))}
-      </div>
-      {/* Desktop grid */}
-      <div className="hidden md:grid md:grid-cols-12 lg:grid-cols-7 xl:grid-cols-8 gap-2 py-2">
+      <div className="grid grid-cols-6 sm:grid-cols-8 gap-2 py-2">
         {tools.map((tool, i) => (
           <img
             key={i}
@@ -60,7 +41,7 @@ function ToolStackCard({ duration = "1.2" }) {
           />
         ))}
       </div>
-    </BlurFadeIn>
+    </div>
   );
 }
 

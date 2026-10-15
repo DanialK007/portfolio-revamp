@@ -1,14 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import BlurFadeIn from "../framer-motion/BlurFadeIn";
 
 function ProfileCard({ duration = "1.2" }) {
   return (
-    <BlurFadeIn
-      duration={1.5}
-      className="relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/10 aspect-[6/7]"
-    >
+    <div className="relative overflow-hidden aspect-[6/7] w-full h-full">
       <Image
         src="/img/profile.jpeg"
         alt=""
@@ -36,7 +32,7 @@ function ProfileCard({ duration = "1.2" }) {
           </div>
         </div>
       </div>
-    </BlurFadeIn>
+    </div>
   );
 }
 

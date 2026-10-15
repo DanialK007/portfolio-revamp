@@ -19,8 +19,8 @@ export default function FadeIn({ children, className, duration }) {
       ref={ref}
       className={className}
       variants={{
-        hide: { opacity: 0 },
-        show: { opacity: 1 },
+        hide: { opacity: 0, filter: "blur(4px)" },
+        show: { opacity: 1, filter: "blur(0px)" },
       }}
       initial="hide"
       animate={mainControls}

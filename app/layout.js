@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/img/Kcube.svg" type="image/svg+xml" />
       </head>
-      <body className={`bg-black text-white/80 overflow-x-hidden ${lexendDeca.className}`}>
+      <body className={`bg-black text-white/80 overflow-x-hidden $ xx{lexendDeca.className}`}>
         {children}
         <Analytics />
       </body>

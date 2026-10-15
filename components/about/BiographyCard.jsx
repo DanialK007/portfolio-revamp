@@ -1,13 +1,9 @@
 "use client";
 import React from "react";
-import BlurFadeIn from "../framer-motion/BlurFadeIn";
 
 function BiographyCard({ duration = "1.2" }) {
   return (
-    <BlurFadeIn
-      duration={1.5}
-      className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
-    >
+    <div className="p-6">
       <div className="uppercase font-mono font-semibold text-lg mb-2">
         Biography
       </div>
@@ -35,7 +31,7 @@ function BiographyCard({ duration = "1.2" }) {
         </div>
         <div className="col-span-3 py-1 text-sm">Mandalay, Myanmar</div>
       </div>
-    </BlurFadeIn>
+    </div>
   );
 }
 

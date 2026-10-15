@@ -1,17 +1,36 @@
 "use client";
-import React from "react";
-import FadeIn from "./framer-motion/FadeIn";
+import React, { useState } from "react";
+import MagicBento from "./MagicBento";
 import { LuExternalLink } from "react-icons/lu";
 import HyperText from "./ui/hyper-text";
-import ProjectModal from "./ProjectModal"; // Import the modal component
-import { useState } from "react";
+import ProjectModal from "./ProjectModal";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import Magnetic from "./ui/Magnetic";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 function PlayGround() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const bp = useBreakpoint();
+
+  // Responsive bento config — null means not yet measured (SSR), default mobile-first
+  const bentoCols =
+    bp === null || bp === "xs" || bp === "sm" ? 1 : bp === "md" ? 2 : 3;
+  const bentoRowHeight =
+    bp === null || bp === "xs" || bp === "sm" ? 30 : bp === "md" ? 40 : 30;
+  // Cap colSpan to the column count so wide cards don't overflow
+  const capSpan = (span) => Math.min(span, bentoCols);
+
+  const novaeProject = {
+    title: "NOVÆ",
+    href: "https://novae.onrender.com/",
+    imgSrc: "img/novae-2.png",
+    photos: ["img/novae-2.png", "img/novae.png"],
+    videoSrc: "img/video9.mov",
+    bgColor: "bg-neutral-900",
+    gradient: "from-white to-neutral-400",
+  };
 
   const projects = [
     {
@@ -28,7 +47,8 @@ function PlayGround() {
       videoSrc: "img/video9.mov",
       bgColor: "bg-teal-500",
       gradient: "to-teal-400 from-white",
-      grid: "col-span-1 lg:col-span-2 lg:row-span-2",
+      colSpan: 2,
+      rowSpan: 16,
     },
     {
       title: "Leiga",
@@ -44,7 +64,8 @@ function PlayGround() {
       videoSrc: "img/video3.mp4",
       bgColor: "bg-cyan-500",
       gradient: "from-pink-400 to-cyan-500",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "Gymnast",
@@ -60,7 +81,8 @@ function PlayGround() {
       videoSrc: "img/video2.mp4",
       bgColor: "bg-red-600",
       gradient: "from-neutral-950 from-40% to-red-700",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "Morph",
@@ -76,7 +98,8 @@ function PlayGround() {
       videoSrc: "img/video1.mp4",
       bgColor: "bg-yellow-600",
       gradient: "from-gray-300 from-40% to-amber-700",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "The Venue",
@@ -92,7 +115,8 @@ function PlayGround() {
       videoSrc: "img/video7.mp4",
       bgColor: "bg-emerald-900",
       gradient: "from-slate-600 to-black",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "Acme",
@@ -108,7 +132,8 @@ function PlayGround() {
       videoSrc: "img/video4.mp4",
       bgColor: "bg-green-600",
       gradient: "from-amber-950 to-zinc-400",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "Portfolio",
@@ -124,7 +149,8 @@ function PlayGround() {
       videoSrc: "img/video6.mp4",
       bgColor: "bg-pink-600",
       gradient: "from-orange-600 to-black",
-      grid: "col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
     {
       title: "Wright's Harbor Mansion",
@@ -140,7 +166,8 @@ function PlayGround() {
       videoSrc: "img/video8.mp4",
       bgColor: "bg-pink-600",
       gradient: "from-lime-600 to-black",
-      grid: "col-span-1 lg:col-span-2 lg:row-span-2",
+      colSpan: 2,
+      rowSpan: 16,
     },
     {
       title: "Pireal",
@@ -156,7 +183,8 @@ function PlayGround() {
       videoSrc: "img/video5.mp4",
       bgColor: "bg-red-600",
       gradient: "from-white to-teal-500",
-      grid: "col-span-1 lg:col-span-1",
+      colSpan: 1,
+      rowSpan: 8,
     },
   ];
 
@@ -169,6 +197,60 @@ function PlayGround() {
     setIsModalOpen(false);
     setSelectedProject(null);
   };
+
+  const renderCardContent = (project) => (
+    <div
+      className={`w-full h-full relative group overflow-hidden flex items-center justify-center ${
+        project.bgColor || "bg-neutral-900"
+      }`}
+    >
+      <div className="absolute inset-0 z-10 text-xl h-full text-transparent group-hover:text-gray-50 group-hover:bg-black/65 duration-500 pointer-events-none">
+        <div className="flex h-full gap-2 justify-center items-center text-lg duration-300">
+          <span className="font-semibold tracking-wide">{project.title}</span>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              openModal(project);
+            }}
+            className="pointer-events-auto absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center border border-white/20 bg-zinc-500/35 backdrop-blur-sm text-gray-200 rounded-full py-1.5 px-4 text-xs scale-90 hover:scale-100 active:scale-95 gap-1.5 opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 duration-300 hover:text-white hover:bg-black/50 cursor-pointer"
+            aria-label={`See preview for ${project.title}`}
+          >
+            <span>see preview</span>
+            <LuExternalLink className="text-xs" />
+          </button>
+        </div>
+      </div>
+      <div className="absolute group-hover:opacity-0 bottom-3 left-3 z-10 md:hidden bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 text-xs text-white/90 flex items-center gap-1 active:scale-95 duration-200 cursor-pointer">
+        <span>{project.title}</span>
+        <FaCircleArrowRight className="text-[10px] -rotate-45 text-white/70" />
+      </div>
+      <img
+        loading="lazy"
+        decoding="async"
+        src={project.imgSrc}
+        alt={`${project.title} screenshot`}
+        className="w-full h-full group-hover:scale-105 duration-700 ease-out object-cover shadow-lg"
+      />
+    </div>
+  );
+
+  const bentoItems = [
+    {
+      id: "novae",
+      title: novaeProject.title,
+      colSpan: capSpan(3),
+      rowSpan: 16,
+      content: renderCardContent(novaeProject),
+    },
+    ...projects.map((project, index) => ({
+      id: project.title.toLowerCase().replace(/[^a-z0-9]/g, "-"),
+      title: project.title,
+      colSpan: capSpan(project.colSpan ?? 1),
+      rowSpan: project.rowSpan,
+      content: renderCardContent(project),
+    })),
+  ];
 
   return (
     <div className="my-5 xl:mt-20 relative">
@@ -201,87 +283,31 @@ function PlayGround() {
           <HyperText text="EXPERIMENTS" />
         </BlurAnimation>
       </div>
-      <div className="grid p-5 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5">
-        <BlurAnimation
-          duration={1.6}
-          delay={0}
-          className={`group bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-60 duration-500 col-span-1 lg:col-span-3 lg:row-span-2`}
-          childClass="size-full"
-        >
-          <FadeIn
-            duration="1.9"
-            className={`bg-neutral-200 h-full relative rounded-2xl flex items-center justify-center`}
-          >
-            <div className="absolute inset-0 z-10 text-xl h-full text-transparent group-hover:text-gray-50 group-hover:bg-black/65 duration-500">
-              <div className="flex h-full gap-2 justify-center items-center text-lg duration-300">
-                NOVÆ
-                <button
-                  // onClick={() => openModal(project)} // Open the modal instead of navigating
-                  className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center border border-white/20 md:bg-zinc-500/35 backdrop-blur-sm text-gray-200 rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 duration-300 hover:text-white hover:bg-black/20"
-                  aria-label="See project preview"
-                >
-                  <div className="text-xs hidden md:block">see preview</div>
-                  <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
-                  <LuExternalLink className="hidden md:block group-hover:opacity-100 duration-300 opacity-0 text-xs" />
-                </button>
-              </div>
-            </div>
-            <button
-              // onClick={() => openModal(project)}
-              className="absolute z-20 inset-0 md:hidden"
-              aria-label="Open project modal"
-            ></button>
-            <img
-              loading="lazy"
-              decoding="async"
-              src="img/novae-2.png"
-              alt={`novae screenshot`}
-              className="w-full h-full aspect-[16/9] group-hover:scale-105 duration-2000 ease-out object-cover shadow-lg"
-            />
-          </FadeIn>
-        </BlurAnimation>
-        {projects.map((project, index) => (
-          <BlurAnimation
-            duration={1.6}
-            delay={0}
-            key={index}
-            className={`group bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-60 duration-500 ${project.grid}`}
-            childClass="size-full"
-          >
-            <FadeIn
-              duration="1.9"
-              className={`${project.bgColor} h-full relative rounded-2xl flex items-center justify-center`}
-            >
-              <div className="absolute inset-0 z-10 text-xl h-full text-transparent group-hover:text-gray-50 group-hover:bg-black/65 duration-500">
-                <div className="flex h-full gap-2 justify-center items-center text-lg duration-300">
-                  {project.title}
-                  <button
-                    onClick={() => openModal(project)} // Open the modal instead of navigating
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center border border-white/20 md:bg-zinc-500/35 backdrop-blur-sm text-gray-200 rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 duration-300 hover:text-white hover:bg-black/20"
-                    aria-label="See project preview"
-                  >
-                    <div className="text-xs hidden md:block">see preview</div>
-                    <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
-                    <LuExternalLink className="hidden md:block group-hover:opacity-100 duration-300 opacity-0 text-xs" />
-                  </button>
-                </div>
-              </div>
-              <button
-                onClick={() => openModal(project)}
-                className="absolute z-20 inset-0 md:hidden"
-                aria-label="Open project modal"
-              ></button>
-              <img
-                loading="lazy"
-                decoding="async"
-                src={project.imgSrc}
-                alt={`${project.title} screenshot`}
-                className="w-full h-full group-hover:scale-110 duration-2000 ease-out object-cover shadow-lg"
-              />
-            </FadeIn>
-          </BlurAnimation>
-        ))}
+
+      {/* ── MagicBento Grid ── */}
+      <div className="p-5">
+        {bp !== null ? (
+          <MagicBento
+            items={bentoItems}
+            columns={bentoCols}
+            rowHeight={bentoRowHeight}
+            gap={12}
+            radius={20}
+            theme="dark"
+            // glowColor="#18181b"
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={false}
+            enableMagnetism={false}
+            clickEffect={true}
+            intro={true}
+            textAutoHide={false}
+          />
+        ) : (
+          <div style={{ minHeight: "60vh" }} />
+        )}
       </div>
+
       <ProjectModal
         isOpen={isModalOpen}
         onClose={closeModal}

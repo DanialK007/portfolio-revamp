@@ -1,18 +1,13 @@
 "use client";
 import React from "react";
-import FadeIn from "../framer-motion/FadeIn";
-import { BlurAnimation } from "../ui/BlurAnimation";
 
 function BackgroundCard() {
   return (
-    <FadeIn
-      duration="1.2"
-      className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
-    >
+    <div className="p-6">
       <div className="uppercase font-mono font-semibold text-lg mb-2">
         My Background
       </div>
-      <BlurAnimation className="text-sm text-neutral-400 myFont">
+      <div className="text-sm text-neutral-400 myFont">
         <div className="py-2">
           Hey there! I'm Kaung Khant Kyaw, a passionate individual from
           <span className="underline text-neutral-50 hover:cursor-pointer hover:text-red-500 px-1">
@@ -71,8 +66,8 @@ function BackgroundCard() {
           </span>
           to tackle any challenge with confidence.
         </div>
-      </BlurAnimation>
-    </FadeIn>
+      </div>
+    </div>
   );
 }
 

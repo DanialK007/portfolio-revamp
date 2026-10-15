@@ -275,9 +275,41 @@ class MorphEngine {
     this.boundContextLost = this.onContextLost.bind(this);
     this.canvas.addEventListener('webglcontextlost', this.boundContextLost, false);
 
-    this.resizeObserver = new ResizeObserver(() => this.resize());
+    this.boundResize = () => this.resize();
+    this.resizeObserver = new ResizeObserver(entries => {
+      const entry = entries[0];
+      if (entry) {
+        if (entry.contentBoxSize) {
+          const box = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
+          if (box.inlineSize > 0 && box.blockSize > 0) {
+            this.resize(box.inlineSize, box.blockSize);
+            return;
+          }
+        }
+        if (entry.contentRect && entry.contentRect.width > 0 && entry.contentRect.height > 0) {
+          this.resize(entry.contentRect.width, entry.contentRect.height);
+          return;
+        }
+      }
+      this.resize();
+    });
     this.resizeObserver.observe(container);
+
+    this.boundWindowResize = () => this.resize();
+    window.addEventListener('resize', this.boundWindowResize);
+
+    this.boundTransitionEnd = e => {
+      if (!e.target || (container && (container.contains(e.target) || e.target.contains(container)))) {
+        this.resize();
+      }
+    };
+    window.addEventListener('transitionend', this.boundTransitionEnd);
+
     this.resize();
+
+    this.initTimer1 = setTimeout(this.boundResize, 100);
+    this.initTimer2 = setTimeout(this.boundResize, 500);
+    this.initTimer3 = setTimeout(this.boundResize, 1200);
 
     this.loadTextures();
 
@@ -304,11 +336,29 @@ class MorphEngine {
     });
   }
 
-  resize() {
-    const rect = this.container.getBoundingClientRect();
-    const w = Math.max(rect.width, 1);
-    const h = Math.max(rect.height, 1);
+  resize(width, height) {
+    let w = width;
+    let h = height;
+
+    if (!w || !h) {
+      w = this.container.clientWidth || this.container.offsetWidth;
+      h = this.container.clientHeight || this.container.offsetHeight;
+    }
+
+    if (!w || !h) {
+      const rect = this.container.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+    }
+
+    w = Math.max(Math.round(w), 1);
+    h = Math.max(Math.round(h), 1);
+
     this.renderer.setSize(w, h);
+    if (this.canvas) {
+      this.canvas.style.width = '100%';
+      this.canvas.style.height = '100%';
+    }
     this.program.uniforms.uResolution.value = [this.gl.canvas.width, this.gl.canvas.height];
   }
 
@@ -462,6 +512,11 @@ class MorphEngine {
   destroy() {
     cancelAnimationFrame(this.raf);
     if (this.tween) this.tween.kill();
+    clearTimeout(this.initTimer1);
+    clearTimeout(this.initTimer2);
+    clearTimeout(this.initTimer3);
+    window.removeEventListener('resize', this.boundWindowResize);
+    window.removeEventListener('transitionend', this.boundTransitionEnd);
     this.resizeObserver.disconnect();
     this.canvas.removeEventListener('webglcontextlost', this.boundContextLost);
     this.textures.forEach(tex => {

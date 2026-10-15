@@ -15,9 +15,11 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
   const [opener, setOpener] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   useEffect(() => {
-    const lenis = getLenis(); // get the global instance
-    if (isOpen) lenis.stop();
-    else lenis.start();
+    const lenis = getLenis(); // get the global instance if active
+    if (lenis) {
+      if (isOpen) lenis.stop();
+      else lenis.start();
+    }
   }, [isOpen]);
 
   useEffect(() => {

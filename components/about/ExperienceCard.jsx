@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import BlurFadeIn from "../framer-motion/BlurFadeIn";
 
 const experienceData = [
   {
@@ -32,10 +31,7 @@ const experienceData = [
 
 function ExperienceCard({ duration = "1.2" }) {
   return (
-    <BlurFadeIn
-      duration={1.9}
-      className="p-6 relative bg-[#0a0a0a] rounded-2xl border border-white/10"
-    >
+    <div className="p-6">
       <div className="uppercase font-mono font-semibold text-lg mb-2">
         Experience
       </div>
@@ -54,7 +50,7 @@ function ExperienceCard({ duration = "1.2" }) {
           </div>
         </div>
       ))}
-    </BlurFadeIn>
+    </div>
   );
 }
 

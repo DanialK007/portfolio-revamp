@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { initLenis, getLenis } from "../lib/lenis";
 import { IoMdMenu } from "react-icons/io";
 import Logo from "./Logo";
 import GradualBlur from "../components/ui/GradualBlur";
@@ -10,35 +9,15 @@ function Header() {
   const [isScrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setMenu(!menuOpen);
-  useEffect(() => {
-    initLenis();
-  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = document.querySelector("#hero")?.offsetHeight || 480;
       setScrolled(window.scrollY > heroHeight * 0.8);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleAnchorClick = (e) => {
-      const target = e.target.closest("a[href^='#']");
-      if (target) {
-        e.preventDefault();
-        const section = document.querySelector(target.getAttribute("href"));
-        if (section) {
-          const lenis = getLenis(); // get the global instance
-          lenis.scrollTo(section);
-        }
-      }
-    };
-    document.addEventListener("click", handleAnchorClick);
-    return () => {
-      document.removeEventListener("click", handleAnchorClick);
-    };
   }, []);
 
   return (
@@ -72,7 +51,9 @@ function Header() {
               menuOpen ? "" : "scale-0"
             }`}
           >
-            <img loading="lazy" decoding="async"
+            <img
+              loading="lazy"
+              decoding="async"
               src="img/cube.svg"
               id="menuIcon2"
               alt=""
@@ -93,6 +74,7 @@ function Header() {
             <a
               aria-label="Go to work section"
               href="#work"
+              onClick={() => setMenu(false)}
               className="hover:text-red-500"
             >
               <div className="opacity-50 font-bold font-mono">01</div>
@@ -103,6 +85,7 @@ function Header() {
             <a
               aria-label="Go to playground section"
               href="#playground"
+              onClick={() => setMenu(false)}
               className="hover:text-red-500"
             >
               <div className="opacity-50 font-bold font-mono">02</div>
@@ -113,6 +96,7 @@ function Header() {
             <a
               aria-label="Go to about me section"
               href="#about"
+              onClick={() => setMenu(false)}
               className="hover:text-red-500"
             >
               <div className="opacity-50 font-bold font-mono">03</div>
@@ -134,31 +118,31 @@ function Header() {
             ? "opacity-0 -z-10 -translate-y-40"
             : "opacity-100 z-50 translate-y-0"
         }`}
-      >
-        <a
-          aria-label="Go to work section"
-          href="#work"
-          className="px-2 hover:text-red-500"
         >
-          <div className="font-mono">01</div>
-          <div className="font-semibold">Work</div>
-        </a>
-        <a
-          aria-label="Go to playground section"
-          href="#playground"
-          className="px-2 hover:text-red-500"
-        >
-          <div className="font-mono">02</div>
-          <div className="font-semibold">Playground</div>
-        </a>
-        <a
-          aria-label="Go to about me section"
-          href="#about"
-          className="px-2 hover:text-red-500"
-        >
-          <div className="font-mono">03</div>
-          <div className="font-semibold">About Me</div>
-        </a>
+          <a
+            aria-label="Go to work section"
+            href="#work"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">01</div>
+            <div className="font-semibold">Work</div>
+          </a>
+          <a
+            aria-label="Go to playground section"
+            href="#playground"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">02</div>
+            <div className="font-semibold">Playground</div>
+          </a>
+          <a
+            aria-label="Go to about me section"
+            href="#about"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">03</div>
+            <div className="font-semibold">About Me</div>
+          </a>
       </div>
       <div
         className={`hidden md:grid fixed top-3 right-10 z-50 gap-5 p-3 text-xs myAnimation2 bg-black/10 border border-white/15 backdrop-blur-md rounded-2xl duration-700 ${
@@ -166,31 +150,31 @@ function Header() {
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-40 pointer-events-none"
         }`}
-      >
-        <a
-          aria-label="Go to work section"
-          href="#work"
-          className="px-2 hover:text-red-500"
         >
-          <div className="font-mono">01</div>
-          <div className="font-semibold">Work</div>
-        </a>
-        <a
-          aria-label="Go to playground section"
-          href="#playground"
-          className="px-2 hover:text-red-500"
-        >
-          <div className="font-mono">02</div>
-          <div className="font-semibold">Playground</div>
-        </a>
-        <a
-          aria-label="Go to about me section"
-          href="#about"
-          className="px-2 hover:text-red-500"
-        >
-          <div className="font-mono">03</div>
-          <div className="font-semibold">About Me</div>
-        </a>
+          <a
+            aria-label="Go to work section"
+            href="#work"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">01</div>
+            <div className="font-semibold">Work</div>
+          </a>
+          <a
+            aria-label="Go to playground section"
+            href="#playground"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">02</div>
+            <div className="font-semibold">Playground</div>
+          </a>
+          <a
+            aria-label="Go to about me section"
+            href="#about"
+            className="px-2 hover:text-red-500"
+          >
+            <div className="font-mono">03</div>
+            <div className="font-semibold">About Me</div>
+          </a>
       </div>
 
       {/*  Side Bar */}
@@ -214,7 +198,13 @@ function Header() {
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
-            <img loading="lazy" decoding="async" src="img/facebookIcon.svg" alt="" className="w-3" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="img/facebookIcon.svg"
+              alt=""
+              className="w-3"
+            />
           </a>
           <a
             aria-label="Send email"
@@ -239,14 +229,26 @@ function Header() {
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
           >
-            <img loading="lazy" decoding="async" src="img/linkedin.svg" alt="" className="w-3" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="img/linkedin.svg"
+              alt=""
+              className="w-3"
+            />
           </a>
           <a
             aria-label="Visit Telegram profile"
             href="https://t.me/DanialK007"
             className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
-            <img loading="lazy" decoding="async" src="img/telegram.png" alt="" className="w-3" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="img/telegram.png"
+              alt=""
+              className="w-3"
+            />
           </a>
         </div>
       </div>
