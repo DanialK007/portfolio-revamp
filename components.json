@@ -15,5 +15,8 @@
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "magicui": "@/components/magicui"
+  },
+  "registries": {
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
   }
 }

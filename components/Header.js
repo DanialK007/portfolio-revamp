@@ -212,14 +212,14 @@ function Header() {
           <a
             aria-label="Visit Facebook profile"
             href="https://www.facebook.com/profile.php?id=100087994523929&mibextid=LQQJ4d"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img loading="lazy" decoding="async" src="img/facebookIcon.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="Send email"
             href="mailto:kaungkhantkyawdk@gmail.com"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-green-500 shadow-sm hover:shadow-green-500"
           >
             <svg
               stroke="currentColor"
@@ -237,14 +237,14 @@ function Header() {
           <a
             aria-label="Visit LinkedIn profile"
             href="http://linkedin.com/in/kaung-khant-kyaw-688141212"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-indigo-500 shadow-sm hover:shadow-indigo-500"
           >
             <img loading="lazy" decoding="async" src="img/linkedin.svg" alt="" className="w-3" />
           </a>
           <a
             aria-label="Visit Telegram profile"
             href="https://t.me/DanialK007"
-            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/5 bg-white/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
+            className="inline-block p-2 rounded-full backdrop-blur-md border border-white/20 bg-black/10 hover:border-blue-500 shadow-sm hover:shadow-blue-500"
           >
             <img loading="lazy" decoding="async" src="img/telegram.png" alt="" className="w-3" />
           </a>

@@ -3,6 +3,16 @@ import Magnetic from "../../components/ui/Magnetic";
 import HyperText from "../../components/ui/hyper-text";
 import DomeGallery from "../../components/ui/DomeGallery";
 
+export const metadata = {
+  title: "Gallery — Kcube's Portfolio",
+  description: "A collection of memories and achievements from Kaung Khant Kyaw's journey.",
+  openGraph: {
+    title: "Gallery — Kcube's Portfolio",
+    description: "A collection of memories and achievements from Kaung Khant Kyaw's journey.",
+    images: ["/img/link-preview.png"],
+  },
+};
+
 function page() {
   return (
     <div className="min-h-screen">
@@ -19,7 +29,7 @@ function page() {
                 <div className="pt-3 px-3 rounded-full">
                   <img
                     src="img/cube.svg"
-                    className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                    className="hover:invert duration-500 cursor-grabbing w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                     alt=""
                   />
                 </div>

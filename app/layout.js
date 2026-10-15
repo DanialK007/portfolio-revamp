@@ -8,39 +8,72 @@ const lexendDeca = Lexend_Deca({
   weight: ["400", "500", "600", "700"],
 });
 
+export const metadata = {
+  metadataBase: new URL("https://kaungkhantkyaw.online"),
+  title: "Kcube's Portfolio — Kaung Khant Kyaw",
+  description:
+    "Frontend Developer from Mandalay, Myanmar — crafting functional and user-centered digital products with visually stunning designs.",
+  keywords: [
+    "frontend developer",
+    "web developer",
+    "portfolio",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Mandalay",
+    "Myanmar",
+    "Kaung Khant Kyaw",
+    "Kcube",
+  ],
+  authors: [{ name: "Kaung Khant Kyaw" }],
+  creator: "Kaung Khant Kyaw",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://kaungkhantkyaw.online",
+    siteName: "Kcube's Portfolio",
+    title: "Kcube's Portfolio — Kaung Khant Kyaw",
+    description:
+      "Frontend Developer from Mandalay, Myanmar — crafting functional and user-centered digital products with visually stunning designs.",
+    images: [
+      {
+        url: "/img/link-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Kcube's Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kcube's Portfolio — Kaung Khant Kyaw",
+    description:
+      "Frontend Developer from Mandalay, Myanmar — crafting functional and user-centered digital products with visually stunning designs.",
+    images: ["/img/link-preview.png"],
+    creator: "@DanialK007",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const viewport = {
+  themeColor: "#000000",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          property="description"
-          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
-        />
-        <meta
-          property="og:image"
-          content="https://kaungkhantkyaw.online/img/link-preview.png"
-        />
-        <meta property="og:site_name" content="Kcube's Portfolio" />
-        <meta property="og:title" content="Kcube's Portfolio" />
-        <meta
-          property="og:description"
-          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
-        />
-        <meta property="og:url" content="https://kaungkhantkyaw.online/" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kcube's Portfolio" />
-        <meta
-          name="twitter:image"
-          content="https://kaungkhantkyaw.online/img/link-preview.png"
-        />
-        <meta
-          property="twitter:description"
-          content="Hey there! I'm Kaung Khant Kyaw, a passionate individual from Mandalay on a journey through the fascinating world of programming and web development."
-        />
-        <title>Kcube's Portfolio</title>
-        <link rel="icon" href="/img/Kcube.svg" />
+        <link rel="icon" href="/img/Kcube.svg" type="image/svg+xml" />
       </head>
       <body className={`bg-black text-white/80 overflow-x-hidden ${lexendDeca.className}`}>
         {children}

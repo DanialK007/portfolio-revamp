@@ -29,7 +29,7 @@ function Footer() {
             <div className="w-fit h-16 my-8">
               <Logo />
             </div>
-            <div className="font-semibold">© 2024 · Danial Kcube</div>
+            <div className="font-semibold">© 2026 · Danial Kcube</div>
             <HyperText className="font-mono" text="All Right Reserved" />
           </div>
           <div className="text-sm">
@@ -64,7 +64,7 @@ function Footer() {
                     loading="lazy"
                     decoding="async"
                     src="img/cube.svg"
-                    className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                    className="hover:invert duration-500 hover:cursor-grabbing w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                     alt=""
                   />
                 </div>
@@ -90,7 +90,7 @@ function Footer() {
             <div className="w-fit mx-auto h-16">
               <Logo />
             </div>
-            <div className="font-semibold">© 2024 · Danial Kcube</div>
+            <div className="font-semibold">© 2026 · Danial Kcube</div>
             <HyperText className="font-mono" text="All Right Reserved" />
           </div>
           <div className="text-sm w-full pt-8 flex flex-col items-center">

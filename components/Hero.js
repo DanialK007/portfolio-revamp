@@ -43,28 +43,32 @@ function Hero() {
           >
             <span>It's</span>
             <span>me,</span>
-            <span className="capitalize text-white relative pb-5 md:pb-3 lg:pb-2">
+            <span className="capitalize relative text-white relative pb-5 md:pb-3 lg:pb-2">
               Kcube
               <div className="absolute left-0 bottom-0 w-full text-end px-1 text-[0.5rem] md:text-xs uppercase font-normal">
                 Kaung Khant Kyaw
               </div>
-            </span>
-            <Magnetic>
-              <div className="pt-3 px-3 -mx-3 rounded-full">
-                <img
-                  src="img/cube.svg"
-                  alt=""
-                  className="w-8 animate-spin mb-5 cursor-pointer hover:invert duration-300"
-                />
+              <div className="absolute -right-3 top-3 z-10">
+                <Magnetic>
+                  <div className="rounded-full">
+                    <img
+                      src="img/cube.svg"
+                      alt=""
+                      className="w-8 animate-spin cursor-grabbing hover:invert duration-300"
+                    />
+                  </div>
+                </Magnetic>
               </div>
-            </Magnetic>
+            </span>
           </BlurAnimation>
           <BlurAnimation
             delay={0.4}
             duration={1.2}
             className="lg:hidden font-bold uppercase -mt-5"
           >
-            <div className="text-[4rem] md:text-[5rem] text-white/60">Hello!</div>
+            <div className="text-[4rem] md:text-[5rem] text-white/60">
+              Hello!
+            </div>
             <span className="text-[3.4rem] md:text-[4rem] text-white leading-[1.4] me-2">
               Welcome
             </span>
@@ -83,7 +87,7 @@ function Hero() {
                 <img
                   src="img/cube.svg"
                   alt=""
-                  className="w-8 animate-spin cursor-pointer hover:invert duration-300"
+                  className="w-8 animate-spin cursor-grabbing hover:invert duration-300"
                 />
               </Magnetic>
             </span>
@@ -101,7 +105,6 @@ function Hero() {
           <div id="scroll" className="absolute bottom-10"></div>
         </div>
       </div>
-
     </BackgroundGradientAnimation>
   );
 }

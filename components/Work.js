@@ -1,8 +1,8 @@
 import React from "react";
-import FadeIn from "./framer-motion/FadeIn";
 import { BlurAnimation } from "./ui/BlurAnimation";
 import HyperText from "./ui/hyper-text";
 import Magnetic from "./ui/Magnetic";
+import BlurFadeIn from "./framer-motion/BlurFadeIn";
 
 function Work() {
   return (
@@ -23,7 +23,7 @@ function Work() {
                   <div className="pt-3 px-3 rounded-full">
                     <img loading="lazy" decoding="async"
                       src="img/cube.svg"
-                      className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                      className="hover:invert duration-500 cursor-grabbing w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                       alt=""
                     />
                   </div>
@@ -38,14 +38,12 @@ function Work() {
           <HyperText text="DESIGN PROCESS" />
         </BlurAnimation>
       </div>
-      <BlurAnimation
-        duration={1.2}
-        className="flex flex-col lg:flex-row p-5 gap-3"
-        childClass="lg:w-1/3 lg:hover:w-5/12 duration-700"
-      >
-        <FadeIn
-          duration="1.2"
-          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+
+      <div className="flex flex-col lg:flex-row p-5 gap-3">
+        <BlurFadeIn
+          duration={1.2}
+          delay={0}
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 transition-[width] duration-700 lg:brightness-[0.6] hover:brightness-100"
         >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-black from-30% to-[#020f60c7] flex justify-between">
             <div className="">Next.js</div>
@@ -71,10 +69,12 @@ function Work() {
               className="w-full h-full object-cover"
             />
           </div>
-        </FadeIn>
-        <FadeIn
-          duration="1.3"
-          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+        </BlurFadeIn>
+
+        <BlurFadeIn
+          duration={1.2}
+          delay={0.15}
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 transition-[width] duration-700 lg:brightness-[0.6] hover:brightness-100"
         >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-gradient-to-br from-blue-950/20 to-[#1b2751] flex justify-between">
             <div className="">Tailwind</div>
@@ -100,10 +100,12 @@ function Work() {
               className="w-full h-full object-cover"
             />
           </div>
-        </FadeIn>
-        <FadeIn
-          duration="1.4"
-          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:brightness-[0.6] hover:brightness-100"
+        </BlurFadeIn>
+
+        <BlurFadeIn
+          duration={1.2}
+          delay={0.3}
+          className="p-2 hover:scale-95 lg:hover:scale-100 duration-1000 bg-[#090909] rounded-3xl border border-white/5 w-full lg:w-1/3 lg:hover:w-5/12 transition-[width] duration-700 lg:brightness-[0.6] hover:brightness-100"
         >
           <div className="p-5 rounded-2xl text-lg font-semibold text-gray-200 bg-neutral-900 flex justify-between">
             <div className="">React</div>
@@ -129,8 +131,8 @@ function Work() {
               className="w-full h-full object-cover"
             />
           </div>
-        </FadeIn>
-      </BlurAnimation>
+        </BlurFadeIn>
+      </div>
     </div>
   );
 }

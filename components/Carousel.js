@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   "img/profile.jpeg",

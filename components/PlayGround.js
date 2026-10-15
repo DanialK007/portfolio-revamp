@@ -184,9 +184,11 @@ function PlayGround() {
             <div className="absolute top-1 -left-[2.2rem] sm:top-2 sm:-left-[2.6rem] md:top-3 lg:top-5 xl:top-4 xl:-left-[4.6rem] md:-left-[3.2rem] lg:-left-[4.4rem]">
               <Magnetic>
                 <div className="pt-3 px-3 rounded-full">
-                  <img loading="lazy" decoding="async"
+                  <img
+                    loading="lazy"
+                    decoding="async"
                     src="img/cube.svg"
-                    className="hover:invert duration-500 hover:cursor-pointer w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
+                    className="hover:invert duration-500 cursor-grabbing w-6 sm:w-8 md:w-10 lg:w-14 xl:w-16 animate-spin"
                     alt=""
                   />
                 </div>
@@ -200,32 +202,68 @@ function PlayGround() {
         </BlurAnimation>
       </div>
       <div className="grid p-5 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5">
+        <BlurAnimation
+          duration={1.6}
+          delay={0}
+          className={`group bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-60 duration-500 col-span-1 lg:col-span-3 lg:row-span-2`}
+          childClass="size-full"
+        >
+          <FadeIn
+            duration="1.9"
+            className={`bg-neutral-200 h-full relative rounded-2xl flex items-center justify-center`}
+          >
+            <div className="absolute inset-0 z-10 text-xl h-full text-transparent group-hover:text-gray-50 group-hover:bg-black/65 duration-500">
+              <div className="flex h-full gap-2 justify-center items-center text-lg duration-300">
+                NOVÆ
+                <button
+                  // onClick={() => openModal(project)} // Open the modal instead of navigating
+                  className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center border border-white/20 md:bg-zinc-500/35 backdrop-blur-sm text-gray-200 rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 duration-300 hover:text-white hover:bg-black/20"
+                  aria-label="See project preview"
+                >
+                  <div className="text-xs hidden md:block">see preview</div>
+                  <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
+                  <LuExternalLink className="hidden md:block group-hover:opacity-100 duration-300 opacity-0 text-xs" />
+                </button>
+              </div>
+            </div>
+            <button
+              // onClick={() => openModal(project)}
+              className="absolute z-20 inset-0 md:hidden"
+              aria-label="Open project modal"
+            ></button>
+            <img
+              loading="lazy"
+              decoding="async"
+              src="img/novae-2.png"
+              alt={`novae screenshot`}
+              className="w-full h-full aspect-[16/9] group-hover:scale-105 duration-2000 ease-out object-cover shadow-lg"
+            />
+          </FadeIn>
+        </BlurAnimation>
         {projects.map((project, index) => (
           <BlurAnimation
             duration={1.6}
             delay={0}
             key={index}
-            className={`group bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-50 hover:brightness-100 duration-500 ${project.grid}`}
+            className={`group bg-white/5 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/5 lg:saturate-100 hover:saturate-100 brightness-90 lg:brightness-60 duration-500 ${project.grid}`}
             childClass="size-full"
           >
             <FadeIn
               duration="1.9"
               className={`${project.bgColor} h-full relative rounded-2xl flex items-center justify-center`}
             >
-              <div className="absolute left-0 bottom-0 z-10 flex flex-col justify-end px-5 p-2 md:p-5 bg-gradient-to-t from-black/50 w-full">
-                <div className="text-xl brightness-200 text-gray-50">
-                  <div className="flex gap-2 items-center text-sm group-hover:text-base duration-300">
-                    {project.title}
-                    <button
-                      onClick={() => openModal(project)} // Open the modal instead of navigating
-                      className="flex items-center justify-center md:bg-zinc-500/35 backdrop-blur-sm text-black rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 hover:text-white hover:bg-black/20 duration-300"
-                      aria-label="See project preview"
-                    >
-                      <div className="text-xs hidden md:block">see preview</div>
-                      <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
-                      <LuExternalLink className="hidden md:block group-hover:opacity-100 opacity-0 text-xs" />
-                    </button>
-                  </div>
+              <div className="absolute inset-0 z-10 text-xl h-full text-transparent group-hover:text-gray-50 group-hover:bg-black/65 duration-500">
+                <div className="flex h-full gap-2 justify-center items-center text-lg duration-300">
+                  {project.title}
+                  <button
+                    onClick={() => openModal(project)} // Open the modal instead of navigating
+                    className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center border border-white/20 md:bg-zinc-500/35 backdrop-blur-sm text-gray-200 rounded-full md:py-1 md:px-2 scale-90 hover:scale-95 gap-1 lg:opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 duration-300 hover:text-white hover:bg-black/20"
+                    aria-label="See project preview"
+                  >
+                    <div className="text-xs hidden md:block">see preview</div>
+                    <FaCircleArrowRight className="-ms-1 md:hidden text-white -rotate-45" />
+                    <LuExternalLink className="hidden md:block group-hover:opacity-100 duration-300 opacity-0 text-xs" />
+                  </button>
                 </div>
               </div>
               <button
@@ -233,7 +271,9 @@ function PlayGround() {
                 className="absolute z-20 inset-0 md:hidden"
                 aria-label="Open project modal"
               ></button>
-              <img loading="lazy" decoding="async"
+              <img
+                loading="lazy"
+                decoding="async"
                 src={project.imgSrc}
                 alt={`${project.title} screenshot`}
                 className="w-full h-full group-hover:scale-110 duration-2000 ease-out object-cover shadow-lg"

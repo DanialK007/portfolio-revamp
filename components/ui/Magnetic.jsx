@@ -38,7 +38,7 @@ function Magnetic({ children, className }) {
       ref.current.addEventListener("mouseleave", mouseLeave);
     };
   }, []);
-  return <div className={`z-30 ${className}`} ref={ref}>{children}</div>;
+  return <div className={`z-30 ${className} cursor-grabbing`} ref={ref}>{children}</div>;
 }
 
 export default Magnetic;
