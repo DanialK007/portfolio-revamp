@@ -9,18 +9,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../components/ui/carousel";
-import { getLenis } from "../lib/lenis";
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   const [opener, setOpener] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  useEffect(() => {
-    const lenis = getLenis(); // get the global instance if active
-    if (lenis) {
-      if (isOpen) lenis.stop();
-      else lenis.start();
-    }
-  }, [isOpen]);
 
   useEffect(() => {
     // Disable scrolling on the body when the modal is open

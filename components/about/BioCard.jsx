@@ -5,7 +5,7 @@ import { RainbowButton } from "../ui/rainbow-button";
 function BioCard() {
   return (
     <div className="p-6 text-2xl">
-      <p className="text-neutral-200 leading-relaxed mb-4 text-lg">
+      <p className="text-neutral-200 leading-relaxed mb-4 text-xl">
         Frontend Developer with 3 years of experience, focused on creating
         functional and user-centered digital products with visually stunning
         designs.

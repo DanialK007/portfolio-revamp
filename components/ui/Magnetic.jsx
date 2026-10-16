@@ -7,6 +7,8 @@ function Magnetic({ children, className }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (!ref.current) return;
+
     const xTo = gsap.quickTo(ref.current, "x", {
       duration: 1,
       ease: "elastic.out(1, 0.3)",
@@ -34,8 +36,10 @@ function Magnetic({ children, className }) {
     ref.current.addEventListener("mouseleave", mouseLeave);
 
     return () => {
-      ref.current.addEventListener("mousemove", mouseMove);
-      ref.current.addEventListener("mouseleave", mouseLeave);
+      if (ref.current) {
+        ref.current.removeEventListener("mousemove", mouseMove);
+        ref.current.removeEventListener("mouseleave", mouseLeave);
+      }
     };
   }, []);
   return <div className={`z-30 ${className} cursor-grabbing`} ref={ref}>{children}</div>;
